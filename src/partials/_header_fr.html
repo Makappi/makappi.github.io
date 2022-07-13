@@ -1,0 +1,64 @@
+<header class="wrapper bg-light">
+  <nav class="navbar navbar-expand-lg classic transparent navbar-light">
+    <div class="container flex-lg-row flex-nowrap align-items-center">
+      <div class="navbar-brand w-100">
+        <a href="@@webRoot/fr/">
+          <img src="@@webRoot/assets/img/logo.png" class="w-10 mb-3" alt="img-fluid" />
+          <span class="fs-32 text-navy">Makappi</span>
+        </a>
+      </div>
+      <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+        <div class="offcanvas-header d-lg-none">
+          <h3 class="text-white fs-30 mb-0">Menu</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              @@if (context.currentPage == "features") { 
+                <a class="nav-link" href="@@webRoot/fr/fonctionnalites.html">
+                  <span class="underline-2 primary">Fonctionnalités</span>
+                </a>
+              }
+              @@if (context.currentPage != "features") { 
+                <a class="nav-link" href="@@webRoot/fr/fonctionnalites.html">Fonctionnalités</a>
+              }
+            </li>
+            <li class="nav-item ">
+              @@if (context.currentPage == "pricing") { 
+                <a class="nav-link" href="@@webRoot/fr/tarifs.html">
+                  <span class="underline-2 blue">Tarifs</span>
+                </a>
+              }
+              @@if (context.currentPage != "pricing") { 
+                <a class="nav-link" href="@@webRoot/fr/tarifs.html">Tarifs</a>
+              }
+            </li>
+            <li class="nav-item d-block d-lg-none">
+              <a href="#" class="nav-link">Mon espace</a>
+            </li>
+          </ul>
+          <!-- /.navbar-nav -->
+        </div>
+        <!-- /.offcanvas-body -->
+      </div>
+      <!-- /.navbar-collapse -->
+      <div class="navbar-other ms-lg-4">
+        <ul class="navbar-nav flex-row align-items-center ms-auto">
+          <li class="nav-item d-none d-lg-block">
+            <a class="btn btn-sm btn-outline-primary rounded-pill fs-16" href="@@webRoot/fr/soon.html">Mon espace</a>
+          </li>
+          <li class="nav-item d-none d-md-block">
+            <a class="btn btn-sm btn-primary rounded-pill" href="@@webRoot/fr/soon.html">Créez votre App</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <button class="hamburger offcanvas-nav-btn"><span></span></button>
+          </li>
+        </ul>
+        <!-- /.navbar-nav -->
+      </div>
+      <!-- /.navbar-other -->
+    </div>
+    <!-- /.container -->
+  </nav>
+</header>

@@ -1,0 +1,21 @@
+<script>
+    window.axeptioSettings = {
+        clientId: "62cda5a4dd4555d5187103c0",
+        cookiesVersion: "site web makappi-fr-2",
+    };
+
+    (function (d, s) {
+        var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+        e.async = true; e.src = "//static.axept.io/sdk.js";
+        t.parentNode.insertBefore(e, t);
+    })(document, "script");
+
+    void 0 === window._axcb && (window._axcb = []);
+        window._axcb.push(function (axeptio) {
+            axeptio.on("cookies:complete", function (choices) {
+                if (choices.mixpanel) {
+                    mixpanel.opt_in_tracking()
+                }
+            });
+        });
+</script>

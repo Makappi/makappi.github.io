@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makappi - Bientôt disponible</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    mixpanel.track("Soon page")
+  </script>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header_fr.html', {"currentPage": "terms"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">Comming soon</h1>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section id="terms-conditions" class="wrapper pt-16">
+              <div class="card">
+                <div class="card-body p-10">
+                  <h3>Leave us your email if your want to now when we launch !</h3>
+                  <form action="https://makappi.us14.list-manage.com/subscribe/post?u=06b247974c259c5038c70eaea&amp;id=e11daf4864"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+                    novalidate>
+                    <div class="d-flex flex-center">
+                      <input class="form-control form-control-lg form-control-solid w-md-250px m-2" type="text" name="EMAIL"
+                        placeholder="Email" autocomplete="off" id="mce-EMAIL" />
+                      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                          name="b_73b19be73d3c4ecc41bfafe56_d649018b18" tabindex="-1" value=""></div>
+                      <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe"
+                        class="btn btn-lg btn-primary fw-bolder m-2 text-nowrap">
+                    </div>
+                  </form>
+                  
+                </div>
+                <!--/.card-body -->
+              </div>
+              <!--/.card -->
+            </section>
+          </div>
+          <!-- /column -->
+        </div>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+  </div>
+  <!-- /.content-wrapper -->
+  
+  @@include('_footer_fr.html')
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie.html')
+</body>
+</html>

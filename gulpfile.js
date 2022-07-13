@@ -15,16 +15,16 @@ var path = {
     docs: 'dev/assets/docs/'
   },
   dist: {
-    html: 'dist/',
-    js: 'dist/assets/js/',
-    css: 'dist/assets/css/',
-    style: 'dist/assets/css/',
-    fontcss: 'dist/assets/css/fonts/',
-    colorcss: 'dist/assets/css/colors/',
-    img: 'dist/assets/img/',
-    fonts: 'dist/assets/fonts/',
-    media: 'dist/assets/media/',
-    docs: 'dist/assets/docs/'
+    html: 'docs/',
+    js: 'docs/assets/js/',
+    css: 'docs/assets/css/',
+    style: 'docs/assets/css/',
+    fontcss: 'docs/assets/css/fonts/',
+    colorcss: 'docs/assets/css/colors/',
+    img: 'docs/assets/img/',
+    fonts: 'docs/assets/fonts/',
+    media: 'docs/assets/media/',
+    docs: 'docs/assets/docs/'
   },
   src: {
     html: ['src/**/*.html', '!src/partials/**/*.html'],
@@ -58,7 +58,7 @@ var path = {
   },
   clean: {
     dev: 'dev/*',
-    dist: 'dist/*',
+    dist: 'docs/*',
   }
 };
 
@@ -90,7 +90,7 @@ var gulp = require('gulp'),
 /* Server */
 var config = {
     server: {
-        baseDir: './dist'
+        baseDir: './docs'
     },
     port: 8080,
     ghostMode: false, // By setting true, clicks, scrolls and form inputs on any device will be mirrored to all others

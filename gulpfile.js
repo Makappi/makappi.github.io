@@ -39,10 +39,12 @@ var path = {
     img: 'src/assets/img/**/*.*',
     fonts: 'src/assets/fonts/**/*.*',
     media: 'src/assets/media/**/*.*',
-    docs: 'src/assets/docs/**/*.*'
+    docs: 'src/assets/docs/**/*.*',
+    sitemap: 'src/sitemap.xml',
+    cname: 'src/CNAME',
   },
   watch: {
-    html: ['src/**/*.html'],
+    html: ['src/**/*.html', 'src/**/*.xml'],
     partials: 'src/partials/**/*.*',
     themejs: 'src/assets/js/theme.js',
     vendorjs: 'src/assets/js/vendor/*.*',
@@ -357,6 +359,30 @@ gulp.task('image:dist', function () {
     .on('end', () => { reload(); });
 });
 
+// Move CNAME
+gulp.task('cname:dev', function () {
+  return gulp.src(path.src.cname)
+    .pipe(newer(path.dev.html))
+    .pipe(gulp.dest(path.dev.html));
+});
+gulp.task('cname:dist', function () {
+  return gulp.src(path.src.cname)
+    .pipe(newer(path.dist.html))
+    .pipe(gulp.dest(path.dist.html));
+});
+
+// Move Sitemap
+gulp.task('sitemap:dev', function () {
+  return gulp.src(path.src.sitemap)
+    .pipe(newer(path.dev.html))
+    .pipe(gulp.dest(path.dev.html));
+});
+gulp.task('sitemap:dist', function () {
+  return gulp.src(path.src.sitemap)
+    .pipe(newer(path.dist.html))
+    .pipe(gulp.dest(path.dist.html));
+});
+
 // Remove catalog dev
 gulp.task('clean:dev', function () {
   return del(path.clean.dev);
@@ -384,7 +410,9 @@ gulp.task('build:dev',
       'fonts:dev',
       'media:dev',
       'docs:dev',
-      'image:dev'
+      'image:dev',
+      'cname:dev',
+      'sitemap:dev'
       )
     )
 );
@@ -403,7 +431,9 @@ gulp.task('build:dist',
       'fonts:dist',
       'media:dist',
       'docs:dist',
-      'image:dist'
+      'image:dist',
+      'cname:dist',
+      'sitemap:dist'
       )
     )
 );

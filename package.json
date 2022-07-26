@@ -6,7 +6,7 @@
   "author": "elemis",
   "private": true,
   "scripts": {
-    "start": "gulp serve",
+    "dev": "gulp serve",
     "build": "gulp build:dist"
   },
   "devDependencies": {

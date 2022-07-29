@@ -16,6 +16,9 @@
                 if (choices.mixpanel) {
                     mixpanel.opt_in_tracking()
                 }
+                if (choices.crisp) {
+                    $crisp.push(["set", "session:segments", [["consentOK"]]]);
+                }
             });
         });
 </script>

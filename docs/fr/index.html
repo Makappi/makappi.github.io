@@ -81,6 +81,20 @@
       opt_out_tracking_by_default: true,
     });
   </script>
+  <script type="text/javascript">
+    window.$crisp = [];
+    window.CRISP_WEBSITE_ID = "0f537867-6e31-483e-8dda-89e0344b4b86";
+    window.$crisp.push(['set', 'session:segments', [
+      ['website']
+    ]]);
+    (function() {
+      d = document;
+      s = d.createElement("script");
+      s.src = "https://client.crisp.chat/l.js";
+      s.async = 1;
+      d.getElementsByTagName("head")[0].appendChild(s);
+    })();
+  </script>
   <script>
     mixpanel.track("Index FR page")
   </script>
@@ -426,6 +440,11 @@
       axeptio.on("cookies:complete", function(choices) {
         if (choices.mixpanel) {
           mixpanel.opt_in_tracking()
+        }
+        if (choices.crisp) {
+          $crisp.push(["set", "session:segments", [
+            ["consentOK"]
+          ]]);
         }
       });
     });

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-  <title>Makappi - Support > Publication</title>
+  <title>Makappi - Support</title>
+  <meta name="description" content="Support">
   <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../../assets/img/favicon.png">
-  <link rel="stylesheet" href="../../assets/css/plugins.css">
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="preload" href="../../assets/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="shortcut icon" href="../assets/img/favicon.png">
+  <link rel="stylesheet" href="../assets/css/plugins.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="preload" href="../assets/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
   <script src="https://kit.fontawesome.com/078b89fd10.js" crossorigin="anonymous"></script>
   <script type="text/javascript">
     (function(f, b) {
@@ -81,7 +82,7 @@
     })();
   </script>
   <script>
-    mixpanel.track("Support FR")
+    mixpanel.track("Support page")
   </script>
 </head>
 
@@ -91,8 +92,8 @@
       <nav class="navbar navbar-expand-lg classic transparent navbar-light">
         <div class="container flex-lg-row flex-nowrap align-items-center">
           <div class="navbar-brand w-100">
-            <a href="../../">
-              <img src="../../assets/img/logo.png" class="w-10 mb-3" alt="img-fluid" />
+            <a href="../">
+              <img src="../assets/img/logo.png" class="w-10 mb-3" alt="img-fluid" />
               <span class="fs-32 text-navy">Makappi</span>
             </a>
           </div>
@@ -121,10 +122,10 @@
           <div class="navbar-other ms-lg-4">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
               <li class="nav-item d-none d-lg-block">
-                <a class="btn btn-sm btn-outline-primary rounded-pill fs-16" href="../../soon.html">My space</a>
+                <a class="btn btn-sm btn-outline-primary rounded-pill fs-16" href="../soon.html">My space</a>
               </li>
               <li class="nav-item d-none d-md-block">
-                <a class="btn btn-sm btn-primary rounded-pill" href="../../soon.html">Create your App</a>
+                <a class="btn btn-sm btn-primary rounded-pill" href="../soon.html">Create your App</a>
               </li>
               <li class="nav-item d-lg-none">
                 <button class="hamburger offcanvas-nav-btn"><span></span></button>
@@ -149,20 +150,43 @@
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-10">
+                  <a href="#publication">
+                    <h4 class="mb-3">- How to publish the App and the App Store and the Play Store?</h4>
+                  </a>
+                  <a href="#apple-invite">
+                    <h4 class="mb-3">- How to add Makappi to your Apple Developer Account?</h4>
+                  </a>
+                </div>
+            </section>
+            <section id="publication" class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <h2 class="mb-3">How to publish the App and the App Store and the Play Store?</h2>
+                  <p>There are a few steps required to publish the App:</p>
                   <ul>
-                    <li>
-                      <a href="../../fr/support/bien-commencer.html" class="hover more">Comment bien commencer à utiliser Makappi ?</a>
+                    <li class="mb-2"> Create an Apple Developer account for your company <a href="https://developer.apple.com/programs/enroll/" target="_blank">here</a>. You need to pay an annual $99 fee to Apple. You can setup auto-renew to prevent disruption. Make sure you register as a Company and not as an Individual. </li>
+                    <li class="mb-2"> You will get a call/message from Apple to confirm your enrollment. It then can take up to 24h for Apple to process the payment and create your account. Once it's done, you will be able to invite us, click <a href="#apple-invite">here to see how</a>. </li>
+                    <li class="mb-2"> You will need a Gmail account, you can create one <a href="https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp" target="_blank">here</a>
                     </li>
-                    <li>
-                      <a href="../../fr/support/produits-collections.html" class="hover more">Comment ajouter vos produits et vos collections ?</a>
+                    <li class="mb-2"> Your Gmail account need to have 2-Step Verification enabled. You can do it <a href="http://google.com/landing/2step/#tab=why-you-need-it" target="_blank">here</a>
                     </li>
-                    <li>
-                      <a href="../../fr/support/publication.html" class="hover more">Comment publier mon App sur l'App Store (Apple) et le Play Store (Android) ?</a>
-                    </li>
-                    <li>
-                      <a href="../../fr/support/mises-a-jour.html" class="hover more">Quand votre App est-elle mise à jour ?</a>
-                    </li>
+                    <li class="mb-2"> Create a Google Developer account for your company <a href="https://play.google.com/apps/publish/signup/" target="_blank">here</a>. There is a one-time $25 fee. </li>
+                    <li class="mb-2"> Once your Google Account is created, go to the 'User and Permissions' page of your Google Play Console. Click on 'Invite new users' and add team@makappi.com with 'Admin' privileges. Then tap on 'Invite User' </li>
                   </ul>
+                </div>
+            </section>
+            <section id="apple-invite" class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <h2 class="mb-3">How to add Makappi to your Apple Developer Account?</h2>
+                  <p>After your account is created and your payment is processed you will be able to invite Makappi to your Apple Developer Account.</p>
+                  <ul>
+                    <li class="mb-2"> Navigate to your App Store Connect account <a href="https://appstoreconnect.apple.com/login" target="_blank">here</a>. </li>
+                    <li class="mb-2"> Click on 'Users and Access' in the top menu bar </li>
+                    <li class="mb-2"> Click the '+' button, then add the email team@makappi.com as an Admin with access to all 'Additional Resources' </li>
+                    <li class="mb-2"> Click on 'Invite' to send the invitation </li>
+                  </ul>
+                  <img src="../assets/img/support/apple-invite-en.png" width="500" class="rounded mx-auto d-block" />
                 </div>
             </section>
           </div>
@@ -176,8 +200,8 @@
         <div class="col-xl-11 col-xxl-10 mx-auto">
           <div class="card image-wrapper bg-full bg-primary bg-overlay-400 mt-n50p mb-n15 mb-md-n5">
             <div class="card-body p-6 p-md-11 d-lg-flex flex-row align-items-lg-center justify-content-md-between text-center text-lg-start">
-              <h3 class="display-5 mb-6 mb-lg-0 pe-lg-15 pe-xxl-18 text-white">Augmentez l'engagement de vos clients et boostez vos ventes à l'aide de votre App Mobile</h3>
-              <a href="../../fr/soon.html" class="btn btn-white rounded-pill mb-0 text-nowrap">Créez votre App</a>
+              <h3 class="display-5 mb-6 mb-lg-0 pe-lg-15 pe-xxl-18 text-white">Increase your customer's engagement and boost your sales with your Mobile App</h3>
+              <a href="../soon.html" class="btn btn-white rounded-pill mb-0 text-nowrap">Create your App</a>
             </div>
             <!--/.card-body -->
           </div>
@@ -194,11 +218,11 @@
           <div class="row mb-3">
             <div class="col-md-4">
               <div class="widget text-lg-start">
-                <h4 class="widget-title">Contactez nous</h4>
+                <h4 class="widget-title">Contact us</h4>
                 <ul class="list-unstyled mb-0">
                   <li><a href="mailto:contact@makappi.com">contact@makappi.com</a></li>
                   <li><br /></li>
-                  <li><a href="../../support/">Switch to English <img src="../../assets/img/flags/usa.png" class="w-5 mb-1" /></a></li>
+                  <li><a href="../fr">Passer en Français <img src="../assets/img/flags/france.png" class="w-5 mb-1" /></a></li>
                 </ul>
               </div>
               <!-- /.widget -->
@@ -207,9 +231,9 @@
             <div class="col-md-8 gy-5 col-lg-8">
               <div class="widget">
                 <ul class="list-unstyled text-lg-end mb-0 mt-lg-0">
-                  <li><a href="mentions.html">Mentions légales</a></li>
-                  <li><a href="../../assets/docs/PolitiqueConfidentialite.pdf" target="_blank">Politique de confidentialité</a></li>
-                  <li><a href="../../assets/docs/CGU.pdf" target="_blank">Conditions générales d'utilisation</a></li>
+                  <li><a href="../fr/mentions.html" target="_blank">Legal notices</a></li>
+                  <li><a href="../assets/docs/PolitiqueConfidentialite.pdf" target="_blank">Privacy Policy</a></li>
+                  <li><a href="../assets/docs/CGU.pdf" target="_blank">Terms of use</a></li>
                 </ul>
               </div>
               <!-- /.widget -->
@@ -238,12 +262,12 @@
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
   </div>
-  <script src="../../assets/js/plugins.js"></script>
-  <script src="../../assets/js/theme.js"></script>
+  <script src="../assets/js/plugins.js"></script>
+  <script src="../assets/js/theme.js"></script>
   <script>
     window.axeptioSettings = {
       clientId: "62cda5a4dd4555d5187103c0",
-      cookiesVersion: "site web makappi-fr-2",
+      cookiesVersion: "site web makappi-en-2",
     };
     (function(d, s) {
       var t = d.getElementsByTagName(s)[0],
@@ -257,11 +281,6 @@
       axeptio.on("cookies:complete", function(choices) {
         if (choices.mixpanel) {
           mixpanel.opt_in_tracking()
-        }
-        if (choices.crisp) {
-          $crisp.push(["set", "session:segments", [
-            ["consentOK"]
-          ]]);
         }
       });
     });

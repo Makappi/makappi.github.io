@@ -81,7 +81,7 @@
     })();
   </script>
   <script>
-    mixpanel.track("Support FR")
+    mixpanel.track("Support/Publication FR")
   </script>
 </head>
 
@@ -141,7 +141,13 @@
       <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
         <div class="row text-center">
           <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-            <h1 class="display-1 mb-3">FAQ</h1>
+            <h1 class="display-1 mb-3">Publication</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../fr/support/">FAQ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Publication</li>
+              </ol>
+            </nav>
           </div>
         </div>
         <div class="row gx-0">
@@ -149,20 +155,43 @@
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-10">
+                  <a href="#publication">
+                    <h4 class="mb-3">- Comment publier mon App sur l'App Store et le Play Store ?</h4>
+                  </a>
+                  <a href="#apple-invite">
+                    <h4 class="mb-3">- Comment inviter Makappi sur votre compte Apple Developer ?</h4>
+                  </a>
+                </div>
+            </section>
+            <section id="publication" class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <h2 class="mb-3">Comment publier mon App sur l'App Store et le Play Store ?</h2>
+                  <p>Il y a plusieurs étapes pour publier votre App :</p>
                   <ul>
-                    <li>
-                      <a href="../../fr/support/bien-commencer.html" class="hover more">Comment bien commencer à utiliser Makappi ?</a>
+                    <li class="mb-2"> Créer un compte Apple Developer pour votre société <a href="https://developer.apple.com/programs/enroll/" target="_blank">en cliquant ici</a>. Vous devrez payer un abonnement annuel de $99 à Apple. Vous pouvez activer une option pour renouveler automatiquement cet abonnement. Il est important de s'enregistrer en tant que société et pas en tant qu'individu. </li>
+                    <li class="mb-2"> Vous allez recevoir un appel ou un message d'Apple pour confirmer votre inscription. Apple peut prendre jusqu'au 24h pour confirmer la création du compte. Un fois que votre compte est validé, vous pouvez inviter Makappi, <a href="#apple-invite">cliquer ici pour voir les étapes</a>. </li>
+                    <li class="mb-2"> Vous allez avoir besoin d'un compte Gmail, vous pouvez en créer un <a href="https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp" target="_blank">en cliquant ici</a>
                     </li>
-                    <li>
-                      <a href="../../fr/support/produits-collections.html" class="hover more">Comment ajouter vos produits et vos collections ?</a>
+                    <li class="mb-2"> Votre compte Gmail doit avoir la vérification en 2 étapes activé. Vous pouvez l'activer en <a href="http://google.com/landing/2step/#tab=why-you-need-it" target="_blank">cliquant ici</a>
                     </li>
-                    <li>
-                      <a href="../../fr/support/publication.html" class="hover more">Comment publier mon App sur l'App Store (Apple) et le Play Store (Android) ?</a>
-                    </li>
-                    <li>
-                      <a href="../../fr/support/mises-a-jour.html" class="hover more">Quand votre App est-elle mise à jour ?</a>
-                    </li>
+                    <li class="mb-2"> Créez ensuite un compte Google Developer account pour votre société <a href="https://play.google.com/apps/publish/signup/" target="_blank">en cliquant ici</a>. Vous devrez payer $25 de frais. </li>
+                    <li class="mb-2"> Une fois votre compte Google créé, allez sur la page 'Utilisateurs et autorisations' de votre Google Play Console. Cliquez sur 'Inviter de nouveaux utilisateurs' et ajoutez 'team@makappi.com' en tant qu'Administrateur. Puis cliquez sur 'Inviter un utilisateur'. </li>
                   </ul>
+                </div>
+            </section>
+            <section id="apple-invite" class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <h2 class="mb-3">Comment inviter Makappi sur votre compte Apple Developer ?</h2>
+                  <p>Après la création de votre compte et la validation de votre paiement par Apple vous pourrez inviter Makappi sur votre compte Apple Developer.</p>
+                  <ul>
+                    <li class="mb-2"> Allez sur votre compte App Store Connect <a href="https://appstoreconnect.apple.com/login" target="_blank">en cliquant ici</a>. </li>
+                    <li class="mb-2"> Cliquez sur 'Utilisateurs et accès' dans le menu </li>
+                    <li class="mb-2"> Cliquez sur le bouton '+' et ajoutez l'email team@makappi.com avec un rôle Administrateur et un accès a tous les éléments de Ressources Supplémentaires. </li>
+                    <li class="mb-2"> Cliquez sur 'Inviter' pour envoyer l'invitation </li>
+                  </ul>
+                  <img src="../../assets/img/support/apple-invite-fr.png" width="500" class="rounded mx-auto d-block" />
                 </div>
             </section>
           </div>
@@ -176,8 +205,8 @@
         <div class="col-xl-11 col-xxl-10 mx-auto">
           <div class="card image-wrapper bg-full bg-primary bg-overlay-400 mt-n50p mb-n15 mb-md-n5">
             <div class="card-body p-6 p-md-11 d-lg-flex flex-row align-items-lg-center justify-content-md-between text-center text-lg-start">
-              <h3 class="display-5 mb-6 mb-lg-0 pe-lg-15 pe-xxl-18 text-white">Augmentez l'engagement de vos clients et boostez vos ventes à l'aide de votre App Mobile</h3>
-              <a href="../../fr/soon.html" class="btn btn-white rounded-pill mb-0 text-nowrap">Créez votre App</a>
+              <h3 class="display-5 mb-6 mb-lg-0 pe-lg-15 pe-xxl-18 text-white">Increase your customer's engagement and boost your sales with your Mobile App</h3>
+              <a href="../../soon.html" class="btn btn-white rounded-pill mb-0 text-nowrap">Create your App</a>
             </div>
             <!--/.card-body -->
           </div>
@@ -194,11 +223,11 @@
           <div class="row mb-3">
             <div class="col-md-4">
               <div class="widget text-lg-start">
-                <h4 class="widget-title">Contactez nous</h4>
+                <h4 class="widget-title">Contact us</h4>
                 <ul class="list-unstyled mb-0">
                   <li><a href="mailto:contact@makappi.com">contact@makappi.com</a></li>
                   <li><br /></li>
-                  <li><a href="../../support/">Switch to English <img src="../../assets/img/flags/usa.png" class="w-5 mb-1" /></a></li>
+                  <li><a href="../../fr">Passer en Français <img src="../../assets/img/flags/france.png" class="w-5 mb-1" /></a></li>
                 </ul>
               </div>
               <!-- /.widget -->
@@ -207,9 +236,9 @@
             <div class="col-md-8 gy-5 col-lg-8">
               <div class="widget">
                 <ul class="list-unstyled text-lg-end mb-0 mt-lg-0">
-                  <li><a href="mentions.html">Mentions légales</a></li>
-                  <li><a href="../../assets/docs/PolitiqueConfidentialite.pdf" target="_blank">Politique de confidentialité</a></li>
-                  <li><a href="../../assets/docs/CGU.pdf" target="_blank">Conditions générales d'utilisation</a></li>
+                  <li><a href="../../fr/mentions.html" target="_blank">Legal notices</a></li>
+                  <li><a href="../../assets/docs/PolitiqueConfidentialite.pdf" target="_blank">Privacy Policy</a></li>
+                  <li><a href="../../assets/docs/CGU.pdf" target="_blank">Terms of use</a></li>
                 </ul>
               </div>
               <!-- /.widget -->
@@ -243,7 +272,7 @@
   <script>
     window.axeptioSettings = {
       clientId: "62cda5a4dd4555d5187103c0",
-      cookiesVersion: "site web makappi-fr-2",
+      cookiesVersion: "site web makappi-en-2",
     };
     (function(d, s) {
       var t = d.getElementsByTagName(s)[0],
@@ -257,11 +286,6 @@
       axeptio.on("cookies:complete", function(choices) {
         if (choices.mixpanel) {
           mixpanel.opt_in_tracking()
-        }
-        if (choices.crisp) {
-          $crisp.push(["set", "session:segments", [
-            ["consentOK"]
-          ]]);
         }
       });
     });

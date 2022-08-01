@@ -17,22 +17,22 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               @@if (context.currentPage == "features") {
-              <a class="nav-link" href="./features.html">
+              <a class="nav-link" href="@@webRoot/features.html">
                 <span class="underline-2 primary">Features</span>
               </a>
               }
               @@if (context.currentPage != "features") {
-              <a class="nav-link" href="./features.html">Features</a>
+              <a class="nav-link" href="@@webRoot/features.html">Features</a>
               }
             </li>
             <li class="nav-item ">
               @@if (context.currentPage == "pricing") {
-              <a class="nav-link" href="./pricing.html">
+              <a class="nav-link" href="@@webRoot/pricing.html">
                 <span class="underline-2 blue">Pricing</span>
               </a>
               }
               @@if (context.currentPage != "pricing") {
-              <a class="nav-link" href="./pricing.html">Pricing</a>
+              <a class="nav-link" href="@@webRoot/pricing.html">Pricing</a>
               }
             </li>
             <li class="nav-item d-block d-lg-none">

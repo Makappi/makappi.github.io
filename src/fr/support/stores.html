@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Makappi - Support > Stores</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    mixpanel.track("Support/Stores FR")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header_fr.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">Stores</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">FAQ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Stores</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <h3>Recommandations pour l'App Store (Apple)</h3>
+                  <ul>
+                    <li>
+                      Vous trouverez <a href="https://developer.apple.com/app-store/product-page/" target="_blank" class="hover-3">sur cette page</a> les recommandations d'Apple pour les éléments de votre page de l'App Store. Les parties "App previews" et "Screenshots" seront automatiquement générés par Makappi.
+                    </li>
+                    <li>
+                      Si vous souhaitez faire la promotion de votre App sur d'autres supports, vous trouverez <a href="https://developer.apple.com/app-store/marketing/guidelines/" target="_blank" class="hover-3">sur cette page</a> les règles d'Apple à ce sujet.
+                    </li>
+                  </ul>
+
+                  <h3>Recommandations pour le Play Store (Android)</h3>
+                  <ul>
+                    <li>
+                      Vous trouverez <a href="https://support.google.com/googleplay/android-developer/answer/9866151?hl=fr" target="_blank" class="hover-3">sur cette page</a> les recommandations de Google pour les éléments de votre page du Play Store. Les captures d'écran et Aperçu vidéo sont automatiquement générés par Makappi.
+                    </li>
+                  </ul>
+                </div>
+            </section>
+
+            <a href="@@webRoot/fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Retour à la FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer_fr.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie_fr.html')
+</body>
+
+</html>

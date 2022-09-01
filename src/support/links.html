@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makappi - Support > Links</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    mixpanel.track("Support/Links")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">Universal links</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Links</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>
+                    Universal links (or App links for Android) are used to redirect a user to your mobile App when they click on a link to your shop.
+                  </p>
+                  <p>
+                    For example, if a user receives an email with a link to https://shop.com/products/dress, a tap on the link will open the Product inside your app rather than in their browser.
+                  </p>
+                  <p>
+                    You will need your Application ID and a fingerprint for Android. Contact Makappi support to get that info.
+                  </p>
+                  
+                  <h3>Creating the Shopify App</h3>
+                  <ul>
+                    <li class="mb-2">
+                      Go to your Shopify Admin, <a href="https://www.shopify.com/admin/apps" target="_blank" class="hover-3">here</a>
+                    </li>
+                    <li class="mb-2">
+                      Click on "Develop apps for your store".
+                    </li>
+                    <li class="mb-2">
+                      If you already have an application select it. Otherwise, click on "Create an app" and choose a name (for example "App Makappi").
+                    </li>
+                  
+                    <img src="@@webRoot/assets/img/support/app/app-create-en.png" width="500" class="rounded mx-auto d-block mb-5" />
+                  
+                    <li class="mb-2">
+                      Click on the "Configuration" tab and then on Configure next to "Storefront API integration"
+                    </li>
+                  
+                    <img src="@@webRoot/assets/img/support/app/app-configure-en.png" width="500" class="rounded mx-auto d-block mb-5" />
+                  </ul>
+                  
+                  <h3>Configuration for iOS and Android</h3>
+                  <ul>
+                    <li class="mb-2">
+                      Click on "iOS Buy SDK"
+                    </li>
+                    <li class="mb-2">
+                      Add the Application ID given by the support.
+                    </li>
+                    <li class="mb-2">
+                      Select "Use iOS universal links"
+                    </li>
+                  
+                    <li class="mb-2">
+                      Click on "Android Buy SDK"
+                    </li>
+                    <li class="mb-2">
+                      Add the Application ID and the fingerprint given by the support.
+                    </li>
+                    <li class="mb-2">
+                      Save the configuration by clicking on "Save"
+                    </li>
+                  </ul>
+                  
+                  <img src="@@webRoot/assets/img/support/app/app-config-en.png" width="500" class="rounded mx-auto d-block mb-5" />
+
+                </div>
+            </section>
+
+            <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Back to FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  @@include('_footer.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie.html')
+</body>
+</html>

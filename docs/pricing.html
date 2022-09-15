@@ -76,7 +76,14 @@
         g.parentNode.insertBefore(e, g)
       }
     })(document, window.mixpanel || []);
-    mixpanel.init('86ccc71cf478dbeb32402079e2610e67', {
+    var mixpanelId
+    if (window.location.host == "www.makappi.com") {
+      mixpanelId = '86ccc71cf478dbeb32402079e2610e67'
+    } else {
+      mixpanelId = 'ad626560b3af5c81cab0d3958e1c2115'
+    }
+    mixpanel.init(mixpanelId, {
+      api_host: 'https://api-eu.mixpanel.com',
       opt_out_tracking_by_default: true,
     });
   </script>

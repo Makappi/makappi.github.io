@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Makappi - Support > Publication</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    mixpanel.track("Partners FR")
+  </script>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header_fr.html', {"currentPage": "partners"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">Nos Partenaires</h1>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-10 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <section class="wrapper bg-light">
+                    <div class="row gx-lg-8 gx-xl-12 gy-10 mb-5 align-items-center">
+                      <div class="col-lg-4 position-relative">
+                        <img src="../../assets/img/partners/lobstter.png" alt="LobsTTer" width="300">
+                      </div>
+                      <div class="col-lg-8">
+                        <h3 class="display-6 mb-4"><a href="@@webRoot/fr/partenaires-lobstter.html">lobsTTer - Agence Shopify & Marketing digital</a></h3>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer_fr.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie_fr.html')
+</body>
+
+</html>

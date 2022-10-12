@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Makappi - Support > Stores</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    mixpanel.track("Support/Smile FR")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header_fr.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">Comment intégrer Smile ?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">Intégrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Comment intégrer Smile ?</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>
+                    Intégrer Smile dans votre Application Mobile permet à vos clients de voir leur nombre de points et de récupérer des récompenses sous forme de bon de réduction.
+                  </p>
+
+                  <h3>Comptes compatibles</h3>
+                  <p>
+                    Pour intégrer Smile dans votre Application Mobile, vous devez posséder un abonnement Smile de niveau au moins "Growth".
+                  </p>
+
+                  <h3>Ajout de la clé privée</h3>
+                  <ul>
+                    <li>
+                      Depuis votre compte Shopify, rendez-vous dans l'Application Smile
+                    </li>
+                    <li>
+                      Cliquez sur "Settings"
+                    </li>
+                    <img src="@@webRoot/assets/img/support/smile/smile1.png" width="500" class="rounded mx-auto d-block mb-5" />
+                    <li>
+                      Cliquez sur "Platform"
+                    </li>
+                    <img src="@@webRoot/assets/img/support/smile/smile2.png" width="500" class="rounded mx-auto d-block mb-5" />
+                    <li>
+                      Cliquez sur "Show More"
+                    </li>
+                    <img src="@@webRoot/assets/img/support/smile/smile3.png" width="500" class="rounded mx-auto d-block mb-5" />
+                    <li>
+                      Cliquez sur "Show" et copiez la clé privée
+                    </li>
+                    <img src="@@webRoot/assets/img/support/smile/smile4.png" width="500" class="rounded mx-auto d-block mb-5" />
+                    <li>
+                      Ajoutez cette clé privée dans la partie Intégration de Makappi
+                    </li>
+                    <img src="@@webRoot/assets/img/support/smile/smile5-fr.png" width="500" class="rounded mx-auto d-block mb-5" />
+                    <li>
+                      Publiez les changements pour terminer l'intégration
+                    </li>
+                    <img src="@@webRoot/assets/img/support/smile/smile6-fr.png" width="500" class="rounded mx-auto d-block mb-5" />
+                  </ul>                  
+                </div>
+            </section>
+
+            <a href="@@webRoot/fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Retour à la FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer_fr.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie_fr.html')
+</body>
+
+</html>

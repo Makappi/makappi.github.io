@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makappi - Support > Stores</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    mixpanel.track("Support/Smile")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">How to integrate Smile?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">Integrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">How to integrate Smile?</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>
+                    You can add Smile to your Mobile App your clients will be able to see their points and redeem coupons.
+                  </p>
+            
+                  <h3>Smile compatible plans</h3>
+                  <p>
+                    To add Smile to your Mobile App, you need to be at least on the Smile "Growth" Plan.
+                  </p>
+            
+                  <h3>Add the private key</h3>
+                  <ul>
+                    <li>
+                      On your Shopify Admin, go to the Smile App
+                    </li>
+                    <li>
+                      Click on "Settings"
+                    </li>
+                    <img src="@@webRoot/assets/img/support/smile/smile1.png" width="500" class="rounded mx-auto d-block mb-5" />
+                    <li>
+                      Click on "Platform"
+                    </li>
+                    <img src="@@webRoot/assets/img/support/smile/smile2.png" width="500" class="rounded mx-auto d-block mb-5" />
+                    <li>
+                      Click on "Show More"
+                    </li>
+                    <img src="@@webRoot/assets/img/support/smile/smile3.png" width="500" class="rounded mx-auto d-block mb-5" />
+                    <li>
+                      Click on "Show" and copy the private key
+                    </li>
+                    <img src="@@webRoot/assets/img/support/smile/smile4.png" width="500" class="rounded mx-auto d-block mb-5" />
+                    <li>
+                      Add this private key to your Integration on Makappi
+                    </li>
+                    <img src="@@webRoot/assets/img/support/smile/smile5-en.png" width="500" class="rounded mx-auto d-block mb-5" />
+                    <li>
+                      Publish the change to finish the integration
+                    </li>
+                    <img src="@@webRoot/assets/img/support/smile/smile6-en.png" width="500" class="rounded mx-auto d-block mb-5" />
+                  </ul>
+                </div>
+            </section>
+
+            <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Back to FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  @@include('_footer.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie.html')
+</body>
+</html>

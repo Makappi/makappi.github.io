@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-  <title>Makappi - Support > Publication</title>
+  <title>Makappi - Support > Apple Pay</title>
   <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,7 +88,7 @@
     })();
   </script>
   <script>
-    mixpanel.track("Support FR")
+    mixpanel.track("Support/Apple Pay FR")
   </script>
 </head>
 
@@ -150,45 +150,69 @@
       <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
         <div class="row text-center">
           <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-            <h1 class="display-1 mb-3">FAQ</h1>
+            <h1 class="display-1 mb-3">Apple Pay</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../fr/support/">FAQ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Apple Pay</li>
+              </ol>
+            </nav>
           </div>
         </div>
         <div class="row gx-0">
-          <div class="col-xl-10 mx-auto">
+          <div class="col-xl-8 mx-auto">
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-10">
+                  <p> La payment avec Apple Pay permet à vos clients de payer directement depuis leur mobile sans jamais quitter votre App. Que se soit sur une fiche produit ou depuis le panier, ils peuvent payer leurs articles en 1 clic. </p>
+                  <h3>Prérequis</h3>
+                  <p> Votre boutique et votre terminal de paiement doivent être compatible avec Apple Pay. Pour plus d'informations sur les exigences Shopify <a href="https://help.shopify.com/fr/manual/payments/accelerated-checkouts/apple-pay#exigences" target="_blank" class="hover-3">Cliquez ici</a>
+                  </p>
+                  <p> Vous aurez besoin de l'identifiant de votre App iOS. Contactez le support de Makappi pour l'obtenir. </p>
+                  <h3>Etape 1: Enregistrement de l'App dans Shopify</h3>
                   <ul>
-                    <li class="mb-1">
-                      <a href="../../fr/support/bien-commencer.html" class="hover more">Comment bien commencer à utiliser Makappi ?</a>
+                    <li class="mb-2"> Rendez-vous sur la partie Apps de l'Admin Shopify en <a href="https://www.shopify.com/admin/apps" target="_blank" class="hover-3">cliquant ici</a>
                     </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/produits-collections.html" class="hover more">Comment ajouter vos produits et vos collections ?</a>
+                    <li class="mb-2"> Cliquez sur "Développez des applications" <img src="../../assets/img/support/app/app-dev-app-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
                     </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/publication.html" class="hover more">Comment publier mon App sur l'App Store (Apple) et le Play Store (Android) ?</a>
+                    <li class="mb-2"> Cliquez sur "Autoriser le développement d'applications personnalisées" <img src="../../assets/img/support/app/app-dev-auth-step1-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
                     </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/stores.html" class="hover more">Votre page App Store (Apple) et Play Store (Android)</a>
+                    <li class="mb-2"> Cliquez à nouveau sur "Autoriser le développement d'applications personnalisées" <img src="../../assets/img/support/app/app-dev-auth-step2-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
                     </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/mises-a-jour.html" class="hover more">Quand votre App est-elle mise à jour ?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/liens.html" class="hover more">Comment configurer les liens universels ?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/apple-pay.html" class="hover more">Comment configurer Apple Pay ?</a>
-                    </li>
+                    <li class="mb-2"> Si vous avez déjà une application cliquez sur son nom. Sinon cliquez sur "Créez une Application" et choisissez un nom (par exemple "App Makappi"). </li>
+                    <img src="../../assets/img/support/app/app-create-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
+                    <li class="mb-2"> Cliquez sur l'onglet "Configuration" puis sur Configuration à coté de "Intégration de l'API Storefront" </li>
+                    <img src="../../assets/img/support/app/app-configure-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
+                    <li class="mb-2"> Sélectionnez la permission "unauthenticated_read_product_listings" au niveau de Produits puis cliquez sur "Sauvegarder" </li>
+                    <img src="../../assets/img/support/app/install1-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
+                    <li class="mb-2"> Cliquez sur "Installer l'application" en haut à droite de l'écran </li>
+                    <img src="../../assets/img/support/app/install2-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
+                    <li class="mb-2"> Pour confirmer l'installation, cliquez sur "Installer" en haut à droite de l'écran </li>
+                    <img src="../../assets/img/support/app/install3-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
                   </ul>
-                  <h3>Integrations</h3>
+                  <h3>Etape 2: Configuration d'Apple Pay</h3>
                   <ul>
-                    <li class="mb-1">
-                      <a href="../../fr/support/smile.html" class="hover more">Comment intégrer Smile ?</a>
+                    <li class="mb-2"> Cliquez sur l'onglet "Configuration" puis sur le bouton "Configurer" ou "Modifier" à coté de "Intégration de l'API Storefront" </li>
+                    <img src="../../assets/img/support/app/app-configure-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
+                    <li class="mb-2"> Cliquez sur "SDK iOS Buy" </li>
+                    <li class="mb-2"> Saisissez l'ID de l'Application fourni par le support si celui-ci est vide. </li>
+                    <li class="mb-2"> Sauvegarder ensuite la configuration en cliquant sur "Sauvegarder" </li>
+                    <li> Dans la section "Apple Pay", cliquez sur "Télécharger le fichier". Envoyer nous par email à <strong>team@makappi.com</strong> le fichier <strong>apple_pay.csr</strong> que vous avez téléchargé <img src="../../assets/img/support/app/app-apple-pay-download-fr.png" width="700" class="rounded mx-auto d-block mb-5 mt-2" />
+                    </li>
+                    <li> A la réception du ficher, nous vous renverrons sous 48h votre certificat <strong>apple_pay.cer</strong> à importer </li>
+                    <li> Cliquez sur "Importer le certificat" et sélectionnez le fichier <strong>apple_pay.cer</strong> que nous vous avons envoyé <img src="../../assets/img/support/app/app-apple-pay-import-fr.png" width="700" class="rounded mx-auto d-block mb-5 mt-2" />
+                    </li>
+                    <li> Confirmez en cliquant sur "Enregistrer" <img src="../../assets/img/support/app/app-apple-pay-import-confirm-fr.png" width="700" class="rounded mx-auto d-block mb-5 mt-2" />
+                    </li>
+                    <li> Votre certificat doit s'afficher sous "Apple Pay" <img src="../../assets/img/support/app/app-apple-pay-certificate-fr.png" width="700" class="rounded mx-auto d-block mb-5 mt-2" />
                     </li>
                   </ul>
                 </div>
             </section>
+            <a href="../../fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Retour à la FAQ</span>
+            </a>
           </div>
         </div>
       </div>

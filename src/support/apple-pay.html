@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makappi - Support > Apple Pay</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    mixpanel.track("Support/Apple Pay")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">Apple Pay</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Apple Pay</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>
+                    Payment with Apple Pay allows your customers to pay directly from their mobile without ever leaving your App. Whether on a product sheet or from the basket, they can pay for their items in 1 click.
+                  </p>
+
+                  <h3>Before you start</h3>
+                  <p>
+                    Your store and your payment terminal must be compatible with Apple Pay. For more information on Shopify requirements <a href="https://help.shopify.com/en/manual/payments/accelerated-checkouts/apple-pay#requirements" target="_blank" class="hover-3">click here</a>
+                  </p>
+                  <p>
+                    You will need your iOS App ID. Contact Makappi support to get it.
+                  </p>
+
+                  <h3>Step 1: Registering the App in Shopify</h3>
+                  <ul>
+                    <li class="mb-2">
+                      Go to the Apps part of the Shopify Admin by <a href="https://www.shopify.com/admin/apps" target="_blank" class="hover-3">clicking here</a>
+                    </li>
+
+                    <li class="mb-2">
+                      Click on "Develop apps"
+                      <img src="@@webRoot/assets/img/support/app/app-dev-app-en.png" width="700" class="rounded mx-auto d-block mb-5" />
+                    </li>
+
+                    <li class="mb-2">
+                      Click on "Allow custom app development"
+                      <img src="@@webRoot/assets/img/support/app/app-dev-auth-step1-en.png" width="700" class="rounded mx-auto d-block mb-5" />
+                    </li>
+
+                    <li class="mb-2">
+                      Click again on "Allow custom app development"
+                      <img src="@@webRoot/assets/img/support/app/app-dev-auth-step2-en.png" width="700" class="rounded mx-auto d-block mb-5" />
+                    </li>
+
+                    <li class="mb-2">
+                      If you already have an application click on its name. Otherwise click on "Create an app" and choose a name (for example "App Makappi").
+                    </li>
+
+                    <img src="@@webRoot/assets/img/support/app/app-create-en.png" width="700" class="rounded mx-auto d-block mb-5" />
+
+                    <li class="mb-2">
+                      Click on the "Configuration" tab and then on "Configure" next to "Storefront API integration"
+                    </li>
+
+                    <img src="@@webRoot/assets/img/support/app/app-configure-en.png" width="700" class="rounded mx-auto d-block mb-5" />
+
+                    <li class="mb-2">
+                      Select the "unauthenticated_read_product_listings" permission at the Products level then click on "Save"
+                    </li>
+
+                    <img src="@@webRoot/assets/img/support/app/install1-en.png" width="700" class="rounded mx-auto d-block mb-5" />
+
+                    <li class="mb-2">
+                      Click "Install app" at the top right of the screen
+                    </li>
+                    
+                    <img src="@@webRoot/assets/img/support/app/install2-en.png" width="700" class="rounded mx-auto d-block mb-5" />
+
+                    <li class="mb-2">
+                      To confirm the installation, click on "Install" at the top right of the screen
+                    </li>
+                    
+                    <img src="@@webRoot/assets/img/support/app/install3-en.png" width="700" class="rounded mx-auto d-block mb-5" />
+                  </ul>
+
+                  <h3>Step 2: Setting up Apple Pay</h3>
+                  <ul>
+                    <li class="mb-2">
+                      Click on the "Configuration" tab and then on the "Configure" or "Edit" button next to "Storefront API integration"
+                    </li>
+
+                    <img src="@@webRoot/assets/img/support/app/app-configure-en.png" width="700" class="rounded mx-auto d-block mb-5" />
+
+                    <li class="mb-2">
+                      Click on "SDK iOS Buy"
+                    </li>
+                    <li class="mb-2">
+                      Enter the Application ID provided by support if it is empty.
+                    </li>
+                    <li class="mb-2">
+                      Then save the configuration by clicking on "Save"
+                    </li>
+                    <li>
+                      In the "Apple Pay" section, click on "Download file". Email us at <strong>team@makappi.com</strong> the <strong>apple_pay.csr</strong> file you downloaded
+                      <img src="@@webRoot/assets/img/support/app/app-apple-pay-download-en.png" width="700" class="rounded mx-auto d-block mb-5 mt-2" />
+                    </li>
+                    <li>
+                      Upon receipt of the file, we will send you your <strong>apple_pay.cer</strong> certificate to import within 48 hours
+                    </li>
+                    <li>
+                      Click "Upload Certificate" and select the <strong>apple_pay.cer</strong> file we sent you
+                      <img src="@@webRoot/assets/img/support/app/app-apple-pay-import-en.png" width="700" class="rounded mx-auto d-block mb-5 mt-2" />
+                    </li>
+                    <li>
+                      Confirm by clicking "Save"
+                      <!--<img src="@@webRoot/assets/img/support/app/app-apple-pay-import-confirm-en.png" width="700" class="rounded mx-auto d-block mb-5 mt-2" />-->
+                    </li>
+                    <li>
+                      Your certificate should appear under "Apple Pay"
+                      <!--<img src="@@webRoot/assets/img/support/app/app-apple-pay-certificate-en.png" width="700" class="rounded mx-auto d-block mb-5 mt-2" />-->
+                    </li>
+                  </ul>
+
+                 
+
+                </div>
+            </section>
+
+            <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Back to FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie.html')
+</body>
+
+</html>

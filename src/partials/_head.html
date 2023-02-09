@@ -5,7 +5,8 @@
 <link rel="stylesheet" href="@@webRoot/assets/css/style.css">
 <link rel="preload" href="@@webRoot/assets/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
 <script src="https://kit.fontawesome.com/078b89fd10.js" crossorigin="anonymous"></script>
-<script type="text/javascript">
+
+<!-- <script type="text/javascript">
     (function (f, b) {
         if (!b.__SV) {
             var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) {
@@ -28,10 +29,38 @@
         opt_out_tracking_by_default: true,
         
     });
+</script> -->
+
+<script type="text/javascript">
+    function trackPage(name) {
+        // mixpanel.track(name)
+    }
 </script>
+
 <script type="text/javascript">
     window.$crisp = []; 
     window.CRISP_WEBSITE_ID = "0f537867-6e31-483e-8dda-89e0344b4b86"; 
     window.$crisp.push(['set', 'session:segments', [['website']]]);
     (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
 </script>
+
+<!-- Meta Pixel Code -->
+<script>
+    function launchFacebookPixel() {
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '564245639086196');
+        fbq('track', 'PageView');
+    }
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=564245639086196&ev=PageView&noscript=1" /></noscript>
+<!-- End Meta Pixel Code -->

@@ -27,6 +27,14 @@
   @@include('_head.html')
   <script>
     mixpanel.track("Index FR page")
+
+    function bookDemo() {
+      if (Math.random() > 0.5) {
+        window.open("https://calendly.com/makappi/demo", '_blank').focus();
+      } else {
+        window.open(" https://calendly.com/makappi-kevin/30min", '_blank').focus();
+      }
+    } 
   </script>
 </head>
 
@@ -45,7 +53,8 @@
               Transformez rapidement votre <mark>boutique Shopify</mark> en <mark>App Mobile</mark> sans écrire
               une seule ligne de code
             </p>
-            <span><a class="btn btn-lg btn-primary rounded-pill me-2" href="https://apps.shopify.com/makappi" target="_blank">Créez votre App Mobile</a></span>
+            <span><a class="btn btn-lg btn-primary rounded-pill me-2 mb-2" href="https://apps.shopify.com/makappi" target="_blank">Créez votre App Mobile</a></span>
+            <span><a class="btn btn-lg btn-outline-primary rounded-pill me-2 mb-2" onclick="bookDemo()" target="_blank">Demander une démo</a></span>
             <p class="mt-5">
               <i class="uil uil-check"></i> 30 jours d'essai gratuit
               <i class="uil uil-check"></i> Sans carte de crédit

@@ -24,6 +24,16 @@
               <a class="nav-link" href="@@webRoot/features.html">Features</a>
               }
             </li>
+            <li class="nav-item">
+              @@if (context.currentPage == "integrations") {
+              <a class="nav-link" href="@@webRoot/integrations.html">
+                <span class="underline-2 primary">Integrations</span>
+              </a>
+              }
+              @@if (context.currentPage != "integrations") {
+              <a class="nav-link" href="@@webRoot/integrations.html">Integrations</a>
+              }
+            </li>
             <li class="nav-item ">
               @@if (context.currentPage == "pricing") {
               <a class="nav-link" href="@@webRoot/pricing.html">

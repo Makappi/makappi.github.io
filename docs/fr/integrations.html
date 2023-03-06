@@ -25,34 +25,72 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="preload" href="../assets/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
   <script src="https://kit.fontawesome.com/078b89fd10.js" crossorigin="anonymous"></script>
-  <!-- <script type="text/javascript">
-    (function (f, b) {
-        if (!b.__SV) {
-            var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) {
-                function g(a, d) { var b = d.split("."); 2 == b.length && (a = a[b[0]], d = b[1]); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))) } } var a = b; "undefined" !== typeof c ? a = b[c] = [] : c = "mixpanel"; a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d }; a.people.toString = function () { return a.toString(1) + ".people (stub)" }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
-                for (h = 0; h < i.length; h++)g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]) } } for (var d = {}, e = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++)b(j[c]); return d }; b._i.push([e, f, c])
-            }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ?
-                MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g)
-        }
+  <script type="text/javascript">
+    (function(f, b) {
+      if (!b.__SV) {
+        var e, g, i, h;
+        window.mixpanel = b;
+        b._i = [];
+        b.init = function(e, f, c) {
+          function g(a, d) {
+            var b = d.split(".");
+            2 == b.length && (a = a[b[0]], d = b[1]);
+            a[d] = function() {
+              a.push([d].concat(Array.prototype.slice.call(arguments, 0)))
+            }
+          }
+          var a = b;
+          "undefined" !== typeof c ? a = b[c] = [] : c = "mixpanel";
+          a.people = a.people || [];
+          a.toString = function(a) {
+            var d = "mixpanel";
+            "mixpanel" !== c && (d += "." + c);
+            a || (d += " (stub)");
+            return d
+          };
+          a.people.toString = function() {
+            return a.toString(1) + ".people (stub)"
+          };
+          i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+          for (h = 0; h < i.length; h++) g(a, i[h]);
+          var j = "set set_once union unset remove delete".split(" ");
+          a.get_group = function() {
+            function b(c) {
+              d[c] = function() {
+                call2_args = arguments;
+                call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
+                a.push([e, call2])
+              }
+            }
+            for (var d = {}, e = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++) b(j[c]);
+            return d
+          };
+          b._i.push([e, f, c])
+        };
+        b.__SV = 1.2;
+        e = f.createElement("script");
+        e.type = "text/javascript";
+        e.async = !0;
+        e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+        g = f.getElementsByTagName("script")[0];
+        g.parentNode.insertBefore(e, g)
+      }
     })(document, window.mixpanel || []);
-
     var mixpanelId
     if (window.location.host == "www.makappi.com") {
-        mixpanelId = '86ccc71cf478dbeb32402079e2610e67'
+      mixpanelId = '86ccc71cf478dbeb32402079e2610e67'
     } else {
-        mixpanelId = 'ad626560b3af5c81cab0d3958e1c2115'
+      mixpanelId = 'ad626560b3af5c81cab0d3958e1c2115'
     }
-
     mixpanel.init(mixpanelId, {
-        api_host: 'https://api-eu.mixpanel.com',
-        opt_out_tracking_by_default: true,
-        
+      api_host: 'https://api-eu.mixpanel.com'
     });
-</script> -->
+  </script>
   <script type="text/javascript">
     function trackPage(name) {
-      // mixpanel.track(name)
+      mixpanel.track(name)
     }
+    mixpanel.track_links(".btn", "Button action")
   </script>
   <script type="text/javascript">
     window.$crisp = [];
@@ -94,7 +132,7 @@
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=564245639086196&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
   <script>
-    trackPage("Integrations page")
+    trackPage("Integrations FR page")
   </script>
 </head>
 
@@ -128,6 +166,9 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../fr/partenaires.html">Partenaires</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../fr/blog">Blog</a>
                 </li>
                 <li class="nav-item d-block d-lg-none">
                   <a href="https://app.makappi.com" class="nav-link" target="_blank">Mon espace</a>
@@ -455,7 +496,7 @@
             <div class="col-md-8 gy-5 col-lg-8">
               <div class="widget">
                 <ul class="list-unstyled text-lg-end mb-0 mt-lg-0">
-                  <li><a href="mentions.html">Mentions légales</a></li>
+                  <li><a href="../fr/mentions.html">Mentions légales</a></li>
                   <li><a href="../assets/docs/PolitiqueConfidentialite.pdf" target="_blank">Politique de confidentialité</a></li>
                   <li><a href="../assets/docs/CGU.pdf" target="_blank">Conditions générales d'utilisation</a></li>
                 </ul>
@@ -503,9 +544,6 @@
     void 0 === window._axcb && (window._axcb = []);
     window._axcb.push(function(axeptio) {
       axeptio.on("cookies:complete", function(choices) {
-        // if (choices.mixpanel) {
-        //     mixpanel.opt_in_tracking()
-        // }
         if (choices.crisp) {
           $crisp.push(["set", "session:segments", [
             ["consentOK"]

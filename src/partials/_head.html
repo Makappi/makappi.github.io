@@ -6,7 +6,7 @@
 <link rel="preload" href="@@webRoot/assets/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
 <script src="https://kit.fontawesome.com/078b89fd10.js" crossorigin="anonymous"></script>
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
     (function (f, b) {
         if (!b.__SV) {
             var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) {
@@ -25,16 +25,16 @@
     }
 
     mixpanel.init(mixpanelId, {
-        api_host: 'https://api-eu.mixpanel.com',
-        opt_out_tracking_by_default: true,
-        
+        api_host: 'https://api-eu.mixpanel.com'
     });
-</script> -->
+</script>
 
 <script type="text/javascript">
     function trackPage(name) {
-        // mixpanel.track(name)
+        mixpanel.track(name)
     }
+
+    mixpanel.track_links(".btn", "Button action")
 </script>
 
 <script type="text/javascript">

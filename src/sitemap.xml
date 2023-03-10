@@ -25,6 +25,18 @@
                href="https://www.makappi.com/fr/fonctionnalites.html"/>
     </url>
     <url>
+        <loc>https://www.makappi.com/integrations.html</loc>
+        <priority>0.80</priority>
+        <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://www.makappi.com/integrations.html"/>
+        <xhtml:link
+               rel="alternate"
+               hreflang="fr"
+               href="https://www.makappi.com/fr/integrations.html"/>
+    </url>
+    <url>
         <loc>https://www.makappi.com/pricing.html</loc>
         <priority>0.80</priority>
         <xhtml:link

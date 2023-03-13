@@ -44,7 +44,7 @@ var path = {
     cname: 'src/CNAME',
   },
   watch: {
-    html: ['src/**/*.html', 'src/**/*.xml'],
+    html: ['src/**/*.html'],
     partials: 'src/partials/**/*.*',
     themejs: 'src/assets/js/theme.js',
     vendorjs: 'src/assets/js/vendor/*.*',
@@ -56,7 +56,9 @@ var path = {
     fonts: 'src/assets/fonts/**/*.*',
     media: 'src/assets/media/**/*.*',
     docs: 'src/assets/docs/',
-    user: 'src/assets/scss/_user-variables.scss'
+    user: 'src/assets/scss/_user-variables.scss',
+    sitemap: ['src/sitemap.xml'],
+    cname: 'src/CNAME'
   },
   clean: {
     dev: 'dev/*',
@@ -453,6 +455,8 @@ gulp.task('watch', function () {
     gulp.watch(path.watch.media, gulp.series('media:dist'));
     gulp.watch(path.watch.docs, gulp.series('docs:dist'));
     gulp.watch(path.watch.user, gulp.series('colorcss:dist'));
+    gulp.watch(path.watch.sitemap, gulp.series('sitemap:dist'));
+    gulp.watch(path.watch.cname, gulp.series('cname:dist'));
 });
 
 // Serve

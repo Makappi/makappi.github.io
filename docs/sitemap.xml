@@ -25,6 +25,18 @@
                href="https://www.makappi.com/fr/fonctionnalites.html"/>
     </url>
     <url>
+        <loc>https://www.makappi.com/integrations.html</loc>
+        <priority>0.80</priority>
+        <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://www.makappi.com/integrations.html"/>
+        <xhtml:link
+               rel="alternate"
+               hreflang="fr"
+               href="https://www.makappi.com/fr/integrations.html"/>
+    </url>
+    <url>
         <loc>https://www.makappi.com/pricing.html</loc>
         <priority>0.80</priority>
         <xhtml:link
@@ -85,11 +97,11 @@
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.makappi.com/fr/blog/5-conseils-notifications-push-relance-paniers-abandones.html</loc>
+        <loc>https://www.makappi.com/fr/blog/articles/5-conseils-notifications-push-relance-paniers-abandones.html</loc>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.makappi.com/fr/blog/articles/4-astuces-navigation-app-mobile.html.html</loc>
+        <loc>https://www.makappi.com/fr/blog/articles/4-astuces-navigation-app-mobile.html</loc>
         <priority>0.80</priority>
     </url>
     <url>

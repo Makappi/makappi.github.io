@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="fr">
+
 <head>
     <title>Makappi - Blog - @@title</title>
 
@@ -22,3 +25,37 @@
         trackPage("Blog FR - @@title")
     </script>
 </head>
+
+<body>
+    <div class="content-wrapper">
+        @@include('_header_fr.html', {"currentPage": "blog"})
+
+        <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="@@webRoot/assets/img/blog/@@image_name">
+            <div class="container pt-17 pb-13 pt-md-19 pb-md-17 text-center">
+                <div class="row">
+                    <div class="col-md-10 col-xl-8 mx-auto">
+                        <div class="post-header">
+                            <div class="post-category text-line text-white">
+                                @@category
+                            </div>
+                            <h1 class="display-1 mb-4 text-white">@@title</h1>
+                            <ul class="post-meta text-white">
+                                <li class="post-date"><i class="uil uil-calendar-alt"></i><span>@@date</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper bg-light">
+            <div class="container py-5">
+                <div class="row gx-lg-8 gx-xl-12">
+                    <div class="col-lg-8">
+                        <div class="blog single">
+                            <div class="card">
+                                <figure class="card-img-top"><img src="@@webRoot/assets/img/blog/@@image_name"/></figure>
+                                <div class="card-body">
+                                    <div class="classic-view">
+                                        <article class="post">
+                                            <div class="post-content mb-5">

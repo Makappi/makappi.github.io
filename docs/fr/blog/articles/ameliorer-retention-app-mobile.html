@@ -88,6 +88,13 @@
       mixpanel.track(name)
     }
     mixpanel.track_links(".btn", "Button action")
+
+    function createApp() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-11209948472/O0OnCKPE46gYELj6qOEp'
+      });
+      console.log('ok2');
+    }
   </script>
   <script type="text/javascript">
     window.$crisp = [];
@@ -128,6 +135,17 @@
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=564245639086196&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11209948472"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'AW-11209948472');
+  </script>
   <script>
     trackPage("Blog FR - Comment une application mobile peut améliorer la rétention de vos clients et augmenter vos ventes ?")
   </script>
@@ -177,7 +195,7 @@
                 <a class="btn btn-sm btn-outline-primary rounded-pill fs-16" href="https://app.makappi.com" target="_blank">Mon espace</a>
               </li>
               <li class="nav-item d-none d-md-block">
-                <a class="btn btn-sm btn-primary rounded-pill" href="https://apps.shopify.com/makappi" target="_blank">Créez votre App</a>
+                <a class="btn btn-sm btn-primary rounded-pill" href="https://apps.shopify.com/makappi" target="_blank" onclick="createApp()">Créez votre App</a>
               </li>
               <li class="nav-item d-lg-none">
                 <button class="hamburger offcanvas-nav-btn"><span></span></button>

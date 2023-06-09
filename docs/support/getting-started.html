@@ -77,6 +77,13 @@
       mixpanel.track(name)
     }
     mixpanel.track_links(".btn", "Button action")
+
+    function createApp() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-11209948472/O0OnCKPE46gYELj6qOEp'
+      });
+      console.log('ok2');
+    }
   </script>
   <script type="text/javascript">
     window.$crisp = [];
@@ -117,6 +124,17 @@
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=564245639086196&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11209948472"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'AW-11209948472');
+  </script>
   <script>
     trackPage("Support/Getting started")
   </script>

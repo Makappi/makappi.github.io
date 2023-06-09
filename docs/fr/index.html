@@ -92,6 +92,13 @@
       mixpanel.track(name)
     }
     mixpanel.track_links(".btn", "Button action")
+
+    function createApp() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-11209948472/O0OnCKPE46gYELj6qOEp'
+      });
+      console.log('ok2');
+    }
   </script>
   <script type="text/javascript">
     window.$crisp = [];
@@ -132,6 +139,17 @@
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=564245639086196&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11209948472"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'AW-11209948472');
+  </script>
   <script>
     trackPage("Index FR page")
 
@@ -141,6 +159,9 @@
       } else {
         window.open(" https://calendly.com/makappi-kevin/30min", '_blank').focus();
       }
+      gtag('event', 'conversion', {
+        'send_to': 'AW-11209948472/O0OnCKPE46gYELj6qOEp'
+      });
     }
   </script>
 </head>
@@ -189,7 +210,7 @@
                 <a class="btn btn-sm btn-outline-primary rounded-pill fs-16" href="https://app.makappi.com" target="_blank">Mon espace</a>
               </li>
               <li class="nav-item d-none d-md-block">
-                <a class="btn btn-sm btn-primary rounded-pill" href="https://apps.shopify.com/makappi" target="_blank">Créez votre App</a>
+                <a class="btn btn-sm btn-primary rounded-pill" href="https://apps.shopify.com/makappi" target="_blank" onclick="createApp()">Créez votre App</a>
               </li>
               <li class="nav-item d-lg-none">
                 <button class="hamburger offcanvas-nav-btn"><span></span></button>
@@ -214,7 +235,7 @@
               <span class="fs-13 bg-soft-primary text-primary p-1 px-2 fw-bold rounded rounded-2 text-center"> Sans écrire une ligne de code </span>
             </div>
             <div class="mt-10">
-              <span><a class="btn btn-lg btn-primary rounded-pill me-2 mb-2 shadow shadow-lg" href="https://apps.shopify.com/makappi" target="_blank">Créez votre App Mobile</a></span>
+              <span><a class="btn btn-lg btn-primary rounded-pill me-2 mb-2 shadow shadow-lg" href="https://apps.shopify.com/makappi" target="_blank" onclick="createApp()">Créez votre App Mobile</a></span>
               <span><a class="btn btn-lg btn-outline-primary rounded-pill me-2 mb-2 shadow shadow-lg" onclick="bookDemo()" target="_blank">Demandez une démo</a></span>
             </div>
             <p class="mt-1 mb-1 ms-0 align-middle text-primary">
@@ -298,7 +319,7 @@
                     <li><span><i class="uil uil-check"></i></span><span>Augmenter le nombre de visites</span></li>
                     <li><span><i class="uil uil-check"></i></span>Boostez vos revenus<span></span></li>
                   </ul>
-                  <a class="btn btn-primary rounded-pill me-2 mt-8" href="https://apps.shopify.com/makappi" target="_blank">Créez votre App</a>
+                  <a class="btn btn-primary rounded-pill me-2 mt-8" href="https://apps.shopify.com/makappi" target="_blank" onclick="createApp()">Créez votre App</a>
                 </div>
                 <!--/.accordion-collapse -->
               </div>
@@ -323,7 +344,7 @@
                     <li><span><i class="uil uil-check"></i></span><span>Relancez automatiquement les paniers abandonnés</span></li>
                     <li><span><i class="uil uil-check"></i></span><span>Programmez vos campagnes et retenez leur attention avec vos nouvelles collections, produits et évènements.</span></li>
                   </ul>
-                  <a class="btn btn-primary rounded-pill me-2 mt-8" href="https://apps.shopify.com/makappi" target="_blank">Créez votre App</a>
+                  <a class="btn btn-primary rounded-pill me-2 mt-8" href="https://apps.shopify.com/makappi" target="_blank" onclick="createApp()">Créez votre App</a>
                 </div>
                 <!--/.accordion-collapse -->
               </div>
@@ -355,7 +376,7 @@
                     <li><span><i class="uil uil-check"></i></span><span>Chargement instantané des pages</span></li>
                     <li><span><i class="uil uil-check"></i></span><span>Achat simplifié avec Apple Pay</span></li>
                   </ul>
-                  <a class="btn btn-primary rounded-pill me-2 mt-8" href="https://apps.shopify.com/makappi" target="_blank">Créez votre App</a>
+                  <a class="btn btn-primary rounded-pill me-2 mt-8" href="https://apps.shopify.com/makappi" target="_blank" onclick="createApp()">Créez votre App</a>
                 </div>
                 <!--/.accordion-collapse -->
               </div>
@@ -381,7 +402,7 @@
                     <li><span><i class="uil uil-check"></i></span><span>Sélectionnez le thème qui vous correspond</span></li>
                     <li><span><i class="uil uil-check"></i></span><span>Customisez par simple glisser/déposer sans écrire une seule ligne de code</span></li>
                   </ul>
-                  <a class="btn btn-primary rounded-pill me-2 mt-4" href="https://apps.shopify.com/makappi" target="_blank">Créez votre App</a>
+                  <a class="btn btn-primary rounded-pill me-2 mt-4" href="https://apps.shopify.com/makappi" target="_blank" onclick="createApp()">Créez votre App</a>
                 </div>
                 <!--/.accordion-collapse -->
               </div>

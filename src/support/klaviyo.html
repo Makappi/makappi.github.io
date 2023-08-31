@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Makappi - Support > Klaviyo</title>
+    <meta name="robots" content="noindex">
+    @@include('_head.html')
+    <script>
+        trackPage("Support/Klaviyo")
+    </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+    <div class="content-wrapper">
+        @@include('_header.html', {"currentPage": "support"})
+
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+                <div class="row text-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+                        <h1 class="display-1 mb-3">Klaviyo</h1>
+                        <nav class="d-inline-block" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Klaviyo</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row gx-0">
+                    <div class="col-xl-8 mx-auto">
+                        <section class="wrapper pt-8">
+                            <div class="card">
+                                <div class="card-body p-10">
+                                    <p>
+                                        Integration allows you to capture events and send Push Notifications to your users from Klaviyo.
+                                    </p>
+                        
+                                    <h3>Events Sent to Klaviyo</h3>
+                                    <p>
+                                        Upon activating the Klaviyo integration, your App automatically sends events to Klaviyo.
+                                    </p>
+                                    <p>
+                                        List of visited screens:
+                                    </p>
+                                    <ul>
+                                        <li>Visit Home</li>
+                                        <li>Visit Collection</li>
+                                        <li>Visit Products List (params: collectionId, collectionTitle)</li>
+                                        <li>$viewed_product (params: productId, productTitle)</li>
+                                        <li>Visit Cart</li>
+                                        <li>Visit Wishlist</li>
+                                        <li>Visit Menu</li>
+                                        <li>Visit Sign In</li>
+                                        <li>Visit Sign Up</li>
+                                        <li>Visit Account Menu</li>
+                                        <li>Visit Orders</li>
+                                    </ul>
+                        
+                                    <p>
+                                        List of actions:
+                                    </p>
+                                    <ul>
+                                        <li>Add to cart (params: productId, variantId, productTitle)</li>
+                                        <li>Remove from cart (params: productId, variantId, productTitle)</li>
+                                        <li>Clear cart</li>
+                                        <li>Add to wishlist (params: productId, variantId, productTitle)</li>
+                                        <li>Clear wishlist</li>
+                                        <li>$started_checkout (params: cart_token) - when user reaches checkout</li>
+                                        <li>$placed_order (params: products, totalPrice, cartToken) - when user places an order</li>
+                                        <li>Open Push Notification (params: origin)</li>
+                                    </ul>
+                        
+                                    <h3>Identifying App Users in Klaviyo</h3>
+                                    <p>
+                                        You can segment App users by checking if they have a Push Notification Token.
+                                    </p>
+                        
+                                    <img src="@@webRoot/assets/img/support/klaviyo/klaviyo-push-token.png" width="500" class="rounded mx-auto d-block" />
+                        
+                                    <h3 class="mt-10">Sending Push Notifications with Klaviyo</h3>
+                                    <p>
+                                        You can configure Klaviyo to send Push Notifications to your users instead of using Makappi.
+                                    </p>
+                                    <p>
+                                        Push Notification sending can also be integrated into your existing campaigns. For example, <i>"If the user can receive Push Notifications, I'll send the message via Push, otherwise
+                                            I'll send an email."</i>
+                                    </p>
+                                    <p>
+                                        Configuration is done in Klaviyo to send Push Notifications to your iOS and Android Apps.
+                                        Contact <a href="mailto:support@makappi.com">support@makappi.com</a> to get the specific settings for your App.
+                                    </p>
+                                    <ul>
+                                        <li>To configure iOS Push: <a href="https://help.klaviyo.com/hc/en-us/articles/360023213971" target="_blank">click here</a></li>
+                                        <li>To configure Android Push: <a href="https://help.klaviyo.com/hc/en-us/articles/14750928993307" target="_blank">click here</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+                            <i class="uil uil-arrow-left"></i>
+                            <span>Back to FAQ</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    @@include('_footer.html', {"currentPage": "support"})
+    @@include('_page-progress.html')
+    @@include('_scripts.html')
+    @@include('_cookie.html')
+</body>
+
+</html>

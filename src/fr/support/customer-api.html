@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Makappi - Support > Compte Clients</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support/Customer-API")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">Comment configurer les nouveaux comptes Client Shopify ?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">Intégrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">API Client Shopify</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <h3>Prérequis</h3>
+                  <p>
+                    Assurez-vous que les "Nouveaux comptes clients" sont activés dans votre administration Shopify.
+                  </p>
+
+                  <h3>Étape 1 : Installer l'application Shopify "Headless"</h3>
+                  <ul>
+                    <li>
+                      Cliquez sur ce lien pour installer directement l'application : <a href="https://apps.shopify.com/headless" target="_blank" class="btn btn-sm btn-outline-primary">Installer l'App Headless</a>
+                    </li>
+                    <li>
+                      Une fois installée, cliquez sur <strong>"Créer une interface de vente"</strong>
+                    </li>
+                  </ul>
+
+                  <h3>Étape 2 : Configurer l'API Customer Account</h3>
+                  <ul>
+                    <li>
+                      Dans l'application Headless, sous <strong>"Gérer l’accès à l’API"</strong>, cliquez sur <strong>"Gérer"</strong> à côté de "Customer Account API"
+                    </li>
+                    <img src="@@webRoot/assets/img/support/customerAPI/customerAPI-Create.png" width="500" class="rounded mx-auto d-block mb-5" />
+
+                    <li>
+                      Changer le type de client en <strong>"Public (application mobile)"</strong> au lieu de "Public (web app)". Puis sauver la modification ("Enregistrer" en haut de l'écran).
+                    </li>
+                    <img src="@@webRoot/assets/img/support/customerAPI/customerAPI-type1.png" width="500" class="rounded mx-auto d-block mb-5" />
+                    <img src="@@webRoot/assets/img/support/customerAPI/customerAPI-type2.png" width="500" class="rounded mx-auto d-block mb-5" />
+
+                    <li>
+                      Copiez le <strong>Client ID</strong> qui s'affiche
+                    </li>
+                    <img src="@@webRoot/assets/img/support/customerAPI/customerAPI-ClientID.png" width="500" class="rounded mx-auto d-block mb-5" />
+                  </ul>
+
+                  <h3>Étape 3 : Récupérer le Shop ID</h3>
+                  <ul>
+                    <li>
+                      Dans la section <strong>"Points de terminaison de l’application"</strong>, vous trouverez votre Shop ID
+                    </li>
+                    <li>
+                      Le Shop ID se trouve dans l'URL des points de terminaison, par exemple : <code>https://shopify.com/authentication/97992016204/oauth/authorize</code>
+                    </li>
+                    <li>
+                      Dans cet exemple, le Shop ID est <strong>97992016204</strong>
+                    </li>
+                    <img src="@@webRoot/assets/img/support/customerAPI/customerAPI-ShopID.png" width="500" class="rounded mx-auto d-block mb-5" />
+                  </ul>
+
+                  <h3>Étape 4 : Finalisation dans Makappi</h3>
+                  <ul>
+                    <li>
+                      Connectez-vous à votre tableau de bord Makappi
+                    </li>
+                    <li>
+                      Allez dans la section <strong>"Design"</strong> puis la page <strong>"Options"</strong>
+                    </li>
+                    <li>
+                      Désactivez <strong>"Utiliser les anciens comptes clients"</strong>
+                    </li>
+                    <li>
+                      Saisissez votre <strong>Client ID</strong> et votre <strong>Shop ID</strong>
+                    </li>
+                    <li>
+                      Publiez les modifications et contacter le support pour finaliser l'intégration. L'activation des nouveaux comptes clients nécessite une mise à jour des Apps iOS et Android.
+                    </li>
+                  </ul>
+
+                  <h3>Résolution de problèmes</h3>
+                  <ul>
+                    <li>
+                      Vérifiez que les "Nouveaux comptes clients" sont bien activés dans Shopify
+                    </li>
+                    <li>
+                      Assurez-vous d'avoir sélectionné "Public (application mobile)" et non "Public (web app)"
+                    </li>
+                    <li>
+                      Vérifiez que les URLs de rappel correspondent exactement à votre Shop ID
+                    </li>
+                  </ul>
+                </div>
+            </section>
+
+            <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Retour à la FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie.html')
+</body>
+</html>

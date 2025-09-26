@@ -2,14 +2,14 @@
 <html lang="fr">
 
 <head>
-  <title>Makappi - Support > Publication</title>
+  <title>Makappi - Support > API Client Shopify</title>
   <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../../assets/img/favicon.png">
-  <link rel="stylesheet" href="../../assets/css/plugins.css">
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="preload" href="../../assets/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="shortcut icon" href="../assets/img/favicon.png">
+  <link rel="stylesheet" href="../assets/css/plugins.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="preload" href="../assets/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
   <script src="https://kit.fontawesome.com/078b89fd10.js" crossorigin="anonymous"></script>
   <script type="text/javascript">
     (function(f, b) {
@@ -135,7 +135,7 @@
     gtag('config', 'AW-11209948472');
   </script>
   <script>
-    trackPage("Support FR")
+    trackPage("Support/Customer-API")
   </script>
 </head>
 
@@ -145,8 +145,8 @@
       <nav class="navbar navbar-expand-lg classic transparent navbar-light">
         <div class="container flex-lg-row flex-nowrap align-items-center">
           <div class="navbar-brand w-100">
-            <a href="../../fr/">
-              <img src="../../assets/img/logo-title.png" class="w-18" alt="img-fluid" />
+            <a href="../">
+              <img src="../assets/img/logo-title.png" class="w-18" alt="img-fluid" />
             </a>
           </div>
           <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -157,19 +157,19 @@
             <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="../../fr/fonctionnalites.html">Fonctionnalités</a>
+                  <a class="nav-link" href="../features.html">Features</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../../fr/integrations.html">Intégrations</a>
+                  <a class="nav-link" href="../integrations.html">Integrations</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../../fr/realisations.html">Réalisations</a>
+                  <a class="nav-link" href="../portfolio.html">Portfolio</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="../../fr/tarifs.html">Tarifs</a>
+                  <a class="nav-link" href="../pricing.html">Pricing</a>
                 </li>
                 <li class="nav-item d-block d-lg-none">
-                  <a href="https://app.makappi.com" class="nav-link" target="_blank">Mon espace</a>
+                  <a href="https://app.makappi.com" class="nav-link" target="_blank">My space</a>
                 </li>
               </ul>
               <!-- /.navbar-nav -->
@@ -180,10 +180,10 @@
           <div class="navbar-other ms-lg-4">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
               <li class="nav-item d-none d-lg-block">
-                <a class="btn btn-sm btn-outline-primary rounded-pill fs-16" href="https://app.makappi.com" target="_blank">Mon espace</a>
+                <a class="btn btn-sm btn-outline-primary rounded-pill fs-16" href="https://app.makappi.com" target="_blank">My space</a>
               </li>
               <li class="nav-item d-none d-md-block">
-                <a class="btn btn-sm btn-primary rounded-pill" href="https://apps.shopify.com/makappi" target="_blank" onclick="createApp()">Créez votre App</a>
+                <a class="btn btn-sm btn-primary rounded-pill" href="https://apps.shopify.com/makappi" target="_blank">Create your App</a>
               </li>
               <li class="nav-item d-lg-none">
                 <button class="hamburger offcanvas-nav-btn"><span></span></button>
@@ -200,55 +200,97 @@
       <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
         <div class="row text-center">
           <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-            <h1 class="display-1 mb-3">FAQ</h1>
+            <h1 class="display-1 mb-3">Comment configurer l'API Client Shopify ?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="../support/">Intégrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">API Client Shopify</li>
+              </ol>
+            </nav>
           </div>
         </div>
         <div class="row gx-0">
-          <div class="col-xl-10 mx-auto">
+          <div class="col-xl-8 mx-auto">
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-10">
+                  <p> L'API Client Shopify permet à vos clients de se connecter avec leurs comptes Shopify directement dans votre application mobile. Cette configuration permet l'authentification sécurisée et l'accès aux données des comptes clients. </p>
+                  <h3>Prérequis</h3>
+                  <p> Assurez-vous que les "Nouveaux comptes clients" sont activés dans votre administration Shopify. </p>
+                  <h3>Étape 1 : Installer l'application Shopify "Headless"</h3>
                   <ul>
-                    <li class="mb-1">
-                      <a href="../../fr/support/bien-commencer.html" class="hover more">Comment bien commencer à utiliser Makappi ?</a>
+                    <li> Dans votre boutique Shopify, allez dans le <strong>App Store Shopify</strong>
                     </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/produits-collections.html" class="hover more">Comment ajouter vos produits et vos collections ?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/publication.html" class="hover more">Comment publier mon App sur l'App Store (Apple) et le Play Store (Android) ?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/stores.html" class="hover more">Votre page App Store (Apple) et Play Store (Android)</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/mises-a-jour.html" class="hover more">Quand votre App est-elle mise à jour ?</a>
-                    </li>
-                    <!-- <li class="mb-1">
-                      <a href="../../fr/support/liens.html" class="hover more">Comment configurer les liens universels ?</a>
-                    </li> -->
-                    <li class="mb-1">
-                      <a href="../../fr/support/apple-pay.html" class="hover more">Comment configurer Apple Pay ?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/customer-api.html" class="hover more">Comment configurer les nouveaux comptes Client Shopify ?</a>
+                    <li> Recherchez et installez l'application gratuite <strong>"Headless"</strong> de Shopify </li>
+                    <li> Une fois installée, cliquez sur <strong>"Create Storefront"</strong>
                     </li>
                   </ul>
-                  <h3>Integrations</h3>
+                  <h3>Étape 2 : Configurer l'API Customer Account</h3>
                   <ul>
-                    <li class="mb-1">
-                      <a href="../../fr/support/smile.html" class="hover more">Comment intégrer Smile ?</a>
+                    <li> Dans l'application Headless, sous <strong>"Manage API Access"</strong>, cliquez sur <strong>"Manage"</strong> à côté de "Customer Account API" </li>
+                    <li>
+                      <strong>Important :</strong> Sélectionnez <strong>"Public (application mobile)"</strong> au lieu de "Public (web app)"
                     </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/klaviyo.html" class="hover more">Comment intégrer Klaviyo ?</a>
+                    <li> Copiez le <strong>Client ID</strong> qui s'affiche </li>
+                    <img src="../assets/img/support/customerAPI/customerAPI-ClientID.png" width="500" class="rounded mx-auto d-block mb-5" />
+                  </ul>
+                  <h3>Étape 3 : Récupérer le Shop ID</h3>
+                  <ul>
+                    <li> Dans la section <strong>"Application Endpoints"</strong>, vous trouverez votre Shop ID </li>
+                    <li> Le Shop ID se trouve dans l'URL des points de terminaison, par exemple : <code>shopify.com/authentication/97992016204</code>
+                    </li>
+                    <li> Dans cet exemple, le Shop ID est <strong>97992016204</strong>
+                    </li>
+                    <img src="../assets/img/support/customerAPI/customerAPI-ShopID.png" width="500" class="rounded mx-auto d-block mb-5" />
+                  </ul>
+                  <h3>Étape 4 : Configuration des URLs de rappel</h3>
+                  <ul>
+                    <li> Dans la section <strong>"Application Setup"</strong>, cliquez sur <strong>"Edit"</strong>
+                    </li>
+                    <li> Ajoutez l'URL de rappel : <code>https://shop.{VOTRE_SHOP_ID}.makappi.app/auth/callback</code>
+                    </li>
+                    <li> Remplacez <code>{VOTRE_SHOP_ID}</code> par votre Shop ID réel </li>
+                    <li> Dans <strong>"Javascript Origins"</strong>, ajoutez : <code>https://shop.{VOTRE_SHOP_ID}.makappi.app</code>
                     </li>
                   </ul>
-                  <br /><br />
-                  <h3 className="mt-10">Vous avez une autre question ?</h3>
-                  <p> Vous pouvez aussi nous contacter par email : <a href="mailto:support@makappi.com">support@makappi.com</a>
-                  </p>
+                  <h3>Étape 5 : Finalisation dans Makappi</h3>
+                  <ul>
+                    <li> Connectez-vous à votre tableau de bord Makappi </li>
+                    <li> Allez dans la section <strong>"Intégrations"</strong>
+                    </li>
+                    <li> Activez l'intégration <strong>"API Client Shopify"</strong>
+                    </li>
+                    <li> Saisissez votre <strong>Client ID</strong> et votre <strong>Shop ID</strong>
+                    </li>
+                    <li> Publiez les modifications pour finaliser l'intégration </li>
+                  </ul>
+                  <div class="alert alert-warning d-flex align-items-center" role="alert">
+                    <i class="uil uil-exclamation-triangle me-2"></i>
+                    <div>
+                      <strong>Note importante :</strong> L'activation de l'API Client Shopify peut prendre quelques heures avant d'être pleinement fonctionnelle. Testez l'authentification après la configuration.
+                    </div>
+                  </div>
+                  <h3>Points de terminaison d'authentification</h3>
+                  <p> Une fois configuré, votre application utilisera les points de terminaison suivants : </p>
+                  <ul>
+                    <li><strong>Point de terminaison d'autorisation :</strong> <code>https://shopify.com/authentication/{SHOP_ID}/oauth/authorize</code></li>
+                    <li><strong>Point de terminaison de jeton :</strong> <code>https://shopify.com/authentication/{SHOP_ID}/oauth/token</code></li>
+                    <li><strong>Point de terminaison de déconnexion :</strong> <code>https://shopify.com/authentication/{SHOP_ID}/logout</code></li>
+                  </ul>
+                  <h3>Résolution de problèmes</h3>
+                  <ul>
+                    <li> Vérifiez que les "Nouveaux comptes clients" sont bien activés dans Shopify </li>
+                    <li> Assurez-vous d'avoir sélectionné "Public (application mobile)" et non "Public (web app)" </li>
+                    <li> Vérifiez que les URLs de rappel correspondent exactement à votre Shop ID </li>
+                    <li> Attendez quelques heures après la configuration avant de tester </li>
+                  </ul>
                 </div>
             </section>
+            <a href="../support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Retour à la FAQ</span>
+            </a>
           </div>
         </div>
       </div>
@@ -260,8 +302,8 @@
         <div class="col-xl-11 col-xxl-10 mx-auto">
           <div class="card image-wrapper bg-full bg-primary bg-overlay-400 mt-n50p mb-n15 mb-md-n5">
             <div class="card-body p-6 p-md-11 d-lg-flex flex-row align-items-lg-center justify-content-md-between text-center text-lg-start">
-              <h3 class="display-5 mb-6 mb-lg-0 pe-lg-15 pe-xxl-18 text-white">Augmentez l'engagement de vos clients et boostez vos ventes à l'aide de votre App Mobile</h3>
-              <a href="https://apps.shopify.com/makappi" target="_blank" class="btn btn-white rounded-pill mb-0 text-nowrap">Créez votre App</a>
+              <h3 class="display-5 mb-6 mb-lg-0 pe-lg-15 pe-xxl-18 text-white">Increase your customer's engagement and boost your sales with your Mobile App</h3>
+              <a href="https://apps.shopify.com/makappi" target="_blank" class="btn btn-white rounded-pill mb-0 text-nowrap">Create your App</a>
             </div>
             <!--/.card-body -->
           </div>
@@ -278,11 +320,11 @@
           <div class="row mb-3">
             <div class="col-md-4">
               <div class="widget text-lg-start">
-                <h4 class="widget-title">Contactez nous</h4>
+                <h4 class="widget-title">Contact us</h4>
                 <ul class="list-unstyled mb-0">
                   <li><a href="mailto:contact@makappi.com">contact@makappi.com</a></li>
                   <li><br /></li>
-                  <li><a href="../../support/">Switch to English <img src="../../assets/img/flags/usa.png" class="w-5 mb-1" /></a></li>
+                  <li><a href="../fr/support/">Passer en Français <img src="../assets/img/flags/france.png" class="w-5 mb-1" /></a></li>
                 </ul>
               </div>
               <!-- /.widget -->
@@ -291,11 +333,10 @@
             <div class="col-md-8 gy-5 col-lg-8">
               <div class="widget">
                 <ul class="list-unstyled text-lg-end mb-0 mt-lg-0">
-                  <li><a href="../../fr/blog">Blog</a></li>
-                  <li><a href="../../fr/partenaires.html">Partenaires</a></li>
-                  <li><a href="../../fr/mentions.html">Mentions légales</a></li>
-                  <li><a href="../../assets/docs/PolitiqueConfidentialite.pdf" target="_blank">Politique de confidentialité</a></li>
-                  <li><a href="../../assets/docs/CGU.pdf" target="_blank">Conditions générales d'utilisation</a></li>
+                  <li><a href="../partners.html">Partners</a></li>
+                  <li><a href="../fr/mentions.html">Legal notices</a></li>
+                  <li><a href="../assets/docs/PolitiqueConfidentialite.pdf" target="_blank">Privacy Policy</a></li>
+                  <li><a href="../assets/docs/CGU.pdf" target="_blank">Terms of use</a></li>
                 </ul>
               </div>
               <!-- /.widget -->
@@ -303,14 +344,6 @@
             <!-- /column -->
           </div>
           <!--/.row -->
-          <!-- <p>© 2022 Makappi. All rights reserved.</p>
-          <nav class="nav social justify-content-center">
-            <a href="#"><i class="uil uil-twitter"></i></a>
-            <a href="#"><i class="uil uil-facebook-f"></i></a>
-            <a href="#"><i class="uil uil-dribbble"></i></a>
-            <a href="#"><i class="uil uil-instagram"></i></a>
-            <a href="#"><i class="uil uil-youtube"></i></a>
-          </nav> -->
           <!-- /.social -->
         </div>
         <!-- /column -->
@@ -324,12 +357,12 @@
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
   </div>
-  <script src="../../assets/js/plugins.js"></script>
-  <script src="../../assets/js/theme.js"></script>
+  <script src="../assets/js/plugins.js"></script>
+  <script src="../assets/js/theme.js"></script>
   <script>
     window.axeptioSettings = {
       clientId: "62cda5a4dd4555d5187103c0",
-      cookiesVersion: "site web makappi-fr-2",
+      cookiesVersion: "site web makappi-en-2",
     };
     (function(d, s) {
       var t = d.getElementsByTagName(s)[0],

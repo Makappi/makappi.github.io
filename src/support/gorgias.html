@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Makappi - Support > Gorgias</title>
+    <meta name="robots" content="noindex">
+    @@include('_head.html')
+    <script>
+        trackPage("Support/Gorgias")
+    </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+    <div class="content-wrapper">
+        @@include('_header.html', {"currentPage": "support"})
+
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+                <div class="row text-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+                        <h1 class="display-1 mb-3">Gorgias</h1>
+                        <nav class="d-inline-block" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Gorgias</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row gx-0">
+                    <div class="col-xl-8 mx-auto">
+                        <section class="wrapper pt-8">
+                            <div class="card">
+                                <div class="card-body p-10">
+                                    <p>
+                                        The Gorgias integration allows you to embed a live chat widget directly into your App, so your customers can contact your support team without leaving the App.
+                                    </p>
+
+                                    <h3>Setup</h3>
+                                    <p>
+                                        To activate the Gorgias integration, go to <b>Settings > Integrations</b> in the <a href="https://app.makappi.com" target="_blank" class="hover-3">Makappi Backoffice</a> and enter your Gorgias Application ID.
+                                    </p>
+
+                                    <h3 class="mt-10">How to Find Your Gorgias Application ID</h3>
+                                    <p>
+                                        To locate your Application ID, follow these steps in your Gorgias dashboard:
+                                    </p>
+                                    <ol>
+                                        <li class="mb-2">Go to <b>Settings</b> and select <b>Chat</b> in the <b>Channels</b> section</li>
+                                        <li class="mb-2">Choose the Chat widget you want to connect</li>
+                                        <li class="mb-2">Go to <b>Installation</b> > <b>Manual Installation</b> > <b>Google Tag Manager</b></li>
+                                        <li class="mb-2">Your <b>Chat Application ID</b> will be displayed in step 4</li>
+                                    </ol>
+
+                                    <img src="@@webRoot/assets/img/support/gorgias/gorgias-ApplicationId.png" width="500" class="rounded mx-auto d-block" />
+
+                                    <h3 class="mt-10">Adding the Chat to Your Menu</h3>
+                                    <p>
+                                        To make the Gorgias chat accessible to your customers, a "Contact" link can be added to your App's menu. Contact us at <a href="mailto:support@makappi.com">support@makappi.com</a> and we will add it for you.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+                            <i class="uil uil-arrow-left"></i>
+                            <span>Back to FAQ</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    @@include('_footer.html', {"currentPage": "support"})
+    @@include('_page-progress.html')
+    @@include('_scripts.html')
+    @@include('_cookie.html')
+</body>
+
+</html>

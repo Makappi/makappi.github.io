@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-  <title>Makappi - Support > Compte Clients</title>
+  <title>Makappi - Support > New Customer Accounts</title>
   <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../../assets/img/favicon.png">
-  <link rel="stylesheet" href="../../assets/css/plugins.css">
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="preload" href="../../assets/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="shortcut icon" href="../assets/img/favicon.png">
+  <link rel="stylesheet" href="../assets/css/plugins.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="preload" href="../assets/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
   <script src="https://kit.fontawesome.com/078b89fd10.js" crossorigin="anonymous"></script>
   <script type="text/javascript">
     (function(f, b) {
@@ -145,8 +145,8 @@
       <nav class="navbar navbar-expand-lg classic transparent navbar-light">
         <div class="container flex-lg-row flex-nowrap align-items-center">
           <div class="navbar-brand w-100">
-            <a href="../../">
-              <img src="../../assets/img/logo-title.png" class="w-18" alt="img-fluid" />
+            <a href="../">
+              <img src="../assets/img/logo-title.png" class="w-18" alt="img-fluid" />
             </a>
           </div>
           <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -157,16 +157,16 @@
             <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="../../features.html">Features</a>
+                  <a class="nav-link" href="../features.html">Features</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../../integrations.html">Integrations</a>
+                  <a class="nav-link" href="../integrations.html">Integrations</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../../portfolio.html">Portfolio</a>
+                  <a class="nav-link" href="../portfolio.html">Portfolio</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="../../pricing.html">Pricing</a>
+                  <a class="nav-link" href="../pricing.html">Pricing</a>
                 </li>
                 <li class="nav-item d-block d-lg-none">
                   <a href="https://app.makappi.com" class="nav-link" target="_blank">My space</a>
@@ -200,12 +200,12 @@
       <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
         <div class="row text-center">
           <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-            <h1 class="display-1 mb-3">Comment configurer les nouveaux comptes Client Shopify ?</h1>
+            <h1 class="display-1 mb-3">How to set up Shopify's New Customer Accounts?</h1>
             <nav class="d-inline-block" aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="../../support/">FAQ</a></li>
-                <li class="breadcrumb-item"><a href="../../support/">Intégrations</a></li>
-                <li class="breadcrumb-item active" aria-current="page">API Client Shopify</li>
+                <li class="breadcrumb-item"><a href="../support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="../support/">Integrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">New Customer Accounts</li>
               </ol>
             </nav>
           </div>
@@ -215,61 +215,59 @@
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-10">
-                  <h3>Prérequis</h3>
-                  <p> Assurez-vous que les "Nouveaux comptes clients" sont activés dans votre administration Shopify. </p>
-                  <h3>Étape 1 : Installer l’application Shopify "Headless"</h3>
+                  <p> Shopify's <strong>New Customer Accounts</strong> replace the traditional email/password login with a passwordless system. Instead of creating a password, customers receive a <strong>6-digit verification code by email</strong> each time they sign in. This guide walks you through enabling this feature for your mobile app. </p>
+                  <h3>Prerequisites</h3>
+                  <p> Make sure that <strong>New Customer Accounts</strong> are enabled in your Shopify admin panel (<strong>Settings &gt; Customer accounts</strong>). If your store still uses classic accounts, you need to switch before proceeding. </p>
+                  <h3>Step 1: Install the Shopify Headless app</h3>
                   <ul>
-                    <li class="mb-2"> Cliquez sur ce lien pour installer directement l’application : <a href="https://apps.shopify.com/headless" target="_blank" class="btn btn-sm btn-outline-primary">Installer l’App Headless</a>
+                    <li class="mb-2"> Install the official Headless channel directly from the Shopify App Store: <a href="https://apps.shopify.com/headless" target="_blank" class="btn btn-sm btn-outline-primary ms-2">Install Headless</a>
                     </li>
                   </ul>
-                  <img src="../../assets/img/support/customerAPI/CustomerAccount-1-Install headless.png" width="500" class="rounded mx-auto d-block mb-5" />
-                  <h3>Étape 2 : Créer une interface de vente</h3>
+                  <img src="../assets/img/support/customerAPI/CustomerAccount-1-Install headless.png" width="500" class="rounded mx-auto d-block mb-5" />
+                  <h3>Step 2: Create a storefront</h3>
                   <ul>
-                    <li class="mb-2"> Une fois l’application installée, ouvrez-la et cliquez sur <strong>"Créer une interface de vente"</strong>
-                    </li>
+                    <li class="mb-2"> Once the Headless app is installed, open it and click <strong>"Create storefront"</strong>. </li>
                   </ul>
-                  <img src="../../assets/img/support/customerAPI/CustomerAccount-2-Create Storefront.png" width="500" class="rounded mx-auto d-block mb-5" />
-                  <h3>Étape 3 : Configurer l’API Customer Account</h3>
+                  <img src="../assets/img/support/customerAPI/CustomerAccount-2-Create Storefront.png" width="500" class="rounded mx-auto d-block mb-5" />
+                  <h3>Step 3: Configure the Customer Account API</h3>
                   <ul>
-                    <li class="mb-2"> Dans l’application Headless, sous <strong>"Gérer l’accès à l’API"</strong>, cliquez sur <strong>"Gérer"</strong> à côté de "Customer Account API" </li>
+                    <li class="mb-2"> In the Headless app, under <strong>"Manage API access"</strong>, click <strong>"Manage"</strong> next to <strong>"Customer Account API"</strong>. </li>
                   </ul>
-                  <img src="../../assets/img/support/customerAPI/CustomerAccount-3-Manage Custom Account API.png" width="500" class="rounded mx-auto d-block mb-5" />
+                  <img src="../assets/img/support/customerAPI/CustomerAccount-3-Manage Custom Account API.png" width="500" class="rounded mx-auto d-block mb-5" />
                   <ul>
-                    <li class="mb-2"> Changez le type de client de <strong>"Public (web app)"</strong> en <strong>"Public (application mobile)"</strong>, puis cliquez sur <strong>"Enregistrer"</strong> en haut de l’écran. </li>
+                    <li class="mb-2"> Change the client type from <strong>"Public (web app)"</strong> to <strong>"Public (mobile app)"</strong>, then click <strong>"Save"</strong> at the top of the screen. </li>
                   </ul>
-                  <img src="../../assets/img/support/customerAPI/CustomerAccount-4-Edit Client Type.png" width="500" class="rounded mx-auto d-block mb-5" />
-                  <img src="../../assets/img/support/customerAPI/CustomerAccount-5-Select Mobile App .png" width="500" class="rounded mx-auto d-block mb-5" />
+                  <img src="../assets/img/support/customerAPI/CustomerAccount-4-Edit Client Type.png" width="500" class="rounded mx-auto d-block mb-5" />
+                  <img src="../assets/img/support/customerAPI/CustomerAccount-5-Select Mobile App .png" width="500" class="rounded mx-auto d-block mb-5" />
                   <ul>
-                    <li class="mb-2"> Copiez le <strong>Client ID</strong> affiché dans la section des identifiants. Vous en aurez besoin à l’étape suivante. </li>
+                    <li class="mb-2"> Copy the <strong>Client ID</strong> displayed in the credentials section. You will need it in the next step. </li>
                   </ul>
-                  <img src="../../assets/img/support/customerAPI/CustomerAccount-6-Copy Client ID.png" width="500" class="rounded mx-auto d-block mb-5" />
+                  <img src="../assets/img/support/customerAPI/CustomerAccount-6-Copy Client ID.png" width="500" class="rounded mx-auto d-block mb-5" />
                   <div class="alert alert-warning d-flex" role="alert">
                     <div>
-                      <strong>Important :</strong> Ne désinstallez pas l’application Headless après cette étape. Elle doit rester installée pour que l’API Customer Account fonctionne.
+                      <strong>Important:</strong> Do not uninstall the Headless app after this step. It must remain installed for the Customer Account API to work.
                     </div>
                   </div>
-                  <h3>Étape 4 : Finalisation dans Makappi</h3>
+                  <h3>Step 4: Finalize in Makappi</h3>
                   <ul>
-                    <li class="mb-2"> Connectez-vous à votre tableau de bord Makappi </li>
-                    <li class="mb-2"> Allez dans la section <strong>"Design"</strong> puis la page <strong>"Options"</strong>
+                    <li class="mb-2"> Log in to your Makappi dashboard </li>
+                    <li class="mb-2"> Go to the <strong>"Design"</strong> section, then open the <strong>"Options"</strong> page </li>
+                    <li class="mb-2"> Disable <strong>"Enable legacy customer accounts"</strong>
                     </li>
-                    <li class="mb-2"> Désactivez <strong>"Utiliser les anciens comptes clients"</strong>
-                    </li>
-                    <li class="mb-2"> Saisissez votre <strong>Client ID</strong>
-                    </li>
-                    <li class="mb-2"> Publiez les modifications </li>
+                    <li class="mb-2"> Paste your <strong>Client ID</strong> in the designated field </li>
+                    <li class="mb-2"> Publish your changes </li>
                   </ul>
-                  <h3>Résolution de problèmes</h3>
+                  <h3>Troubleshooting</h3>
                   <ul>
-                    <li class="mb-2"> Vérifiez que les "Nouveaux comptes clients" sont bien activés dans Shopify </li>
-                    <li class="mb-2"> Assurez-vous d’avoir sélectionné "Public (application mobile)" et non "Public (web app)" </li>
-                    <li class="mb-2"> Vérifiez que l’application Headless est toujours installée sur votre boutique </li>
+                    <li class="mb-2"> Verify that <strong>New Customer Accounts</strong> are enabled in your Shopify admin </li>
+                    <li class="mb-2"> Make sure you selected <strong>"Public (mobile app)"</strong> and not "Public (web app)" in the Headless app </li>
+                    <li class="mb-2"> Ensure the Headless app is still installed on your store </li>
                   </ul>
                 </div>
             </section>
-            <a href="../../support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+            <a href="../support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
               <i class="uil uil-arrow-left"></i>
-              <span>Retour à la FAQ</span>
+              <span>Back to FAQ</span>
             </a>
           </div>
         </div>
@@ -304,7 +302,7 @@
                 <ul class="list-unstyled mb-0">
                   <li><a href="mailto:contact@makappi.com">contact@makappi.com</a></li>
                   <li><br /></li>
-                  <li><a href="../../fr/support/">Passer en Français <img src="../../assets/img/flags/france.png" class="w-5 mb-1" /></a></li>
+                  <li><a href="../fr/support/">Passer en Français <img src="../assets/img/flags/france.png" class="w-5 mb-1" /></a></li>
                 </ul>
               </div>
               <!-- /.widget -->
@@ -313,10 +311,10 @@
             <div class="col-md-8 gy-5 col-lg-8">
               <div class="widget">
                 <ul class="list-unstyled text-lg-end mb-0 mt-lg-0">
-                  <li><a href="../../partners.html">Partners</a></li>
-                  <li><a href="../../mentions.html">Legal Notice</a></li>
-                  <li><a href="../../privacy.html">Privacy Policy</a></li>
-                  <li><a href="../../terms.html">Terms of Use</a></li>
+                  <li><a href="../partners.html">Partners</a></li>
+                  <li><a href="../mentions.html">Legal Notice</a></li>
+                  <li><a href="../privacy.html">Privacy Policy</a></li>
+                  <li><a href="../terms.html">Terms of Use</a></li>
                 </ul>
               </div>
               <!-- /.widget -->
@@ -337,8 +335,8 @@
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
   </div>
-  <script src="../../assets/js/plugins.js"></script>
-  <script src="../../assets/js/theme.js"></script>
+  <script src="../assets/js/plugins.js"></script>
+  <script src="../assets/js/theme.js"></script>
   <script>
     window.axeptioSettings = {
       clientId: "62cda5a4dd4555d5187103c0",

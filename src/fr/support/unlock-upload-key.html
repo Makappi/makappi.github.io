@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Makappi - Support > Réinitialiser la clé d'upload</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support FR/UnlockUploadKey")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header_fr.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">Réinitialiser la clé d'upload</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">FAQ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Réinitialiser la clé d'upload</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <h2 class="mb-3">1. Sélectionnez votre App</h2>
+                  <p>Allez sur <a href="https://play.google.com/console" target="_blank" class="hover-3">Google Play Console</a> et sélectionnez votre application.</p>
+                  <img src="@@webRoot/assets/img/support/androidUploadKey/Android-UnlockUpload-1-Select App.png" class="rounded mx-auto d-block img-fluid" />
+                </div>
+              </div>
+            </section>
+
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <h2 class="mb-3">2. Ouvrir les paramètres d'App Integrity</h2>
+                  <p>Allez dans "Test et publication" > "Intégrité de l'application", scrollez jusqu'à "Signature de l'application par Google Play" et cliquez sur "Paramètres".</p>
+                  <img src="@@webRoot/assets/img/support/androidUploadKey/Android-UnlockUpload-2-Select Settings.png" class="rounded mx-auto d-block img-fluid" />
+                </div>
+              </div>
+            </section>
+
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <h2 class="mb-3">3. Demander la réinitialisation de la clé d'upload</h2>
+                  <p>Cliquez sur "Demander la réinitialisation de la clé d'importation".</p>
+                  <img src="@@webRoot/assets/img/support/androidUploadKey/Android-UnlockUpload-3-Request unlock.png" class="rounded mx-auto d-block img-fluid" />
+                </div>
+              </div>
+            </section>
+
+            <a href="@@webRoot/fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Retour à la FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer_fr.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie_fr.html')
+</body>
+</html>

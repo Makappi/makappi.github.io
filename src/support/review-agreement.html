@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makappi - Support > Review Apple Agreement</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support/ReviewAgreement")
+  </script>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">How to accept the Apple Developer Agreement?</h1>
+
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Apple Developer Agreement</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <h2 class="mb-3">Why is this needed?</h2>
+                  <p>
+                    From time to time, Apple updates the <strong>Apple Developer Program License Agreement</strong>. When a new version is available, it must be reviewed and accepted before any app update can be submitted to the App Store.
+                  </p>
+                  <p>
+                    Until the agreement is accepted, <strong>we are unable to publish or update your app</strong>. Only the <strong>Account Holder</strong> (the person who originally created the Apple Developer account) can review and accept the agreement.
+                  </p>
+
+                  <h2 class="mb-3 mt-8">How to accept the agreement</h2>
+                  <ol>
+                    <li class="mb-2">
+                      Go to your <a href="https://developer.apple.com/account" target="_blank" class="hover-3">Apple Developer account</a>.
+                    </li>
+                    <li class="mb-2">
+                      If you see a notification or a message about a pending agreement, click on it.
+                    </li>
+                    <li class="mb-2">
+                      Review the agreement in the pop-up that appears, then click <strong>Agree</strong> to confirm.
+                    </li>
+                  </ol>
+
+                  <img src="@@webRoot/assets/img/support/reviewAgreement/ReviewAgreement.png" width="600" class="rounded mx-auto d-block mb-5 mt-5" />
+
+                  <p>
+                    If there is no notification or message, the agreement is already up to date and no action is required on your end.
+                  </p>
+
+                  <p class="mt-5">
+                    Once the agreement has been accepted, please let us know so we can proceed with your app update.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Back to FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie.html')
+</body>
+</html>

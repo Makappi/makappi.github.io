@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Makappi - Support > Facebook</title>
+    <meta name="robots" content="noindex">
+    @@include('_head.html')
+    <script>
+        trackPage("Support/Facebook")
+    </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+    <div class="content-wrapper">
+        @@include('_header.html', {"currentPage": "support"})
+
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+                <div class="row text-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+                        <h1 class="display-1 mb-3">Facebook</h1>
+                        <nav class="d-inline-block" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Facebook</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row gx-0">
+                    <div class="col-xl-8 mx-auto">
+                        <section class="wrapper pt-8">
+                            <div class="card">
+                                <div class="card-body p-10">
+                                    <p>
+                                        The Facebook integration requires a Facebook Application ID. You can create a Facebook app from Meta for Developers and copy the Application ID into Makappi.
+                                    </p>
+
+                                    <h3>How to get your Facebook Application ID</h3>
+                                    <ol>
+                                        <li class="mb-2">Go to <a href="https://developers.facebook.com/" target="_blank">developers.facebook.com</a> and log in with your Facebook account.</li>
+                                        <li class="mb-2">Open <strong>My Apps</strong>. If you already have a Facebook app for your store, select it and go directly to step 5.</li>
+                                        <li class="mb-2">If you do not have an app yet, click <strong>Create App</strong>, choose the <strong>Business</strong> app type, then continue.</li>
+                                        <li class="mb-2">Enter your app display name and contact email. Select a Business Account if needed, then create the app.</li>
+                                        <li class="mb-2">Copy the <strong>App ID</strong> displayed at the top-left of the Facebook app dashboard, then paste it into the Facebook integration in Makappi.</li>
+                                    </ol>
+
+                                    <img src="@@webRoot/assets/img/support/facebook/Facebook-App ID.png" width="700" class="img-fluid rounded mx-auto d-block mb-10" />
+
+                                    <ol start="6">
+                                        <li class="mb-2">In the left menu, go to <strong>Settings > Basic</strong>.</li>
+                                        <li class="mb-2">Fill in the required basic settings, especially the <strong>Privacy Policy URL</strong> and <strong>Category</strong>, then save your changes.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+
+                        <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+                            <i class="uil uil-arrow-left"></i>
+                            <span>Back to FAQ</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    @@include('_footer.html', {"currentPage": "support"})
+    @@include('_page-progress.html')
+    @@include('_scripts.html')
+    @@include('_cookie.html')
+</body>
+
+</html>

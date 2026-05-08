@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Makappi - Support > Facebook</title>
+    <meta name="robots" content="noindex">
+    @@include('_head.html')
+    <script>
+        trackPage("Support/Facebook FR")
+    </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+    <div class="content-wrapper">
+        @@include('_header_fr.html', {"currentPage": "support"})
+
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+                <div class="row text-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+                        <h1 class="display-1 mb-3">Facebook</h1>
+                        <nav class="d-inline-block" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">FAQ</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Facebook</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row gx-0">
+                    <div class="col-xl-8 mx-auto">
+                        <section class="wrapper pt-8">
+                            <div class="card">
+                                <div class="card-body p-10">
+                                    <p>
+                                        L'intégration Facebook nécessite un Facebook Application ID. Vous pouvez créer une app Facebook depuis Meta for Developers et copier l'Application ID dans Makappi.
+                                    </p>
+
+                                    <h3>Comment récupérer le Facebook Application ID</h3>
+                                    <ol>
+                                        <li class="mb-2">Allez sur <a href="https://developers.facebook.com/" target="_blank">developers.facebook.com</a> et connectez-vous avec votre compte Facebook.</li>
+                                        <li class="mb-2">Ouvrez <strong>My Apps</strong>. Si vous avez déjà une app Facebook pour votre boutique, sélectionnez-la et passez directement à l'étape 5.</li>
+                                        <li class="mb-2">Si vous n'avez pas encore d'app, cliquez sur <strong>Create App</strong>, choisissez le type d'app <strong>Business</strong>, puis continuez.</li>
+                                        <li class="mb-2">Renseignez le nom de l'app et l'email de contact. Sélectionnez un Business Account si nécessaire, puis créez l'app.</li>
+                                        <li class="mb-2">Copiez l'<strong>App ID</strong> affiché en haut à gauche du dashboard Facebook, puis collez-le dans l'intégration Facebook de Makappi.</li>
+                                    </ol>
+
+                                    <img src="@@webRoot/assets/img/support/facebook/Facebook-App ID.png" width="700" class="img-fluid rounded mx-auto d-block mb-10" />
+
+                                    <ol start="6">
+                                        <li class="mb-2">Dans le menu de gauche, allez dans <strong>Settings > Basic</strong>.</li>
+                                        <li class="mb-2">Complétez les paramètres de base obligatoires, notamment la <strong>Privacy Policy URL</strong> et la <strong>Category</strong>, puis enregistrez vos changements.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+
+                        <a href="@@webRoot/fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+                            <i class="uil uil-arrow-left"></i>
+                            <span>Retour à la FAQ</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    @@include('_footer_fr.html', {"currentPage": "support"})
+    @@include('_page-progress.html')
+    @@include('_scripts.html')
+    @@include('_cookie_fr.html')
+</body>
+
+</html>

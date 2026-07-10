@@ -59,6 +59,11 @@
                                             Une fois activée, l'intégration apparaît dans votre backoffice dans « Settings » > « Integrations » > « Enabled integrations »
                                         </li>
                                         <li>
+                                            Utilisez l'interrupteur « Réservations actives » pour activer ou désactiver les réservations sans perdre vos réglages &mdash;
+                                            par exemple juste avant et après une session de live shopping. La désactivation libère toutes les réservations en cours et
+                                            restaure le stock
+                                        </li>
+                                        <li>
                                             Définissez la durée de réservation en minutes (par défaut : 60 minutes), puis publiez la configuration de votre app
                                         </li>
                                     </ul>
@@ -70,6 +75,10 @@
                                         </li>
                                         <li>
                                             Quand le client ouvre le checkout, la réservation est libérée pour que le paiement puisse aboutir
+                                        </li>
+                                        <li>
+                                            Pendant que le client paie (période de grâce d'environ 10 minutes), le stock libéré est protégé dans l'app :
+                                            les autres utilisateurs de l'app ne peuvent pas le réserver
                                         </li>
                                         <li>
                                             Si le client retire le produit ou laisse le compte à rebours expirer, le stock est restauré automatiquement
@@ -90,7 +99,55 @@
                                         <li>
                                             Si le stock est insuffisant pour réserver, le produit est quand même ajouté au panier normalement, sans compte à rebours
                                         </li>
+                                        <li>
+                                            La réservation protège totalement vos clients vis-à-vis des autres utilisateurs de l'app. Pendant le checkout d'un produit
+                                            réservé, des acheteurs venant d'autres canaux de vente (boutique en ligne, POS&hellip;) peuvent encore prendre le stock.
+                                            L'idéal est d'utiliser Cart Hold sur des produits vendus uniquement via le canal de vente de l'app mobile (typique des
+                                            exclusivités live shopping) &mdash; sinon il faut accepter cette limitation
+                                        </li>
                                     </ul>
+
+                                    <h3>FAQ</h3>
+
+                                    <h5>Pourquoi mon stock bouge-t-il tout seul ?</h5>
+                                    <p>
+                                        C'est Cart Hold qui réserve et libère du stock au fur et à mesure que les clients ajoutent des produits à leur panier dans l'app mobile.
+                                    </p>
+
+                                    <h5>Un client dit que le compte à rebours a disparu, c'est un bug ?</h5>
+                                    <p>
+                                        Quand le client ouvre le checkout, la réservation est libérée (pour que Shopify accepte le paiement). S'il revient au panier sans
+                                        acheter, les produits sont réservés à nouveau. Un compte à rebours expiré affiche un badge « Réservation expirée » à la place.
+                                    </p>
+
+                                    <h5>La réservation bloque-t-elle l'achat du client lui-même ?</h5>
+                                    <p>
+                                        Non. La réservation est libérée au moment où le client ouvre le checkout.
+                                    </p>
+
+                                    <h5>Un autre client peut-il « voler » le produit pendant que quelqu'un paie ?</h5>
+                                    <p>
+                                        Pas depuis l'app : pendant le checkout, le stock libéré est protégé environ 10 minutes et les autres utilisateurs de l'app ne
+                                        peuvent pas le réserver. Un acheteur d'un autre canal de vente (boutique en ligne, POS&hellip;) pourrait encore le prendre pendant
+                                        cette fenêtre. C'est pourquoi nous recommandons d'utiliser Cart Hold sur des produits vendus uniquement via le canal de l'app mobile.
+                                    </p>
+
+                                    <h5>Comment mettre les réservations en pause entre deux lives ?</h5>
+                                    <p>
+                                        Utilisez l'interrupteur « Réservations actives » dans les réglages de l'intégration puis publiez. Les réservations en cours sont
+                                        libérées immédiatement et le stock est restauré ; la durée configurée est conservée pour la prochaine fois.
+                                    </p>
+
+                                    <h5>Que se passe-t-il si l'app crashe ou si le client la ferme ?</h5>
+                                    <p>
+                                        Rien n'est perdu : la réservation expire simplement à la fin de la durée configurée et le stock est restauré automatiquement.
+                                    </p>
+
+                                    <h5>Et si je désinstalle l'app Makappi avec des réservations en cours ?</h5>
+                                    <p>
+                                        Shopify révoque l'accès de Makappi à la désinstallation, les réservations en cours ne peuvent donc pas être restaurées
+                                        automatiquement. Vérifiez vos niveaux de stock après la désinstallation.
+                                    </p>
                                 </div>
                             </div>
                         </section>

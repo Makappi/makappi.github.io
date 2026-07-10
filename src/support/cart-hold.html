@@ -57,6 +57,10 @@
                       Once enabled, the integration appears in your backoffice under "Settings" > "Integrations" > "Enabled integrations"
                     </li>
                     <li>
+                      Use the "Reservations active" switch to turn reservations on or off without losing your settings &mdash; for example
+                      right before and after a live shopping session. Turning it off releases all active reservations and restores the stock
+                    </li>
+                    <li>
                       Set the reservation duration in minutes (default: 60 minutes), then publish your app configuration
                     </li>
                   </ul>
@@ -68,6 +72,10 @@
                     </li>
                     <li>
                       When the customer opens the checkout, the reservation is released so the payment can go through
+                    </li>
+                    <li>
+                      While the customer is paying (about 10 minutes of grace period), the released stock is protected inside the app:
+                      other app users cannot reserve it
                     </li>
                     <li>
                       If the customer removes the product or lets the countdown expire, the stock is restored automatically
@@ -88,7 +96,55 @@
                     <li>
                       If there is not enough stock to reserve, the product is still added to the cart normally, without a countdown
                     </li>
+                    <li>
+                      The reservation fully protects your customers against other app users. During the checkout of a reserved product,
+                      buyers from other sales channels (online store, POS&hellip;) can still take the stock. The ideal setup is to use
+                      Cart Hold on products sold only through the mobile app sales channel (typical for live shopping exclusives) &mdash;
+                      otherwise you should accept this limitation
+                    </li>
                   </ul>
+
+                  <h3>FAQ</h3>
+
+                  <h5>Why is my stock changing on its own?</h5>
+                  <p>
+                    This is Cart Hold reserving and releasing stock as customers add products to their cart in the mobile app.
+                  </p>
+
+                  <h5>A customer says the countdown disappeared, is that a bug?</h5>
+                  <p>
+                    When the customer opens the checkout, the reservation is released (so Shopify accepts the payment). If they come back
+                    to the cart without buying, the products are reserved again. An expired countdown shows a "Reservation expired" badge instead.
+                  </p>
+
+                  <h5>Does the reservation block the customer's own purchase?</h5>
+                  <p>
+                    No. The reservation is released the moment the customer opens the checkout.
+                  </p>
+
+                  <h5>Can another customer "steal" the product while someone is paying?</h5>
+                  <p>
+                    Not from the app: during the checkout, the released stock is protected for about 10 minutes and other app users cannot
+                    reserve it. A buyer from another sales channel (online store, POS&hellip;) could still take it during that window. This
+                    is why we recommend using Cart Hold on products sold only through the mobile app channel.
+                  </p>
+
+                  <h5>How do I pause reservations between two live sessions?</h5>
+                  <p>
+                    Use the "Reservations active" switch in the integration settings and publish. Active reservations are released immediately
+                    and the stock is restored; the duration setting is kept for next time.
+                  </p>
+
+                  <h5>What happens if the app crashes or the customer closes it?</h5>
+                  <p>
+                    Nothing is lost: the reservation simply expires at the end of the configured duration and the stock is restored automatically.
+                  </p>
+
+                  <h5>What if I uninstall the Makappi app while reservations are active?</h5>
+                  <p>
+                    Shopify revokes Makappi's access when the app is uninstalled, so active reservations cannot be restored automatically.
+                    Check your stock levels after uninstalling.
+                  </p>
                 </div>
               </div>
             </section>

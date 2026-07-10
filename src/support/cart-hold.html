@@ -97,10 +97,13 @@
                       If there is not enough stock to reserve, the product is still added to the cart normally, without a countdown
                     </li>
                     <li>
-                      The reservation fully protects your customers against other app users. During the checkout of a reserved product,
-                      buyers from other sales channels (online store, POS&hellip;) can still take the stock. The ideal setup is to use
-                      Cart Hold on products sold only through the mobile app sales channel (typical for live shopping exclusives) &mdash;
-                      otherwise you should accept this limitation
+                      While the product is in the cart, the reservation protects your customer against everyone: the stock is actually
+                      decreased on Shopify, so nobody can buy it, whether from the app, the online store or any other sales channel.
+                      The only exposed window is between the moment the customer taps checkout and the moment they complete the payment,
+                      because the stock has to be released so Shopify accepts the payment. During that short window, other app users
+                      still cannot reserve it (grace period), but a buyer from another sales channel (online store, POS&hellip;) could
+                      take it. The ideal setup is to use Cart Hold on products sold only through the mobile app sales channel (typical
+                      for live shopping exclusives) &mdash; otherwise you should accept this small window
                     </li>
                   </ul>
 
@@ -122,11 +125,13 @@
                     No. The reservation is released the moment the customer opens the checkout.
                   </p>
 
-                  <h5>Can another customer "steal" the product while someone is paying?</h5>
+                  <h5>Can another customer "steal" the product?</h5>
                   <p>
-                    Not from the app: during the checkout, the released stock is protected for about 10 minutes and other app users cannot
-                    reserve it. A buyer from another sales channel (online store, POS&hellip;) could still take it during that window. This
-                    is why we recommend using Cart Hold on products sold only through the mobile app channel.
+                    Not while it is in the cart: the stock is decreased on Shopify, so nobody can buy it from any sales channel during the
+                    countdown. The only exposed window is between the moment the customer taps checkout and the moment the payment is
+                    completed, because the stock has to be released for Shopify to accept the payment. During that window, other app users
+                    still cannot reserve it (grace period), but a buyer from another sales channel (online store, POS&hellip;) could take it.
+                    This is why we recommend using Cart Hold on products sold only through the mobile app channel.
                   </p>
 
                   <h5>How do I pause reservations between two live sessions?</h5>

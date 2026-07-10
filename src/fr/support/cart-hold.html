@@ -100,10 +100,13 @@
                                             Si le stock est insuffisant pour réserver, le produit est quand même ajouté au panier normalement, sans compte à rebours
                                         </li>
                                         <li>
-                                            La réservation protège totalement vos clients vis-à-vis des autres utilisateurs de l'app. Pendant le checkout d'un produit
-                                            réservé, des acheteurs venant d'autres canaux de vente (boutique en ligne, POS&hellip;) peuvent encore prendre le stock.
-                                            L'idéal est d'utiliser Cart Hold sur des produits vendus uniquement via le canal de vente de l'app mobile (typique des
-                                            exclusivités live shopping) &mdash; sinon il faut accepter cette limitation
+                                            Tant que le produit est dans le panier, la réservation protège votre client contre tout le monde : le stock est réellement
+                                            décrémenté sur Shopify, donc personne ne peut l'acheter, ni depuis l'app, ni depuis la boutique en ligne, ni depuis un autre
+                                            canal de vente. La seule fenêtre exposée se situe entre le moment où le client tape sur checkout et le moment où il finalise
+                                            son paiement, car le stock doit être libéré pour que Shopify accepte le paiement. Pendant cette courte fenêtre, les autres
+                                            utilisateurs de l'app ne peuvent toujours pas le réserver (période de grâce), mais un acheteur d'un autre canal de vente
+                                            (boutique en ligne, POS&hellip;) pourrait le prendre. L'idéal est d'utiliser Cart Hold sur des produits vendus uniquement via
+                                            le canal de vente de l'app mobile (typique des exclusivités live shopping) &mdash; sinon il faut accepter cette petite fenêtre
                                         </li>
                                     </ul>
 
@@ -125,11 +128,14 @@
                                         Non. La réservation est libérée au moment où le client ouvre le checkout.
                                     </p>
 
-                                    <h5>Un autre client peut-il « voler » le produit pendant que quelqu'un paie ?</h5>
+                                    <h5>Un autre client peut-il « voler » le produit ?</h5>
                                     <p>
-                                        Pas depuis l'app : pendant le checkout, le stock libéré est protégé environ 10 minutes et les autres utilisateurs de l'app ne
-                                        peuvent pas le réserver. Un acheteur d'un autre canal de vente (boutique en ligne, POS&hellip;) pourrait encore le prendre pendant
-                                        cette fenêtre. C'est pourquoi nous recommandons d'utiliser Cart Hold sur des produits vendus uniquement via le canal de l'app mobile.
+                                        Pas tant qu'il est dans le panier : le stock est décrémenté sur Shopify, donc personne ne peut l'acheter depuis aucun canal de
+                                        vente pendant le compte à rebours. La seule fenêtre exposée se situe entre le moment où le client tape sur checkout et le moment
+                                        où le paiement est finalisé, car le stock doit être libéré pour que Shopify accepte le paiement. Pendant cette fenêtre, les autres
+                                        utilisateurs de l'app ne peuvent toujours pas le réserver (période de grâce), mais un acheteur d'un autre canal de vente (boutique
+                                        en ligne, POS&hellip;) pourrait le prendre. C'est pourquoi nous recommandons d'utiliser Cart Hold sur des produits vendus uniquement
+                                        via le canal de l'app mobile.
                                     </p>
 
                                     <h5>Comment mettre les réservations en pause entre deux lives ?</h5>

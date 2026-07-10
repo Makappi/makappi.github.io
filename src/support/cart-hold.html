@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makappi - Support > Cart Hold</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support/CartHold")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">How does Makappi Cart Hold work?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">Integrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">How does Makappi Cart Hold work?</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>
+                    Makappi Cart Hold reserves the stock of a product when a customer adds it to the cart in your mobile app.
+                    The customer sees a countdown on the cart line (for example "Reserved &mdash; 59:32"). If they don't complete
+                    their purchase before the end of the countdown, the reservation is released and the stock becomes available
+                    again for other customers.
+                  </p>
+                  <p>
+                    This feature is designed for high-demand sales, especially live shopping sessions with Live Me Up, where many
+                    customers buy the same limited-stock products at the same time.
+                  </p>
+
+                  <h3>Availability</h3>
+                  <p>
+                    Cart Hold is currently in restricted access and is enabled shop by shop by the Makappi team. Contact us if you
+                    would like to try it. Activating it may require re-authorizing the Makappi app on Shopify, because stock
+                    reservation needs additional inventory permissions.
+                  </p>
+
+                  <h3>Configuration</h3>
+                  <ul>
+                    <li>
+                      Once enabled, the integration appears in your backoffice under "Settings" > "Integrations" > "Enabled integrations"
+                    </li>
+                    <li>
+                      Set the reservation duration in minutes (default: 60 minutes), then publish your app configuration
+                    </li>
+                  </ul>
+
+                  <h3>How it works</h3>
+                  <ul>
+                    <li>
+                      When a customer adds a product to the cart, the available stock is decreased on Shopify
+                    </li>
+                    <li>
+                      When the customer opens the checkout, the reservation is released so the payment can go through
+                    </li>
+                    <li>
+                      If the customer removes the product or lets the countdown expire, the stock is restored automatically
+                    </li>
+                  </ul>
+
+                  <h3>Good to know</h3>
+                  <ul>
+                    <li>
+                      Your available stock will move automatically in Shopify as customers add and remove products &mdash; this is expected
+                    </li>
+                    <li>
+                      Only products with tracked inventory and the "stop selling when out of stock" policy are reserved
+                    </li>
+                    <li>
+                      Stock is reserved at your shop's primary location
+                    </li>
+                    <li>
+                      If there is not enough stock to reserve, the product is still added to the cart normally, without a countdown
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Back to FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie.html')
+</body>
+</html>

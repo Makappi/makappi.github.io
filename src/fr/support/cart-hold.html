@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Makappi - Support > Cart Hold</title>
+    <meta name="robots" content="noindex">
+    @@include('_head.html')
+    <script>
+        trackPage("Support/CartHold FR")
+    </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+    <div class="content-wrapper">
+        @@include('_header_fr.html', {"currentPage": "support"})
+
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+                <div class="row text-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+                        <h1 class="display-1 mb-3">Comment fonctionne Makappi Cart Hold ?</h1>
+                        <nav class="d-inline-block" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">FAQ</a></li>
+                                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">Intégrations</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Comment fonctionne Makappi Cart Hold ?</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row gx-0">
+                    <div class="col-xl-8 mx-auto">
+                        <section class="wrapper pt-8">
+                            <div class="card">
+                                <div class="card-body p-10">
+                                    <p>
+                                        Makappi Cart Hold réserve le stock d'un produit quand un client l'ajoute au panier dans votre app mobile.
+                                        Le client voit un compte à rebours sur la ligne du panier (par exemple « Réservé &mdash; 59:32 »). S'il ne
+                                        finalise pas son achat avant la fin du compte à rebours, la réservation est libérée et le stock redevient
+                                        disponible pour les autres clients.
+                                    </p>
+                                    <p>
+                                        Cette fonctionnalité est conçue pour les ventes à forte demande, en particulier les sessions de live shopping
+                                        avec Live Me Up, où de nombreux clients achètent les mêmes produits à stock limité au même moment.
+                                    </p>
+
+                                    <h3>Disponibilité</h3>
+                                    <p>
+                                        Cart Hold est actuellement en accès restreint et est activé boutique par boutique par l'équipe Makappi.
+                                        Contactez-nous si vous souhaitez l'essayer. L'activation peut nécessiter une nouvelle autorisation de
+                                        l'app Makappi sur Shopify, car la réservation de stock demande des permissions supplémentaires sur
+                                        l'inventaire.
+                                    </p>
+
+                                    <h3>Configuration</h3>
+                                    <ul>
+                                        <li>
+                                            Une fois activée, l'intégration apparaît dans votre backoffice dans « Settings » > « Integrations » > « Enabled integrations »
+                                        </li>
+                                        <li>
+                                            Définissez la durée de réservation en minutes (par défaut : 60 minutes), puis publiez la configuration de votre app
+                                        </li>
+                                    </ul>
+
+                                    <h3>Fonctionnement</h3>
+                                    <ul>
+                                        <li>
+                                            Quand un client ajoute un produit au panier, le stock disponible est décrémenté sur Shopify
+                                        </li>
+                                        <li>
+                                            Quand le client ouvre le checkout, la réservation est libérée pour que le paiement puisse aboutir
+                                        </li>
+                                        <li>
+                                            Si le client retire le produit ou laisse le compte à rebours expirer, le stock est restauré automatiquement
+                                        </li>
+                                    </ul>
+
+                                    <h3>Bon à savoir</h3>
+                                    <ul>
+                                        <li>
+                                            Votre stock disponible bougera automatiquement sur Shopify au rythme des ajouts et retraits du panier &mdash; c'est un comportement normal
+                                        </li>
+                                        <li>
+                                            Seuls les produits au stock suivi avec la politique « arrêter de vendre en rupture de stock » sont réservés
+                                        </li>
+                                        <li>
+                                            Le stock est réservé sur l'emplacement principal de votre boutique
+                                        </li>
+                                        <li>
+                                            Si le stock est insuffisant pour réserver, le produit est quand même ajouté au panier normalement, sans compte à rebours
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <a href="@@webRoot/fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+                            <i class="uil uil-arrow-left"></i>
+                            <span>Retour à la FAQ</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    @@include('_footer_fr.html', {"currentPage": "support"})
+    @@include('_page-progress.html')
+    @@include('_scripts.html')
+    @@include('_cookie_fr.html')
+</body>
+</html>

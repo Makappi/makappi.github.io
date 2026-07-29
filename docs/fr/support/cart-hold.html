@@ -200,12 +200,12 @@
       <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
         <div class="row text-center">
           <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-            <h1 class="display-1 mb-3">Comment fonctionne Makappi Cart Hold ?</h1>
+            <h1 class="display-1 mb-3">Comment fonctionne le Cart Hold ?</h1>
             <nav class="d-inline-block" aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="../../fr/support/">FAQ</a></li>
                 <li class="breadcrumb-item"><a href="../../fr/support/">Intégrations</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Comment fonctionne Makappi Cart Hold ?</li>
+                <li class="breadcrumb-item active" aria-current="page">Comment fonctionne le Cart Hold ?</li>
               </ol>
             </nav>
           </div>
@@ -215,46 +215,58 @@
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-10">
-                  <p> Makappi Cart Hold réserve le stock d'un produit quand un client l'ajoute au panier dans votre app mobile. Le client voit un compte à rebours sur la ligne du panier (par exemple « Réservé &mdash; 59:32 »). S'il ne finalise pas son achat avant la fin du compte à rebours, la réservation est libérée et le stock redevient disponible pour les autres clients. </p>
-                  <p> Cette fonctionnalité est conçue pour les ventes à forte demande, en particulier les sessions de live shopping avec Live Me Up, où de nombreux clients achètent les mêmes produits à stock limité au même moment. </p>
-                  <h3>Disponibilité</h3>
-                  <p> Cart Hold est actuellement en accès restreint et est activé boutique par boutique par l'équipe Makappi. Contactez-nous si vous souhaitez l'essayer. L'activation peut nécessiter une nouvelle autorisation de l'app Makappi sur Shopify, car la réservation de stock demande des permissions supplémentaires sur l'inventaire. </p>
-                  <h3>Configuration</h3>
+                  <p> Le Cart Hold réserve le stock d'un produit dès qu'un client l'ajoute à son panier dans votre app, pendant une durée que vous choisissez. Un compte à rebours s'affiche en haut de son panier, et le stock est remis en vente s'il ne paie pas avant la fin. </p>
+                  <p> Il est fait pour les moments où le stock est rare et les acheteurs nombreux, typiquement une session de live shopping : le client qui a ajouté le produit est sûr de le garder jusqu'à son paiement. </p>
+                  <h3>Comment la réservation fonctionne</h3>
+                  <p> Makappi utilise le mécanisme de réservation propre à Shopify, la commande provisoire (draft order). </p>
                   <ul>
-                    <li> Une fois activée, l'intégration apparaît dans votre backoffice dans « Settings » > « Integrations » > « Enabled integrations » </li>
-                    <li> Utilisez l'interrupteur « Réservations actives » pour activer ou désactiver les réservations sans perdre vos réglages &mdash; par exemple juste avant et après une session de live shopping. La désactivation libère toutes les réservations en cours et restaure le stock </li>
-                    <li> Définissez la durée de réservation en minutes (par défaut : 60 minutes), puis publiez la configuration de votre app </li>
+                    <li> Quand un client ajoute un produit à son panier, nous créons une commande provisoire qui retient ce stock jusqu'à la fin de la réservation </li>
+                    <li> Shopify fait passer l'unité de « disponible » à « réservée » : personne ne peut plus l'acheter, sur aucun canal de vente, ni votre boutique en ligne, ni votre point de vente, ni une autre app </li>
+                    <li> La protection tient aussi <strong>pendant que le client paie</strong>, parce que le paiement se fait sur cette réservation </li>
+                    <li> Si le client ne paie pas à temps, la réservation est libérée et le stock repart en vente </li>
                   </ul>
-                  <h3>Fonctionnement</h3>
+                  <h3>Vous verrez des commandes provisoires dans votre admin, c'est normal</h3>
+                  <p> Tant que vos clients ont des produits réservés dans leur panier, des commandes provisoires apparaissent dans « Commandes » > « Brouillons » de votre admin Shopify. Ce sont les réservations elles-mêmes, pas de vraies commandes, et il n'y a rien à nettoyer. </p>
                   <ul>
-                    <li> Quand un client ajoute un produit au panier, le stock disponible est décrémenté sur Shopify </li>
-                    <li> Quand le client ouvre le checkout, la réservation est libérée pour que le paiement puisse aboutir </li>
-                    <li> Pendant que le client paie (période de grâce d'environ 10 minutes), le stock libéré est protégé dans l'app : les autres utilisateurs de l'app ne peuvent pas le réserver </li>
-                    <li> Si le client retire le produit ou laisse le compte à rebours expirer, le stock est restauré automatiquement </li>
+                    <li> Une commande provisoire ouverte correspond à un client dont le panier est réservé : rien n'a été vendu </li>
+                    <li> Makappi la supprime tout seul dès que la réservation expire, ou quand le client vide son panier </li>
+                    <li> Une commande provisoire qui devient une commande est une commande payée, listée avec les autres </li>
+                    <li> Pendant un live chargé, il peut y en avoir beaucoup en même temps, une par panier actif </li>
                   </ul>
+                  <p> Le stock réservé apparaît comme « Indisponible » dans votre écran d'inventaire. Il est mis de côté pour un client en train d'acheter, et il revient automatiquement. </p>
+                  <h3>Réglages</h3>
+                  <p> Dans votre tableau de bord Makappi, allez dans « Paramètres » > « Intégrations » et choisissez « Cart Hold ». </p>
+                  <ul>
+                    <li>
+                      <strong>Réservations actives</strong> : active ou coupe les réservations sans perdre vos réglages. Les couper libère immédiatement toutes les réservations en cours, votre stock repart en vente tout de suite
+                    </li>
+                    <li>
+                      <strong>Durée de réservation</strong> : combien de temps un produit reste réservé, en minutes. 60 minutes par défaut, 5 minutes minimum
+                    </li>
+                  </ul>
+                  <p> Enregistrez et publiez la modification pour qu'elle arrive dans votre app. </p>
+                  <h3>Notre conseil : ne gardez les réservations actives que quand elles servent</h3>
+                  <p> Les réservations sont utiles quand plusieurs clients visent le même stock limité. En dehors de ces moments, elles apportent peu et elles remplissent votre liste de brouillons. Coupez « Réservations actives » entre deux lives, et remettez-les juste avant le suivant. </p>
+                  <p> Pour la durée : 10 à 30 minutes conviennent bien au live shopping, assez court pour qu'un panier abandonné ne bloque pas une unité longtemps, assez long pour finir de payer. Le compte à rebours démarre à l'ajout au panier et n'est jamais prolongé, un panier ne peut donc pas être gardé indéfiniment. </p>
                   <h3>Bon à savoir</h3>
                   <ul>
-                    <li> Votre stock disponible bougera automatiquement sur Shopify au rythme des ajouts et retraits du panier &mdash; c'est un comportement normal </li>
-                    <li> Seuls les produits au stock suivi avec la politique « arrêter de vendre en rupture de stock » sont réservés </li>
-                    <li> Le stock est réservé sur l'emplacement principal de votre boutique </li>
-                    <li> Si le stock est insuffisant pour réserver, le produit est quand même ajouté au panier normalement, sans compte à rebours </li>
-                    <li> Tant que le produit est dans le panier, la réservation protège votre client contre tout le monde : le stock est réellement décrémenté sur Shopify, donc personne ne peut l'acheter, ni depuis l'app, ni depuis la boutique en ligne, ni depuis un autre canal de vente. La seule fenêtre exposée se situe entre le moment où le client tape sur checkout et le moment où il finalise son paiement, car le stock doit être libéré pour que Shopify accepte le paiement. Pendant cette courte fenêtre, les autres utilisateurs de l'app ne peuvent toujours pas le réserver (période de grâce), mais un acheteur d'un autre canal de vente (boutique en ligne, POS&hellip;) pourrait le prendre. L'idéal est d'utiliser Cart Hold sur des produits vendus uniquement via le canal de vente de l'app mobile (typique des exclusivités live shopping) &mdash; sinon il faut accepter cette petite fenêtre </li>
+                    <li>
+                      <strong>Uniquement les produits suivis</strong> : un produit est réservé si son stock est suivi par Shopify avec la politique « arrêter la vente en cas de rupture ». Les autres sont vendus normalement, sans réservation
+                    </li>
+                    <li>
+                      <strong>Abonnements et précommandes</strong> : un panier contenant une ligne d'abonnement ou de précommande n'est pas réservé et passe par le paiement habituel. Le reste de votre catalogue n'est pas concerné
+                    </li>
+                    <li>
+                      <strong>Vos remises s'appliquent toujours</strong> : les remises automatiques s'appliquent au panier réservé, et vos clients peuvent toujours saisir un code promo au moment de payer
+                    </li>
+                    <li>
+                      <strong>Une vente n'est jamais bloquée</strong> : si un produit ne peut pas être réservé, il est quand même ajouté au panier et reste achetable comme d'habitude
+                    </li>
+                    <li>
+                      <strong>Autorisations supplémentaires</strong> : réserver du stock demande de nouvelles autorisations Shopify, on vous demandera donc de ré-autoriser l'app Makappi une fois
+                    </li>
                   </ul>
-                  <h3>FAQ</h3>
-                  <h5>Pourquoi mon stock bouge-t-il tout seul ?</h5>
-                  <p> C'est Cart Hold qui réserve et libère du stock au fur et à mesure que les clients ajoutent des produits à leur panier dans l'app mobile. </p>
-                  <h5>Un client dit que le compte à rebours a disparu, c'est un bug ?</h5>
-                  <p> Quand le client ouvre le checkout, la réservation est libérée (pour que Shopify accepte le paiement). S'il revient au panier sans acheter, les produits sont réservés à nouveau. Un compte à rebours expiré affiche un badge « Réservation expirée » à la place. </p>
-                  <h5>La réservation bloque-t-elle l'achat du client lui-même ?</h5>
-                  <p> Non. La réservation est libérée au moment où le client ouvre le checkout. </p>
-                  <h5>Un autre client peut-il « voler » le produit ?</h5>
-                  <p> Pas tant qu'il est dans le panier : le stock est décrémenté sur Shopify, donc personne ne peut l'acheter depuis aucun canal de vente pendant le compte à rebours. La seule fenêtre exposée se situe entre le moment où le client tape sur checkout et le moment où le paiement est finalisé, car le stock doit être libéré pour que Shopify accepte le paiement. Pendant cette fenêtre, les autres utilisateurs de l'app ne peuvent toujours pas le réserver (période de grâce), mais un acheteur d'un autre canal de vente (boutique en ligne, POS&hellip;) pourrait le prendre. C'est pourquoi nous recommandons d'utiliser Cart Hold sur des produits vendus uniquement via le canal de l'app mobile. </p>
-                  <h5>Comment mettre les réservations en pause entre deux lives ?</h5>
-                  <p> Utilisez l'interrupteur « Réservations actives » dans les réglages de l'intégration puis publiez. Les réservations en cours sont libérées immédiatement et le stock est restauré ; la durée configurée est conservée pour la prochaine fois. </p>
-                  <h5>Que se passe-t-il si l'app crashe ou si le client la ferme ?</h5>
-                  <p> Rien n'est perdu : la réservation expire simplement à la fin de la durée configurée et le stock est restauré automatiquement. </p>
-                  <h5>Et si je désinstalle l'app Makappi avec des réservations en cours ?</h5>
-                  <p> Shopify révoque l'accès de Makappi à la désinstallation, les réservations en cours ne peuvent donc pas être restaurées automatiquement. Vérifiez vos niveaux de stock après la désinstallation. </p>
+                  <p> Une question sur le Cart Hold ? Écrivez-nous à <a href="mailto:support@makappi.com">support@makappi.com</a>. </p>
                 </div>
               </div>
             </section>

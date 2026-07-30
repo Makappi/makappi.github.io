@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-  <title>Makappi - Support > Publication</title>
+  <title>Makappi - Support > Flits</title>
   <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -135,7 +135,7 @@
     gtag('config', 'AW-11209948472');
   </script>
   <script>
-    trackPage("Support FR")
+    trackPage("Support/Flits FR")
   </script>
 </head>
 
@@ -200,73 +200,68 @@
       <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
         <div class="row text-center">
           <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-            <h1 class="display-1 mb-3">FAQ</h1>
+            <h1 class="display-1 mb-3">Comment intégrer Flits Wishlist ?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../fr/support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="../../fr/support/">Intégrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Comment intégrer Flits Wishlist ?</li>
+              </ol>
+            </nav>
           </div>
         </div>
         <div class="row gx-0">
-          <div class="col-xl-10 mx-auto">
+          <div class="col-xl-8 mx-auto">
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-10">
+                  <p> Intégrez Flits dans votre Application Mobile pour partager la liste de souhaits entre votre site et l'app : vos clients retrouvent la même liste partout, dès qu'ils sont connectés. </p>
+                  <h3>Créer une clé API Flits</h3>
+                  <p> L'intégration utilise une clé API Flits que vous pouvez créer vous-même, directement depuis l'app Flits. </p>
                   <ul>
-                    <li class="mb-1">
-                      <a href="../../fr/support/bien-commencer.html" class="hover more">Comment bien commencer à utiliser Makappi ?</a>
+                    <li> Dans votre admin Shopify, ouvrez l'app "Flits" </li>
+                    <li> Allez dans "Settings" > "API Keys" </li>
+                  </ul>
+                  <img src="../../assets/img/support/flits/flits-1-add-api-key.png" width="700" class="rounded mx-auto d-block mb-5" />
+                  <ul>
+                    <li> Cliquez sur "Create API Key", nommez la clé "Makappi", puis cliquez sur "Generate" </li>
+                  </ul>
+                  <img src="../../assets/img/support/flits/flits-2-create-api-key.png" width="700" class="rounded mx-auto d-block mb-5" />
+                  <ul>
+                    <li> Copiez la clé générée : elle n'est affichée qu'une seule fois, juste après sa création </li>
+                  </ul>
+                  <img src="../../assets/img/support/flits/flits-3-copy-api-key.png" width="700" class="rounded mx-auto d-block mb-5" />
+                  <h3>Connecter Flits à votre Application Mobile</h3>
+                  <ul>
+                    <li> Dans votre dashboard Makappi, allez dans "Réglages" > "Intégrations" et sélectionnez "Flits Wishlist" </li>
+                    <li> Activez l'intégration et collez la clé dans le champ "Token d'API" </li>
+                    <li> Cliquez sur "Tester la connexion" pour vérifier que la clé fonctionne </li>
+                    <li> Enregistrez et publiez les changements pour terminer l'intégration </li>
+                  </ul>
+                  <h3>Ce que vos clients voient dans l'app</h3>
+                  <ul>
+                    <li> Les clients connectés à leur compte boutique retrouvent leur liste de souhaits Flits dans l'app </li>
+                    <li> Les produits ajoutés à la liste depuis l'app apparaissent aussi sur votre site, et inversement </li>
+                  </ul>
+                  <h3>Dépannage</h3>
+                  <ul>
+                    <li>
+                      <strong>Le token est refusé</strong> : vérifiez que vous avez copié la clé en entier, sans espace avant ou après. Au besoin, créez une nouvelle clé dans l'app Flits et réessayez.
                     </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/produits-collections.html" class="hover more">Comment ajouter vos produits et vos collections ?</a>
+                    <li>
+                      <strong>La liste de souhaits ne s'affiche pas dans l'app</strong> : le client doit être connecté à son compte boutique dans l'app.
                     </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/publication.html" class="hover more">Comment publier mon App sur l'App Store (Apple) et le Play Store (Android) ?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/stores.html" class="hover more">Votre page App Store (Apple) et Play Store (Android)</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/mises-a-jour.html" class="hover more">Quand votre App est-elle mise à jour ?</a>
-                    </li>
-                    <!-- <li class="mb-1">
-                      <a href="../../fr/support/liens.html" class="hover more">Comment configurer les liens universels ?</a>
-                    </li> -->
-                    <!-- <li class="mb-1">
-                      <a href="../../fr/support/apple-pay.html" class="hover more">Comment configurer Apple Pay ?</a>
-                    </li> -->
-                    <li class="mb-1">
-                      <a href="../../fr/support/customer-api.html" class="hover more">Comment configurer les nouveaux comptes Client Shopify ?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/unlock-upload-key.html" class="hover more">Comment réinitialiser la clé d'upload Android ?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/accepter-agreement-apple.html" class="hover more">Comment accepter l'agreement Apple Developer ?</a>
+                    <li>
+                      <strong>Autre problème</strong> : contactez-nous à <a href="mailto:support@makappi.com">support@makappi.com</a>.
                     </li>
                   </ul>
-                  <h3>Integrations</h3>
-                  <ul>
-                    <li class="mb-1">
-                      <a href="../../fr/support/facebook.html" class="hover more">Comment intégrer Facebook ?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/smile.html" class="hover more">Comment intégrer Smile ?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/klaviyo.html" class="hover more">Comment intégrer Klaviyo ?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/gorgias.html" class="hover more">Comment intégrer Gorgias ?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/judge-me.html" class="hover more">Comment intégrer JudgeMe ?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../../fr/support/flits.html" class="hover more">Comment intégrer Flits Wishlist ?</a>
-                    </li>
-                  </ul>
-                  <br /><br />
-                  <h3 className="mt-10">Vous avez une autre question ?</h3>
-                  <p> Vous pouvez aussi nous contacter par email : <a href="mailto:support@makappi.com">support@makappi.com</a>
-                  </p>
                 </div>
+              </div>
             </section>
+            <a href="../../fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Retour à la FAQ</span>
+            </a>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Makappi - Support > Smile</title>
+  <title>Makappi - Support > Flits</title>
   <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -135,7 +135,7 @@
     gtag('config', 'AW-11209948472');
   </script>
   <script>
-    trackPage("Support/Smile")
+    trackPage("Support/Flits")
   </script>
 </head>
 
@@ -200,12 +200,12 @@
       <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
         <div class="row text-center">
           <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-            <h1 class="display-1 mb-3">How to integrate Smile?</h1>
+            <h1 class="display-1 mb-3">How to integrate Flits Wishlist?</h1>
             <nav class="d-inline-block" aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="../support/">FAQ</a></li>
                 <li class="breadcrumb-item"><a href="../support/">Integrations</a></li>
-                <li class="breadcrumb-item active" aria-current="page">How to integrate Smile?</li>
+                <li class="breadcrumb-item active" aria-current="page">How to integrate Flits Wishlist?</li>
               </ol>
             </nav>
           </div>
@@ -215,35 +215,44 @@
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-10">
-                  <p> Add Smile to your Mobile App so your customers can see their loyalty points and redeem their rewards directly in the app. </p>
-                  <h3>Connect your Smile account</h3>
-                  <p> The integration is set up with a simple "Connect with Smile" button — no API key and no specific Smile plan required. </p>
+                  <p> Add Flits to your Mobile App to share the wishlist between your website and the app: your customers find the same wishlist everywhere, as soon as they are signed in. </p>
+                  <h3>Create a Flits API key</h3>
+                  <p> The integration uses a Flits API key that you can create yourself, directly from the Flits app. </p>
                   <ul>
-                    <li> In your Makappi dashboard, go to "Settings" > "Integrations" and select "Smile" </li>
-                    <li> Enable the integration, then click on "Connect with Smile" </li>
-                    <li> A Smile page opens in a new tab: sign in if needed and authorize Makappi to access your Smile account </li>
-                    <li> Back in the dashboard, the Smile integration shows a "Connected" badge </li>
+                    <li> In your Shopify admin, open the "Flits" app </li>
+                    <li> Go to "Settings" > "API Keys" </li>
+                  </ul>
+                  <img src="../assets/img/support/flits/flits-1-add-api-key.png" width="700" class="rounded mx-auto d-block mb-5" />
+                  <ul>
+                    <li> Click on "Create API Key", name the key "Makappi", then click on "Generate" </li>
+                  </ul>
+                  <img src="../assets/img/support/flits/flits-2-create-api-key.png" width="700" class="rounded mx-auto d-block mb-5" />
+                  <ul>
+                    <li> Copy the generated key: it is only shown once, right after it is created </li>
+                  </ul>
+                  <img src="../assets/img/support/flits/flits-3-copy-api-key.png" width="700" class="rounded mx-auto d-block mb-5" />
+                  <h3>Connect Flits to your Mobile App</h3>
+                  <ul>
+                    <li> In your Makappi dashboard, go to "Settings" > "Integrations" and select "Flits Wishlist" </li>
+                    <li> Enable the integration and paste the key in the "API token" field </li>
+                    <li> Click on "Test the connection" to make sure the key works </li>
                     <li> Save and publish the change to finish the integration </li>
                   </ul>
                   <h3>What your customers get in the app</h3>
                   <ul>
-                    <li> Customers signed in to their store account see their Smile points balance </li>
-                    <li> They can browse the rewards you configured in Smile </li>
-                    <li> They can redeem their points for a reward: the app shows the discount code to use at checkout </li>
+                    <li> Customers signed in to their store account see their Flits wishlist in the app </li>
+                    <li> Products added to the wishlist in the app also appear on your website, and vice versa </li>
                   </ul>
                   <h3>Troubleshooting</h3>
                   <ul>
                     <li>
-                      <strong>Points don't show in the app</strong>: the customer must be signed in to their store account in the app, and must already be a Smile member on your store (Smile creates members when customers sign up or place an order).
+                      <strong>The token is refused</strong>: make sure you copied the whole key, without spaces before or after. If needed, create a new key in the Flits app and try again.
                     </li>
                     <li>
-                      <strong>No rewards listed</strong>: check that "Points products" (ways to redeem) are configured and active in your Smile admin.
+                      <strong>The wishlist doesn't show in the app</strong>: the customer must be signed in to their store account in the app.
                     </li>
                     <li>
-                      <strong>The connection failed or was refused</strong>: go back to "Settings" > "Integrations" > "Smile" and click "Connect with Smile" again.
-                    </li>
-                    <li>
-                      <strong>The integration stopped working</strong>: click "Disconnect" then "Connect with Smile" to reconnect your account. If the problem persists, contact us at <a href="mailto:support@makappi.com">support@makappi.com</a>.
+                      <strong>Anything else</strong>: contact us at <a href="mailto:support@makappi.com">support@makappi.com</a>.
                     </li>
                   </ul>
                 </div>

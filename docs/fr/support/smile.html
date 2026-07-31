@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-  <title>Makappi - Support > Stores</title>
+  <title>Makappi - Support > Smile</title>
   <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -215,18 +215,36 @@
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-10">
-                  <p> Intégrer Smile dans votre Application Mobile permet à vos clients de voir leur nombre de points et de récupérer des récompenses sous forme de bon de réduction. </p>
-                  <h3>Comptes compatibles</h3>
-                  <p> Pour intégrer Smile dans votre Application Mobile, vous devez posséder un abonnement Smile de niveau "Plus". Vous pouvez contacter Smile pour en savoir plus sur l'accès à l'API. </p>
-                  <h3>Ajout de la clé API</h3>
+                  <p> Intégrez Smile dans votre Application Mobile pour que vos clients puissent voir leur nombre de points de fidélité et récupérer leurs récompenses directement dans l'app. </p>
+                  <h3>Connecter votre compte Smile</h3>
+                  <p> L'intégration se configure avec un simple bouton "Connecter avec Smile" — sans clé API et sans abonnement Smile particulier. </p>
                   <ul>
-                    <li> Depuis votre compte Shopify, rendez-vous dans l'Application Smile </li>
-                    <li> Allez sur la page "Settings" > "Developer Tools", puis cliquez sur "Manage API Keys" </li>
-                    <img src="../../assets/img/support/smile/smile1.png" width="500" class="rounded mx-auto d-block mb-5" />
-                    <li> Générez une nouvelle clé API pour votre Application Mobile et incluez tous les scopes </li>
-                    <img src="../../assets/img/support/smile/smile2.png" width="500" class="rounded mx-auto d-block mb-5" />
-                    <li> Copiez cette clé API dans le backoffice de Makappi et publiez les changements pour terminer l'intégration </li>
-                    <img src="../../assets/img/support/smile/smile3.png" width="500" class="rounded mx-auto d-block mb-5" />
+                    <li> Dans votre dashboard Makappi, allez dans "Réglages" > "Intégrations" et sélectionnez "Smile" </li>
+                    <li> Activez l'intégration, puis cliquez sur "Connecter avec Smile" </li>
+                    <li> Une page Smile s'ouvre dans un nouvel onglet : connectez-vous si nécessaire et autorisez Makappi à accéder à votre compte Smile </li>
+                    <li> De retour dans le dashboard, l'intégration Smile affiche un badge "Connecté" </li>
+                    <li> Enregistrez et publiez les changements pour terminer l'intégration </li>
+                  </ul>
+                  <h3>Ce que vos clients voient dans l'app</h3>
+                  <ul>
+                    <li> Les clients connectés à leur compte boutique voient leur solde de points Smile </li>
+                    <li> Ils peuvent parcourir les récompenses que vous avez configurées dans Smile </li>
+                    <li> Ils peuvent échanger leurs points contre une récompense : l'app affiche le code de réduction à utiliser au moment du paiement </li>
+                  </ul>
+                  <h3>Dépannage</h3>
+                  <ul>
+                    <li>
+                      <strong>Les points ne s'affichent pas dans l'app</strong> : le client doit être connecté à son compte boutique dans l'app, et doit déjà être membre Smile sur votre boutique (Smile crée les membres à l'inscription ou à la première commande).
+                    </li>
+                    <li>
+                      <strong>Aucune récompense listée</strong> : vérifiez que des "Points products" (façons d'échanger les points) sont configurés et actifs dans votre admin Smile.
+                    </li>
+                    <li>
+                      <strong>La connexion a échoué ou a été refusée</strong> : retournez dans "Réglages" > "Intégrations" > "Smile" et cliquez à nouveau sur "Connecter avec Smile".
+                    </li>
+                    <li>
+                      <strong>L'intégration ne fonctionne plus</strong> : cliquez sur "Déconnecter" puis "Connecter avec Smile" pour reconnecter votre compte. Si le problème persiste, contactez-nous à <a href="mailto:support@makappi.com">support@makappi.com</a>.
+                    </li>
                   </ul>
                 </div>
               </div>

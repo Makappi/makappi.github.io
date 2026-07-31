@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makappi - Support > Flits</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support/Flits")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">How to integrate Flits Wishlist?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">Integrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">How to integrate Flits Wishlist?</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>
+                    Add Flits to your Mobile App to share the wishlist between your website and the app: your customers find the same wishlist everywhere, as soon as they are signed in.
+                  </p>
+
+                  <h3>Create a Flits API key</h3>
+                  <p>
+                    The integration uses a Flits API key that you can create yourself, directly from the Flits app.
+                  </p>
+                  <ul>
+                    <li>
+                      In your Shopify admin, open the "Flits" app
+                    </li>
+                    <li>
+                      Go to "Settings" > "API Keys"
+                    </li>
+                  </ul>
+                  <img src="@@webRoot/assets/img/support/flits/flits-1-add-api-key.png" width="700" class="rounded mx-auto d-block mb-5" />
+                  <ul>
+                    <li>
+                      Click on "Create API Key", name the key "Makappi", then click on "Generate"
+                    </li>
+                  </ul>
+                  <img src="@@webRoot/assets/img/support/flits/flits-2-create-api-key.png" width="700" class="rounded mx-auto d-block mb-5" />
+                  <ul>
+                    <li>
+                      Copy the generated key: it is only shown once, right after it is created
+                    </li>
+                  </ul>
+                  <img src="@@webRoot/assets/img/support/flits/flits-3-copy-api-key.png" width="700" class="rounded mx-auto d-block mb-5" />
+
+                  <h3>Connect Flits to your Mobile App</h3>
+                  <ul>
+                    <li>
+                      In your Makappi dashboard, go to "Settings" > "Integrations" and select "Flits Wishlist"
+                    </li>
+                    <li>
+                      Enable the integration and paste the key in the "API token" field
+                    </li>
+                    <li>
+                      Click on "Test the connection" to make sure the key works
+                    </li>
+                    <li>
+                      Save and publish the change to finish the integration
+                    </li>
+                  </ul>
+
+                  <h3>What your customers get in the app</h3>
+                  <ul>
+                    <li>
+                      Customers signed in to their store account see their Flits wishlist in the app
+                    </li>
+                    <li>
+                      Products added to the wishlist in the app also appear on your website, and vice versa
+                    </li>
+                  </ul>
+
+                  <h3>Troubleshooting</h3>
+                  <ul>
+                    <li>
+                      <strong>The token is refused</strong>: make sure you copied the whole key, without spaces before or after. If needed, create a new key in the Flits app and try again.
+                    </li>
+                    <li>
+                      <strong>The wishlist doesn't show in the app</strong>: the customer must be signed in to their store account in the app.
+                    </li>
+                    <li>
+                      <strong>Anything else</strong>: contact us at <a href="mailto:support@makappi.com">support@makappi.com</a>.
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </section>
+
+            <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Back to FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie.html')
+</body>
+</html>

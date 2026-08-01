@@ -92,6 +92,9 @@
                     <li>
                       <strong>Reservation duration</strong>: how long a product stays reserved, in minutes. 60 minutes by default, 5 minutes minimum
                     </li>
+                    <li>
+                      <strong>When a product is in high demand</strong>: when many customers add the same product within a few seconds, not all of them can get a reservation. This setting decides what happens to those who do not. "Let customers try their luck" (the default) keeps the product in their cart, without a countdown, and they can still buy as long as stock remains: the right choice when you have plenty of units. "Refuse and invite to retry" takes the product out of their cart with a message inviting them to try again in a moment: the right choice for drops and very small stocks, so nobody finds out at the payment step that the product is gone. Changing this setting takes effect immediately, even in the middle of a live
+                    </li>
                   </ul>
                   <p>
                     Save and publish the change for it to reach your app.
@@ -117,7 +120,7 @@
                       <strong>Your discounts still apply</strong>: automatic discounts apply to the reserved cart, and your customers can still enter a discount code when they pay
                     </li>
                     <li>
-                      <strong>A sale is never blocked</strong>: if a product cannot be reserved, it is added to the cart anyway and can be bought as usual
+                      <strong>A sale is never blocked</strong>: if a product is not eligible for a reservation, or if anything goes wrong on the reservation side, it is added to the cart anyway and can be bought as usual. The only exception is the "Refuse and invite to retry" choice above, which you enable on purpose
                     </li>
                     <li>
                       <strong>Extra permissions</strong>: reserving stock requires new Shopify permissions, so you will be asked to re-authorize the Makappi app once

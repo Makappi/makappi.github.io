@@ -243,6 +243,9 @@
                     <li>
                       <strong>Durée de réservation</strong> : combien de temps un produit reste réservé, en minutes. 60 minutes par défaut, 5 minutes minimum
                     </li>
+                    <li>
+                      <strong>Quand un produit est très demandé</strong> : quand de nombreux clients ajoutent le même produit à quelques secondes d'intervalle, tous ne peuvent pas obtenir une réservation. Ce réglage décide de ce qui arrive aux autres. « Laisser les clients tenter leur chance » (le choix par défaut) garde le produit dans leur panier, sans compte à rebours, et ils peuvent quand même acheter tant qu'il reste du stock : le bon choix quand vous avez beaucoup d'unités. « Refuser et inviter à réessayer » retire le produit de leur panier avec un message les invitant à réessayer dans un instant : le bon choix pour les drops et les très petits stocks, pour que personne ne découvre au moment de payer que le produit est parti. Ce réglage prend effet immédiatement, même en plein live
+                    </li>
                   </ul>
                   <p> Enregistrez et publiez la modification pour qu'elle arrive dans votre app. </p>
                   <h3>Notre conseil : ne gardez les réservations actives que quand elles servent</h3>
@@ -260,7 +263,7 @@
                       <strong>Vos remises s'appliquent toujours</strong> : les remises automatiques s'appliquent au panier réservé, et vos clients peuvent toujours saisir un code promo au moment de payer
                     </li>
                     <li>
-                      <strong>Une vente n'est jamais bloquée</strong> : si un produit ne peut pas être réservé, il est quand même ajouté au panier et reste achetable comme d'habitude
+                      <strong>Une vente n'est jamais bloquée</strong> : si un produit n'est pas éligible à la réservation, ou si quoi que ce soit se passe mal côté réservation, il est quand même ajouté au panier et reste achetable comme d'habitude. La seule exception est le choix « Refuser et inviter à réessayer » ci-dessus, que vous activez volontairement
                     </li>
                     <li>
                       <strong>Autorisations supplémentaires</strong> : réserver du stock demande de nouvelles autorisations Shopify, on vous demandera donc de ré-autoriser l'app Makappi une fois

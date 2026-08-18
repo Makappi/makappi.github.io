@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makappi - Support > Cart Hold</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support/CartHold")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">How does Cart Hold work?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">Integrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">How does Cart Hold work?</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>
+                    Cart Hold reserves the stock of a product as soon as a customer adds it to their cart in your app, for a duration you choose. A countdown is shown at the top of their cart, and the stock goes back on sale if they do not pay before the end.
+                  </p>
+                  <p>
+                    It is made for moments when stock is scarce and buyers are many, typically a live shopping session: the customer who added the product is sure to keep it until they pay.
+                  </p>
+
+                  <h3>How the reservation works</h3>
+                  <p>
+                    Makappi uses Shopify's own reservation mechanism, the draft order.
+                  </p>
+                  <ul>
+                    <li>
+                      When a customer adds a product to their cart, we create a draft order that holds that stock until the end of the reservation
+                    </li>
+                    <li>
+                      Shopify moves the unit from "available" to "reserved", so nobody can buy it, on any sales channel: your online store, your point of sale or another app
+                    </li>
+                    <li>
+                      The protection also holds <strong>while the customer is paying</strong>, because the payment runs on that reservation
+                    </li>
+                    <li>
+                      If the customer does not pay in time, the reservation is released and the stock goes back on sale
+                    </li>
+                  </ul>
+
+                  <h3>You will see draft orders in your admin, and that is normal</h3>
+                  <p>
+                    While your customers hold products in their carts, draft orders appear in "Orders" > "Drafts" in your Shopify admin. They are the reservations themselves, not real orders, and there is nothing to clean up.
+                  </p>
+                  <ul>
+                    <li>
+                      A draft order that stays open is a customer with a reserved cart: nothing has been sold
+                    </li>
+                    <li>
+                      Makappi deletes it on its own as soon as the reservation expires, or when the customer empties their cart
+                    </li>
+                    <li>
+                      A draft order that becomes an order is a paid order, listed with your other orders
+                    </li>
+                    <li>
+                      During a busy live session there can be many at once, one per active cart
+                    </li>
+                  </ul>
+                  <p>
+                    Reserved stock shows as "Unavailable" in your inventory screen. It is set aside for a customer who is buying, and it comes back automatically.
+                  </p>
+
+                  <h3>Settings</h3>
+                  <p>
+                    In your Makappi dashboard, go to "Settings" > "Integrations" and select "Cart Hold".
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Reservations active</strong>: turns reservations on or off without losing your settings. Turning it off releases every reservation in progress immediately, so your stock goes back on sale right away
+                    </li>
+                    <li>
+                      <strong>Reservation duration</strong>: how long a product stays reserved, in minutes. 60 minutes by default, 5 minutes minimum
+                    </li>
+                    <li>
+                      <strong>When a product is in high demand</strong>: when many customers add the same product within a few seconds, not all of them can get a reservation. This setting decides what happens to those who do not. "Let customers try their luck" (the default) keeps the product in their cart, without a countdown, and they can still buy as long as stock remains: the right choice when you have plenty of units. "Refuse and invite to retry" takes the product out of their cart with a message inviting them to try again in a moment: the right choice for drops and very small stocks, so nobody finds out at the payment step that the product is gone. Changing this setting takes effect immediately, even in the middle of a live
+                    </li>
+                  </ul>
+                  <p>
+                    Save and publish the change for it to reach your app.
+                  </p>
+
+                  <h3>Our advice: only keep reservations on when they are useful</h3>
+                  <p>
+                    Reservations earn their keep when several customers are after the same limited stock. Outside of those moments they bring little, and they fill your drafts list. Turn "Reservations active" off between two live sessions, and back on shortly before the next one.
+                  </p>
+                  <p>
+                    For the duration: 10 to 30 minutes suits live shopping, short enough that an abandoned cart does not block a unit for long, long enough for a customer to finish paying. The countdown starts when the product is added to the cart and is never extended, so a cart cannot be held indefinitely.
+                  </p>
+
+                  <h3>Good to know</h3>
+                  <ul>
+                    <li>
+                      <strong>Tracked products only</strong>: a product is reserved if its inventory is tracked by Shopify with the "stop selling when out of stock" policy. The others are sold normally, without a reservation
+                    </li>
+                    <li>
+                      <strong>Subscriptions and pre-orders</strong>: a cart containing a subscription or a pre-order line is not reserved and goes through the usual checkout. The rest of your catalog is unaffected
+                    </li>
+                    <li>
+                      <strong>Your discounts still apply</strong>: automatic discounts apply to the reserved cart, and your customers can still enter a discount code when they pay
+                    </li>
+                    <li>
+                      <strong>A sale is never blocked</strong>: if a product is not eligible for a reservation, or if anything goes wrong on the reservation side, it is added to the cart anyway and can be bought as usual. The only exception is the "Refuse and invite to retry" choice above, which you enable on purpose
+                    </li>
+                    <li>
+                      <strong>Extra permissions</strong>: reserving stock requires new Shopify permissions, so you will be asked to re-authorize the Makappi app once
+                    </li>
+                  </ul>
+
+                  <p>
+                    A question about Cart Hold? Write to us at <a href="mailto:support@makappi.com">support@makappi.com</a>.
+                  </p>
+
+                </div>
+              </div>
+            </section>
+
+            <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Back to FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie.html')
+</body>
+</html>

@@ -1,1 +1,8 @@
 // Use this to write your custom SCSS
+
+// Section title rows of the pricing comparison table live in their own <tbody>
+// so table-striped restarts its odd/even count at each section; this keeps
+// the title rows themselves unstriped.
+.table-striped tbody.table-section-title {
+  --bs-table-striped-bg: transparent;
+}

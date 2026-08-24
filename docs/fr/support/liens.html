@@ -200,7 +200,7 @@
       <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
         <div class="row text-center">
           <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-            <h1 class="display-1 mb-3">Liens universels</h1>
+            <h1 class="display-1 mb-3">Comment configurer les liens universels sur iOS et Android&nbsp;?</h1>
             <nav class="d-inline-block" aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="../../fr/support/">FAQ</a></li>
@@ -214,46 +214,64 @@
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-10">
-                  <p> Les Liens universels (ou App Links sur Android) permettent de rediriger automatiquement un utilisateur vers votre application lorsqu'ils cliquent sur un lien vers votre boutique. </p>
-                  <p> Par exemple si un utilisateur reçoit un email avec un lien vers https://boutique.com/products/robe, un tap sur le lien ouvrira la fiche produit dans votre App plutôt que dans son navigateur. </p>
-                  <p> Vous aurez besoin de l'identifiant de votre App ainsi que d'une Empreinte pour Android. Contactez le support de Makappi pour les obtenir. </p>
-                  <h3>Enregistrement de l'App dans Shopify</h3>
+                  <p> Les liens universels sur iOS et les App Links sur Android associent le domaine personnalisé de votre boutique Shopify à votre application mobile. Lorsqu'un client ouvre un lien comme <strong>votreboutique.com</strong>, votre App s'ouvre automatiquement si elle est installée. Sinon, le lien ouvre votre boutique en ligne. </p>
+                  <p> Les liens profonds sont également pris en charge&nbsp;: les liens vers des produits, des collections et d'autres pages compatibles ouvrent directement le contenu correspondant dans l'App. </p>
+                  <h3>Prérequis</h3>
                   <ul>
-                    <li class="mb-2"> Rendez-vous sur la partie Apps de l'Admin Shopify en <a href="https://www.shopify.com/admin/apps" target="_blank" class="hover-3">cliquant ici</a>
+                    <li class="mb-2">Votre boutique Shopify doit utiliser un <strong>domaine personnalisé</strong>. Un domaine <strong>*.myshopify.com</strong> ne peut pas être utilisé pour cette configuration.</li>
+                    <li class="mb-2"> Contactez le <a href="mailto:support@makappi.com">support Makappi</a> pour obtenir les informations suivantes&nbsp;: <ul class="mt-2">
+                        <li><strong>iOS&nbsp;:</strong> identifiant Apple de l'App (Apple App ID)</li>
+                        <li><strong>Android&nbsp;:</strong> identifiant de l'application (Application ID) et empreinte SHA-256 du certificat de signature</li>
+                      </ul>
                     </li>
-                    <li class="mb-2"> Cliquez sur "Développez des applications" <img src="../../assets/img/support/app/app-dev-app-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
-                    </li>
-                    <li class="mb-2">
-                      <i>Si vous avez déjà une application, vous pouvez ignorer les 2 étapes suivantes)</i>
-                    </li>
-                    <li class="mb-2"> Cliquez sur "Autoriser le développement d'applications personnalisées" <img src="../../assets/img/support/app/app-dev-auth-step1-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
-                    </li>
-                    <li class="mb-2"> Cliquez à nouveau sur "Autoriser le développement d'applications personnalisées" <img src="../../assets/img/support/app/app-dev-auth-step2-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
-                    </li>
-                    <li class="mb-2"> Cliquez sur "Créez une Application" et choisissez un nom (par exemple "App Makappi"). Le bouton sera en haut à droite si vous avez déjà des applications. </li>
-                    <img src="../../assets/img/support/app/app-create-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
-                    <li class="mb-2"> Cliquez sur l'onglet "Configuration" puis sur Configuration à coté de "Intégration de l'API Storefront" </li>
-                    <img src="../../assets/img/support/app/app-configure-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
-                    <li class="mb-2"> Sélectionnez la permission "unauthenticated_read_product_listings" au niveau de Produits puis cliquez sur "Sauvegarder" </li>
-                    <img src="../../assets/img/support/app/install1-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
-                    <li class="mb-2"> Cliquez sur "Installer l'application" en haut à droite de l'écran </li>
-                    <img src="../../assets/img/support/app/install2-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
-                    <li class="mb-2"> Pour confirmer l'installation, cliquez sur "Installer" </li>
-                    <img src="../../assets/img/support/app/install3-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
                   </ul>
-                  <h3>Configuration pour iOS et Android</h3>
+                  <h3 class="mt-8">Configurer l'application personnalisée dans Shopify</h3>
+                  <h4>1. Ouvrez les paramètres de développement d'applications</h4>
+                  <p>Dans l'interface d'administration Shopify, accédez à <strong>Paramètres &gt; Applications et canaux de vente &gt; Développer des applications</strong>.</p>
+                  <img src="../../assets/img/support/universalLink/UniversalLink01.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Page de développement d'applications dans l'administration Shopify" />
+                  <h4>2. Autorisez le développement d'applications personnalisées héritées si nécessaire</h4>
+                  <p>Si Shopify affiche cette option, sélectionnez <strong>Allow legacy custom app development</strong>. Si ce message n'apparaît pas, créez directement une application et passez à l'étape 5.</p>
+                  <img src="../../assets/img/support/universalLink/UniversalLink02.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Option permettant les applications personnalisées héritées" loading="lazy" />
+                  <h4>3. Confirmez le développement d'applications personnalisées</h4>
+                  <p>Sélectionnez <strong>Allow custom app development</strong>.</p>
+                  <img src="../../assets/img/support/universalLink/UniversalLink03.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Confirmation du développement d'applications personnalisées" loading="lazy" />
+                  <h4>4. Créez une application personnalisée héritée</h4>
+                  <p>Sélectionnez <strong>Create a legacy custom app</strong>.</p>
+                  <img src="../../assets/img/support/universalLink/UniversalLink04.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Bouton de création d'une application personnalisée héritée" loading="lazy" />
+                  <h4>5. Nommez et créez l'application</h4>
+                  <p>Saisissez <strong>Makappi</strong> comme nom de l'application, puis sélectionnez <strong>Create app</strong>.</p>
+                  <img src="../../assets/img/support/universalLink/UniversalLink05.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Création de l'application personnalisée Makappi" loading="lazy" />
+                  <h4>6. Configurez les autorisations de l'API Storefront</h4>
+                  <p>Sélectionnez <strong>Configure Storefront API scopes</strong>.</p>
+                  <img src="../../assets/img/support/universalLink/UniversalLink06.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Bouton de configuration des autorisations de l'API Storefront" loading="lazy" />
+                  <h4>7. Autorisez la lecture des fiches produits</h4>
+                  <p>Sélectionnez <strong>unauthenticated_read_product_listings</strong> dans la liste des autorisations, puis sélectionnez <strong>Save</strong>.</p>
+                  <img src="../../assets/img/support/universalLink/UniversalLink07.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Autorisation de lecture des fiches produits de l'API Storefront" loading="lazy" />
+                  <h4>8. Installez l'application</h4>
+                  <p>Après avoir enregistré l'autorisation, sélectionnez <strong>Install app</strong>.</p>
+                  <img src="../../assets/img/support/universalLink/UniversalLink08.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Bouton d'installation de l'application dans Shopify" loading="lazy" />
+                  <h4>9. Confirmez l'installation</h4>
+                  <p>Sélectionnez <strong>Install</strong> dans la fenêtre de confirmation.</p>
+                  <img src="../../assets/img/support/universalLink/UniversalLink09.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Confirmation de l'installation de l'application Shopify" loading="lazy" />
+                  <h3 class="mt-8">Configurer iOS et Android</h3>
+                  <h4>10. Modifiez l'intégration de l'API Storefront</h4>
+                  <p>Ouvrez l'onglet <strong>Configuration</strong>, puis sélectionnez <strong>Edit</strong> dans la section <strong>Storefront API integration</strong>.</p>
+                  <img src="../../assets/img/support/universalLink/UniversalLink10.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Bouton de modification de l'intégration de l'API Storefront" loading="lazy" />
+                  <h4>11. Saisissez les identifiants iOS et Android</h4>
+                  <p>Faites défiler la page jusqu'aux sections iOS et Android, puis saisissez les informations fournies par le support Makappi&nbsp;:</p>
                   <ul>
-                    <li class="mb-2"> Cliquez sur l'onglet "Configuration" puis sur Configuration à coté de "Intégration de l'API Storefront" </li>
-                    <img src="../../assets/img/support/app/app-configure-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
-                    <li class="mb-2"> Cliquez sur "SDK iOS Buy" </li>
-                    <li class="mb-2"> Saisissez l'ID de l'Application fourni par le support. </li>
-                    <li class="mb-2"> Cliquez sur "Utilisez les liens universels iOS" </li>
-                    <li class="mb-2"> Cliquez sur "SDK Android Buy" </li>
-                    <li class="mb-2"> Saisissez l'ID de l'Application et l'Empreinte digitale fournis par le support. </li>
-                    <li class="mb-2"> Sauvegarder ensuite la configuration en cliquant sur "Sauvegarder" </li>
+                    <li class="mb-2"><strong>iOS&nbsp;:</strong> saisissez l'Apple App ID et cochez <strong>Use iOS universal links</strong> ainsi que <strong>Use iOS web credentials</strong>.</li>
+                    <li class="mb-2"><strong>Android&nbsp;:</strong> saisissez l'Application ID Android et l'empreinte SHA-256 du certificat de signature.</li>
                   </ul>
-                  <img src="../../assets/img/support/app/app-config-fr.png" width="700" class="rounded mx-auto d-block mb-5" />
+                  <img src="../../assets/img/support/universalLink/UniversalLink11.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Identifiants iOS et Android pour les liens universels dans Shopify" loading="lazy" />
+                  <h4>12. Enregistrez la configuration</h4>
+                  <p>Remontez en haut de la page, puis sélectionnez <strong>Save</strong>.</p>
+                  <img src="../../assets/img/support/universalLink/UniversalLink12.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Enregistrement de la configuration de l'API Storefront" loading="lazy" />
+                  <div class="alert alert-success d-flex mb-0" role="alert">
+                    <div><strong>Tout est prêt&nbsp;!</strong> Votre domaine personnalisé peut maintenant ouvrir l'App installée et rediriger les clients vers les contenus compatibles.</div>
+                  </div>
                 </div>
+              </div>
             </section>
             <a href="../../fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
               <i class="uil uil-arrow-left"></i>

@@ -36,7 +36,10 @@
                     Les liens universels sur iOS et les App Links sur Android associent le domaine personnalisé de votre boutique Shopify à votre application mobile. Lorsqu'un client ouvre un lien comme <strong>votreboutique.com</strong>, votre App s'ouvre automatiquement si elle est installée. Sinon, le lien ouvre votre boutique en ligne.
                   </p>
                   <p>
-                    Les liens profonds sont également pris en charge&nbsp;: les liens vers des produits, des collections et d'autres pages compatibles ouvrent directement le contenu correspondant dans l'App.
+                    Par exemple, si un utilisateur reçoit un email contenant un lien vers <a href="https://shop.com/products/dress">https://shop.com/products/dress</a>, toucher ce lien ouvre le produit dans l'App lorsque celle-ci est installée. Si l'App n'est pas installée, le même lien s'ouvre normalement dans le navigateur web de l'utilisateur.
+                  </p>
+                  <p>
+                    Les liens profonds fonctionnent également pour les collections et les autres pages compatibles de la boutique, en ouvrant directement le contenu correspondant dans l'App lorsqu'elle est installée.
                   </p>
 
                   <h3>Prérequis</h3>
@@ -55,45 +58,45 @@
 
                   <h4>1. Ouvrez les paramètres de développement d'applications</h4>
                   <p>Dans l'interface d'administration Shopify, accédez à <strong>Paramètres &gt; Applications et canaux de vente &gt; Développer des applications</strong>.</p>
-                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink01.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Page de développement d'applications dans l'administration Shopify" />
+                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink01.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Page de développement d'applications dans l'administration Shopify" />
 
                   <h4>2. Autorisez le développement d'applications personnalisées héritées si nécessaire</h4>
                   <p>Si Shopify affiche cette option, sélectionnez <strong>Allow legacy custom app development</strong>. Si ce message n'apparaît pas, créez directement une application et passez à l'étape 5.</p>
-                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink02.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Option permettant les applications personnalisées héritées" loading="lazy" />
+                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink02.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Option permettant les applications personnalisées héritées" loading="lazy" />
 
                   <h4>3. Confirmez le développement d'applications personnalisées</h4>
                   <p>Sélectionnez <strong>Allow custom app development</strong>.</p>
-                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink03.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Confirmation du développement d'applications personnalisées" loading="lazy" />
+                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink03.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Confirmation du développement d'applications personnalisées" loading="lazy" />
 
                   <h4>4. Créez une application personnalisée héritée</h4>
                   <p>Sélectionnez <strong>Create a legacy custom app</strong>.</p>
-                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink04.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Bouton de création d'une application personnalisée héritée" loading="lazy" />
+                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink04.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Bouton de création d'une application personnalisée héritée" loading="lazy" />
 
                   <h4>5. Nommez et créez l'application</h4>
                   <p>Saisissez <strong>Makappi</strong> comme nom de l'application, puis sélectionnez <strong>Create app</strong>.</p>
-                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink05.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Création de l'application personnalisée Makappi" loading="lazy" />
+                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink05.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Création de l'application personnalisée Makappi" loading="lazy" />
 
                   <h4>6. Configurez les autorisations de l'API Storefront</h4>
                   <p>Sélectionnez <strong>Configure Storefront API scopes</strong>.</p>
-                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink06.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Bouton de configuration des autorisations de l'API Storefront" loading="lazy" />
+                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink06.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Bouton de configuration des autorisations de l'API Storefront" loading="lazy" />
 
                   <h4>7. Autorisez la lecture des fiches produits</h4>
                   <p>Sélectionnez <strong>unauthenticated_read_product_listings</strong> dans la liste des autorisations, puis sélectionnez <strong>Save</strong>.</p>
-                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink07.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Autorisation de lecture des fiches produits de l'API Storefront" loading="lazy" />
+                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink07.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Autorisation de lecture des fiches produits de l'API Storefront" loading="lazy" />
 
                   <h4>8. Installez l'application</h4>
                   <p>Après avoir enregistré l'autorisation, sélectionnez <strong>Install app</strong>.</p>
-                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink08.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Bouton d'installation de l'application dans Shopify" loading="lazy" />
+                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink08.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Bouton d'installation de l'application dans Shopify" loading="lazy" />
 
                   <h4>9. Confirmez l'installation</h4>
                   <p>Sélectionnez <strong>Install</strong> dans la fenêtre de confirmation.</p>
-                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink09.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Confirmation de l'installation de l'application Shopify" loading="lazy" />
+                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink09.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Confirmation de l'installation de l'application Shopify" loading="lazy" />
 
                   <h3 class="mt-8">Configurer iOS et Android</h3>
 
                   <h4>10. Modifiez l'intégration de l'API Storefront</h4>
                   <p>Ouvrez l'onglet <strong>Configuration</strong>, puis sélectionnez <strong>Edit</strong> dans la section <strong>Storefront API integration</strong>.</p>
-                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink10.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Bouton de modification de l'intégration de l'API Storefront" loading="lazy" />
+                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink10.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Bouton de modification de l'intégration de l'API Storefront" loading="lazy" />
 
                   <h4>11. Saisissez les identifiants iOS et Android</h4>
                   <p>Faites défiler la page jusqu'aux sections iOS et Android, puis saisissez les informations fournies par le support Makappi&nbsp;:</p>
@@ -101,11 +104,11 @@
                     <li class="mb-2"><strong>iOS&nbsp;:</strong> saisissez l'Apple App ID et cochez <strong>Use iOS universal links</strong> ainsi que <strong>Use iOS web credentials</strong>.</li>
                     <li class="mb-2"><strong>Android&nbsp;:</strong> saisissez l'Application ID Android et l'empreinte SHA-256 du certificat de signature.</li>
                   </ul>
-                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink11.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Identifiants iOS et Android pour les liens universels dans Shopify" loading="lazy" />
+                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink11.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Identifiants iOS et Android pour les liens universels dans Shopify" loading="lazy" />
 
                   <h4>12. Enregistrez la configuration</h4>
                   <p>Remontez en haut de la page, puis sélectionnez <strong>Save</strong>.</p>
-                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink12.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Enregistrement de la configuration de l'API Storefront" loading="lazy" />
+                  <img src="@@webRoot/assets/img/support/universalLink/UniversalLink12.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Enregistrement de la configuration de l'API Storefront" loading="lazy" />
 
                   <div class="alert alert-success d-flex mb-0" role="alert">
                     <div><strong>Tout est prêt&nbsp;!</strong> Votre domaine personnalisé peut maintenant ouvrir l'App installée et rediriger les clients vers les contenus compatibles.</div>

@@ -215,7 +215,8 @@
               <div class="card">
                 <div class="card-body p-10">
                   <p> Universal links on iOS and App Links on Android connect your Shopify store's custom domain to your mobile app. When a customer opens a link such as <strong>yourstore.com</strong>, it automatically opens your app if it is installed, or your online store if it is not. </p>
-                  <p> Deep links are supported too: links to products, collections, and other compatible store pages open the corresponding content directly in the app. </p>
+                  <p> For example, if a user receives an email with a link to <a href="https://shop.com/products/dress">https://shop.com/products/dress</a>, tapping the link opens the product inside the app when the app is installed. If the app is not installed, the same link opens normally in the user's web browser. </p>
+                  <p> Deep links also work for collections and other compatible store pages, opening the corresponding content directly in the app when it is installed. </p>
                   <h3>Prerequisites</h3>
                   <ul>
                     <li class="mb-2">Your Shopify store must use a <strong>custom domain</strong>. A <strong>*.myshopify.com</strong> domain cannot be used for this setup.</li>
@@ -228,45 +229,45 @@
                   <h3 class="mt-8">Set up the custom app in Shopify</h3>
                   <h4>1. Open app development settings</h4>
                   <p>In your Shopify admin, go to <strong>Settings &gt; Apps and sales channels &gt; Develop apps</strong>.</p>
-                  <img src="../assets/img/support/universalLink/UniversalLink01.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Develop apps page in Shopify admin" />
+                  <img src="../assets/img/support/universalLink/UniversalLink01.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Develop apps page in Shopify admin" />
                   <h4>2. Allow legacy custom app development if required</h4>
                   <p>If Shopify displays the option, select <strong>Allow legacy custom app development</strong>. If you do not see this message, create an app directly and continue at step 5.</p>
-                  <img src="../assets/img/support/universalLink/UniversalLink02.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Allow legacy custom app development option" loading="lazy" />
+                  <img src="../assets/img/support/universalLink/UniversalLink02.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Allow legacy custom app development option" loading="lazy" />
                   <h4>3. Confirm custom app development</h4>
                   <p>Select <strong>Allow custom app development</strong>.</p>
-                  <img src="../assets/img/support/universalLink/UniversalLink03.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Allow custom app development confirmation" loading="lazy" />
+                  <img src="../assets/img/support/universalLink/UniversalLink03.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Allow custom app development confirmation" loading="lazy" />
                   <h4>4. Create a legacy custom app</h4>
                   <p>Select <strong>Create a legacy custom app</strong>.</p>
-                  <img src="../assets/img/support/universalLink/UniversalLink04.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Create a legacy custom app button" loading="lazy" />
+                  <img src="../assets/img/support/universalLink/UniversalLink04.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Create a legacy custom app button" loading="lazy" />
                   <h4>5. Name and create the app</h4>
                   <p>Enter <strong>Makappi</strong> as the app name, then select <strong>Create app</strong>.</p>
-                  <img src="../assets/img/support/universalLink/UniversalLink05.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Creating the Makappi custom app" loading="lazy" />
+                  <img src="../assets/img/support/universalLink/UniversalLink05.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Creating the Makappi custom app" loading="lazy" />
                   <h4>6. Configure the Storefront API scopes</h4>
                   <p>Select <strong>Configure Storefront API scopes</strong>.</p>
-                  <img src="../assets/img/support/universalLink/UniversalLink06.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Configure Storefront API scopes button" loading="lazy" />
+                  <img src="../assets/img/support/universalLink/UniversalLink06.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Configure Storefront API scopes button" loading="lazy" />
                   <h4>7. Grant product listing access</h4>
                   <p>Select <strong>unauthenticated_read_product_listings</strong> from the permissions list, then select <strong>Save</strong>.</p>
-                  <img src="../assets/img/support/universalLink/UniversalLink07.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Storefront API product listing permission" loading="lazy" />
+                  <img src="../assets/img/support/universalLink/UniversalLink07.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Storefront API product listing permission" loading="lazy" />
                   <h4>8. Install the app</h4>
                   <p>After saving the permission, select <strong>Install app</strong>.</p>
-                  <img src="../assets/img/support/universalLink/UniversalLink08.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Install app button in Shopify" loading="lazy" />
+                  <img src="../assets/img/support/universalLink/UniversalLink08.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Install app button in Shopify" loading="lazy" />
                   <h4>9. Confirm the installation</h4>
                   <p>Select <strong>Install</strong> in the confirmation popup.</p>
-                  <img src="../assets/img/support/universalLink/UniversalLink09.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Shopify app installation confirmation" loading="lazy" />
+                  <img src="../assets/img/support/universalLink/UniversalLink09.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Shopify app installation confirmation" loading="lazy" />
                   <h3 class="mt-8">Configure iOS and Android</h3>
                   <h4>10. Edit the Storefront API integration</h4>
                   <p>Open the <strong>Configuration</strong> tab, then select <strong>Edit</strong> in the <strong>Storefront API integration</strong> section.</p>
-                  <img src="../assets/img/support/universalLink/UniversalLink10.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Edit Storefront API integration button" loading="lazy" />
+                  <img src="../assets/img/support/universalLink/UniversalLink10.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Edit Storefront API integration button" loading="lazy" />
                   <h4>11. Enter the iOS and Android identifiers</h4>
                   <p>Scroll down to the iOS and Android sections, then enter the information provided by Makappi support:</p>
                   <ul>
                     <li class="mb-2"><strong>iOS:</strong> enter the Apple App ID and select both <strong>Use iOS universal links</strong> and <strong>Use iOS web credentials</strong>.</li>
                     <li class="mb-2"><strong>Android:</strong> enter the Android Application ID and the SHA-256 signing certificate fingerprint.</li>
                   </ul>
-                  <img src="../assets/img/support/universalLink/UniversalLink11.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="iOS and Android universal link identifiers in Shopify" loading="lazy" />
+                  <img src="../assets/img/support/universalLink/UniversalLink11.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="iOS and Android universal link identifiers in Shopify" loading="lazy" />
                   <h4>12. Save the configuration</h4>
                   <p>Scroll back to the top of the page and select <strong>Save</strong>.</p>
-                  <img src="../assets/img/support/universalLink/UniversalLink12.png" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Save Storefront API integration configuration" loading="lazy" />
+                  <img src="../assets/img/support/universalLink/UniversalLink12.png?v=20260824" width="700" class="img-fluid rounded mx-auto d-block mb-7" alt="Save Storefront API integration configuration" loading="lazy" />
                   <div class="alert alert-success d-flex mb-0" role="alert">
                     <div><strong>All set!</strong> Your custom domain can now open the installed mobile app and direct customers to supported deep-linked content.</div>
                   </div>

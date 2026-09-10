@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Makappi - Support > Loop Checkout+</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support/LoopCheckout FR")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header_fr.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">Configurer Loop Checkout+</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">Intégrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Configurer Loop Checkout+</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>Vos clients peuvent choisir Checkout+ dans le panier de l’app pour payer une couverture des retours.</p>
+                  <h3>1. Vérifier la configuration Loop</h3>
+                  <p>Demandez à votre interlocuteur Loop d’activer <strong>Returns Coverage Enabled</strong> et de confirmer la création du produit Checkout+. Utilisez ce produit, sans en créer un autre. L’option <strong>Checkout+ New Extension</strong> n’est pas nécessaire pour cette intégration.</p>
+                  <h3>2. Publier le produit dans Shopify</h3>
+                  <p>Ouvrez le produit Checkout+ dans Shopify &gt; Produits. Vérifiez son statut <strong>Actif</strong>, ajoutez <strong>Makappi</strong> dans les canaux de vente de la rubrique Publication, puis enregistrez. Vérifiez sa disponibilité sur les marchés où votre app vend.</p>
+                  <h3>3. Activer l’intégration Makappi</h3>
+                  <p>Dans Makappi &gt; Paramètres &gt; Intégrations, activez <strong>Loop Checkout+</strong>, enregistrez et publiez votre configuration. L’app récupère automatiquement le produit et son prix. Aucun identifiant produit ni clé API à saisir.</p>
+                  <h3>4. Vérifier le parcours d’achat</h3>
+                  <p>Testez le panier avec et sans Checkout+. Si vous utilisez des tags d’exclusion dans Loop, testez aussi un panier exclu. Si l’offre n’apparaît pas, vérifiez les étapes ci-dessus ou contactez Loop.</p>
+                  <p><a href="https://help.loopreturns.com/en/articles/8122881" target="_blank" rel="noopener noreferrer">Documentation Loop</a></p>
+
+                </div>
+              </div>
+            </section>
+
+            <a href="@@webRoot/fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Retour à la FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer_fr.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie_fr.html')
+</body>
+
+</html>

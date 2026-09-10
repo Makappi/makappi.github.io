@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Makappi - Support > Redo</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support/Redo FR")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header_fr.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">Configurer Redo</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">Intégrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Configurer Redo</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>Proposez à vos clients un paiement avec ou sans couverture des retours Redo dans le panier de votre app.</p>
+                  <h3>1. Terminer la configuration Redo</h3>
+                  <p>Installez Redo sur votre boutique Shopify et terminez sa configuration avec votre interlocuteur Redo. Confirmez que la couverture des retours est active et identifiez les produits Shopify utilisés pour votre offre.</p>
+                  <h3>2. Publier les produits de couverture dans Shopify</h3>
+                  <p>Dans Shopify &gt; Produits, ouvrez chaque produit de couverture Redo. Vérifiez son statut <strong>Actif</strong>, ajoutez <strong>Makappi</strong> dans les canaux de vente de la rubrique Publication, puis enregistrez. Vérifiez sa disponibilité sur les marchés où votre app vend. Redo peut proposer des produits différents selon le panier.</p>
+                  <h3>3. Activer l’intégration Makappi</h3>
+                  <p>Dans Makappi &gt; Paramètres &gt; Intégrations, activez <strong>Redo</strong>. Enregistrez et publiez votre configuration. L’app récupère automatiquement le Team ID depuis votre domaine Shopify, puis l’offre et son prix. Aucun identifiant ni clé API à saisir et aucun produit à sélectionner.</p>
+                  <h3>4. Vérifier le parcours d’achat</h3>
+                  <p>Testez le paiement avec et sans couverture. Si l’offre n’apparaît pas, vérifiez la disponibilité des produits et l’activation de la couverture avec Redo. Si le problème persiste, contactez le support Makappi pour vérifier la détection automatique.</p>
+                  <p><a href="https://developers.redo.com/docs/guides/integrations/hydrogen" target="_blank" rel="noopener noreferrer">Documentation Redo</a></p>
+
+                </div>
+              </div>
+            </section>
+
+            <a href="@@webRoot/fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Retour à la FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer_fr.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie_fr.html')
+</body>
+
+</html>

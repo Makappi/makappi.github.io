@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Makappi - Support</title>
+  <title>Makappi - Support > Biscuits Bundles</title>
   <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -135,7 +135,7 @@
     gtag('config', 'AW-11209948472');
   </script>
   <script>
-    trackPage("Support")
+    trackPage("Support/BiscuitsBundles")
   </script>
 </head>
 
@@ -200,70 +200,54 @@
       <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
         <div class="row text-center">
           <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-            <h1 class="display-1 mb-3">FAQ</h1>
+            <h1 class="display-1 mb-3">Set up Biscuits Bundles</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="../support/">Integrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Set up Biscuits Bundles</li>
+              </ol>
+            </nav>
           </div>
         </div>
         <div class="row gx-0">
-          <div class="col-xl-10 mx-auto">
+          <div class="col-xl-8 mx-auto">
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-10">
+                  <p>Let customers compose a pack in your native app, from a Home banner, a product link or a dedicated menu entry.</p>
+                  <h3>1. Prepare your pack in Biscuits Bundles</h3>
+                  <p>Install Biscuits Bundles in Shopify and create your pack there. This integration supports one selection step, variable quantities with an increment of one, and a percentage discount, either fixed or based on quantity tiers. V1 supports one variant at a time per product and up to 249 variants in total. Mandatory selections, custom fields, fixed-price bundles and multiple steps are not supported yet.</p>
+                  <p>The product page must contain the Biscuits configurator and be accessible on your online store. The online store must be publicly accessible, without a storefront password. Product choices and bundle rules remain managed in Biscuits.</p>
+                  <h3>2. Publish the products on the Makappi sales channel</h3>
+                  <ol>
+                    <li>Open <strong>Shopify → Products</strong> and select the parent bundle product created by Biscuits.</li>
+                    <li>Set its status to <strong>Active</strong>.</li>
+                    <li>In <strong>Publishing / Sales channels and apps</strong>, click <strong>Manage</strong> and select <strong>Makappi</strong>.</li>
+                    <li>Click <strong>Done</strong>, then <strong>Save on the product page</strong>. Selecting the channel without saving the product is not enough.</li>
+                    <li>Repeat for all component products and check their availability in the markets where your app sells.</li>
+                  </ol>
+                  <h3>3. Configure the Makappi integration</h3>
+                  <p>In <strong>Settings → Integrations → Biscuits Bundles</strong>, enable the integration, then save and publish the Makappi configuration. No packs, product URLs or version limits need to be entered. When a customer opens a product, the app automatically reads its online product page and opens the native configurator if it contains a supported Biscuits bundle. Regular products keep their standard product page.</p>
+                  <h3>4. Add an entry point</h3>
                   <ul>
-                    <li class="mb-1">
-                      <a href="../support/getting-started.html" class="hover more">Getting started</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/products-collections.html" class="hover more">How to add Products and Collections to your App?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/publication.html" class="hover more">How can I publish my App on the App Store (Apple) and Play Store (Android)?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/stores.html" class="hover more">Your App on the App Store (Apple) and Play Store (Android)</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/updates.html" class="hover more">When is your App updated?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/links.html" class="hover more">How can I set up universal links for iOS and Android?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/customer-api.html" class="hover more">How to set up Shopify's New Customer Accounts?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/unlock-upload-key.html" class="hover more">How to unlock your Android upload key?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/review-agreement.html" class="hover more">How to accept the Apple Developer Agreement?</a>
-                    </li>
+                    <li><strong>Collections:</strong> enable “Show build your pack below collections” in the integration settings. Customize the label in each language and choose an optional image. The button appears below the main collections list, using the menu style.</li>
+                    <li><strong>Menu:</strong> add Biscuits Bundles from the bottom of the block library, then customize its label, icon and position. No product selection is required.</li>
+                    <li><strong>Home:</strong> in a banner or slideshow image, choose <strong>Select a Destination → Build your pack</strong>. No URL is needed.</li>
                   </ul>
-                  <h3>Integrations</h3>
-                  <ul>
-                    <li class="mb-1"><a href="../support/biscuits-bundles.html" class="hover more">Set up Biscuits Bundles</a></li>
-                    <li class="mb-1">
-                      <a href="../support/facebook.html" class="hover more">How to integrate Facebook?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/smile.html" class="hover more">How to integrate Smile?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/klaviyo.html" class="hover more">How to integrate Klaviyo?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/gorgias.html" class="hover more">How to integrate Gorgias?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/judge-me.html" class="hover more">How to integrate JudgeMe?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/flits.html" class="hover more">How to integrate Flits Wishlist?</a>
-                    </li>
-                  </ul><br /><br />
-                  <h3 className="mt-10">Still have a question?</h3>
-                  <p> You can also contact us by email : <a href="mailto:support@makappi.com">support@makappi.com</a>
-                  </p>
+                  <p>These three destinations discover products tagged <code>biscuits-bundle</code> and published on the Makappi channel. A single pack opens its product selection directly. If several exist, the customer first chooses which pack to build. Keep this tag on parent products. Links to a specific product still open that product’s configurator.</p>
+                  <p>Disabling the integration hides its dedicated menu entries and stops automatic detection. Manage bundle availability in Shopify and Biscuits, and remove links to discontinued products.</p>
+                  <h3>5. Test before sharing with customers</h3>
+                  <p>Choose variants and quantities, check availability and wait for Shopify to calculate the price before adding the pack. The initial estimate is replaced by the bundle price before the add button becomes available. Shopify calculates the final price in the cart; confirm it and the checkout total in each selling currency, including applicable discounts. Test quantity changes, removal of the last pack, two different selections of the same pack and a cart containing regular products. Open checkout with a customer account if your app requires one.</p>
+                  <h3>Troubleshooting</h3>
+                  <p>If loading fails, check that the public product page contains the Biscuits configurator, that its rules are supported, and that the parent and components are published on Makappi. A failed detection blocks the product screen and offers a retry instead of allowing an unconfigured bundle to be added. After a change in Biscuits, allow up to one minute for the configuration cache to refresh, then reload the app screen. A market restriction or an out-of-stock variant may prevent selection even when the product is published.</p>
                 </div>
+              </div>
             </section>
+            <a href="../support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Back to FAQ</span>
+            </a>
           </div>
         </div>
       </div>

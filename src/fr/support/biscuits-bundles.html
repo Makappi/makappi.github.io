@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Makappi - Support > Biscuits Bundles</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support/BiscuitsBundles FR")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header_fr.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">Configurer Biscuits Bundles</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">Intégrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Configurer Biscuits Bundles</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+<p>Permettez à vos clients de composer un pack dans votre app native, depuis un bandeau Home, un lien produit ou une entrée dédiée du menu.</p>
+<h3>1. Préparer le pack dans Biscuits Bundles</h3>
+<p>Installez Biscuits Bundles dans Shopify et créez votre pack dans cette application. L’intégration prend en charge une étape de sélection, des quantités variables avec un incrément de un et une remise en pourcentage, fixe ou par paliers de quantité. La V1 propose une variante à la fois par produit et jusqu’à 249 variantes au total. Les sélections obligatoires, champs personnalisés, packs à prix fixe et parcours à plusieurs étapes ne sont pas encore pris en charge.</p>
+<p>La page produit doit contenir le configurateur Biscuits et être accessible sur la boutique web. La boutique web doit être accessible publiquement, sans mot de passe. Les produits proposés et les règles du pack restent gérés dans Biscuits.</p>
+<h3>2. Publier les produits sur le canal de vente Makappi</h3>
+<ol><li>Dans <strong>Shopify → Produits</strong>, ouvrez le produit parent du pack créé par Biscuits.</li><li>Vérifiez que son statut est <strong>Actif</strong>.</li><li>Dans <strong>Publication / Canaux de vente et applications</strong>, cliquez sur <strong>Gérer</strong> et cochez <strong>Makappi</strong>.</li><li>Cliquez sur <strong>Terminé</strong>, puis sur <strong>Enregistrer sur la fiche produit</strong>. Cocher le canal sans enregistrer le produit ne suffit pas.</li><li>Répétez pour tous les produits composant le pack et vérifiez leur disponibilité dans les marchés où votre app vend.</li></ol>
+<h3>3. Configurer l’intégration Makappi</h3>
+<p>Dans <strong>Paramètres → Intégrations → Biscuits Bundles</strong>, activez l’intégration, puis enregistrez et publiez la configuration Makappi. Aucun pack, URL de produit ou limite de version à renseigner. Lorsqu’un client ouvre un produit, l’app lit automatiquement sa page web et ouvre le configurateur natif si elle contient un pack Biscuits compatible. Les produits classiques conservent leur fiche habituelle.</p>
+<h3>4. Ajouter un accès</h3>
+<ul><li><strong>Collections :</strong> dans les réglages de l’intégration, activez « Afficher Composer votre pack sous les collections ». Personnalisez le libellé dans chaque langue et choisissez une image facultative. Le bouton apparaît en bas de la liste principale, avec le style du menu.</li><li><strong>Menu :</strong> ajoutez le bloc Biscuits Bundles depuis le bas de la bibliothèque, puis personnalisez son libellé, son icône et sa position. Aucun produit à sélectionner.</li><li><strong>Home :</strong> dans un bandeau ou une image de diaporama, choisissez <strong>Select a Destination → Composer votre pack</strong>. Aucune URL à saisir.</li></ul>
+<p>Ces trois accès recherchent les produits portant le tag <code>biscuits-bundle</code>, publiés sur le canal Makappi. Avec un seul pack, sa sélection de produits s’ouvre directement. Avec plusieurs packs, le client choisit d’abord lequel composer. Conservez ce tag sur les produits parents. Les liens vers un produit précis continuent d’ouvrir son configurateur.</p>
+<p>Désactiver l’intégration masque ses entrées de menu dédiées et arrête la détection automatique. Gérez la disponibilité des packs dans Shopify et Biscuits, et retirez les liens vers les produits abandonnés.</p>
+<h3>5. Tester avant de le proposer aux clients</h3>
+<p>Choisissez les variantes et quantités, vérifiez les disponibilités et attendez le calcul du prix Shopify, puis ajoutez le pack. L’estimation initiale est remplacée par le prix du pack avant que le bouton d’ajout soit disponible. Shopify calcule le prix final dans le panier : contrôlez ce montant et celui du checkout pour chaque devise de vente, remises applicables comprises. Testez les changements de quantité, la suppression du dernier pack, deux compositions différentes du même pack et un panier contenant des produits classiques. Ouvrez le checkout avec un compte client si votre app l’exige.</p>
+<h3>En cas de problème</h3>
+<p>Si le chargement échoue, vérifiez que la page produit publique contient le configurateur Biscuits, que ses règles sont prises en charge et que le parent et ses composants sont publiés sur Makappi. Une erreur de détection bloque la fiche et propose de réessayer, sans permettre d’ajouter un pack non configuré. Après une modification dans Biscuits, le cache de configuration peut prendre jusqu’à une minute à expirer : actualisez ensuite l’écran de l’app. Une restriction de marché ou une rupture de stock peut bloquer une variante même si le produit est publié.</p>
+                </div>
+              </div>
+            </section>
+
+            <a href="@@webRoot/fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Retour à la FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer_fr.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie_fr.html')
+</body>
+
+</html>

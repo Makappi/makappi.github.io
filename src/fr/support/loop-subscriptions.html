@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Makappi - Support > Loop Subscriptions</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support/LoopSubscriptions FR")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header_fr.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">Configurer Loop Subscriptions</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">Intégrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Loop Subscriptions</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>Connectez Loop Subscriptions à Makappi pour permettre aux clients de choisir un abonnement sur les produits éligibles dans votre app.</p>
+                  <h3>1. Vérifier le produit dans Shopify</h3>
+                  <p>Configurez son abonnement dans Loop. Dans Shopify, vérifiez que le produit est actif, en stock et disponible sur le canal de vente <strong>Makappi</strong>.</p>
+                  <h3>2. Générer un token API Loop</h3>
+                  <p>Dans Loop, ouvrez <strong>Settings &gt; Admin &gt; API tokens</strong>, puis cliquez sur <strong>Generate New Token</strong> (ou <strong>Generate Token</strong> si la liste est vide).</p>
+                  <img src="@@webRoot/assets/img/support/loop-subscriptions/api-tokens.png" alt="Page des tokens API Loop avec le bouton Generate New Token" class="img-fluid rounded mx-auto d-block mb-5" />
+                  <p>Saisissez <strong>Makappi</strong> comme nom. Cochez uniquement <strong>Customers</strong> avec le droit <strong>Read &amp; write</strong>, puis cliquez sur <strong>Generate</strong>.</p>
+                  <img src="@@webRoot/assets/img/support/loop-subscriptions/generate-token.png" alt="Formulaire Loop avec Customers Read and write sélectionné" class="img-fluid rounded mx-auto d-block mb-5" />
+                  <p>Copiez le token API généré et gardez-le confidentiel. Le droit Loop <strong>Selling Plans</strong> n’est pas nécessaire : Makappi lit les plans d’achat dans Shopify.</p>
+                  <h3>3. Publier l’intégration Makappi</h3>
+                  <p>Dans Makappi, ouvrez <strong>Settings &gt; Integrations &gt; Loop Subscriptions</strong>, cliquez sur <strong>Enable integration</strong>, collez le token dans <strong>API token</strong>, puis cliquez sur <strong>Publish Changes</strong> en haut de la page. Vous pouvez saisir le token avant cette première publication. Le champ conserve la valeur enregistrée pour la consulter ou la remplacer ensuite.</p>
+                  <p>Le token reste sur le serveur Makappi et n’est pas inclus dans la configuration envoyée aux apps mobiles.</p>
+                  <h3>4. Vérifier le parcours d’achat</h3>
+                  <p>Ouvrez un produit éligible dans votre app, choisissez un abonnement et vérifiez que le plan et son prix restent dans le panier jusqu’au paiement Shopify.</p>
+                  <p><a href="https://developer.loopwork.co/reference/generate-admin-api-tokens" target="_blank" rel="noopener noreferrer">Documentation Loop sur les tokens API</a></p>
+                </div>
+              </div>
+            </section>
+
+            <a href="@@webRoot/fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Retour à la FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer_fr.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie_fr.html')
+</body>
+</html>

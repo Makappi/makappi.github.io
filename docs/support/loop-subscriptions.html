@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Makappi - Support</title>
+  <title>Makappi - Support > Loop Subscriptions</title>
   <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -135,7 +135,7 @@
     gtag('config', 'AW-11209948472');
   </script>
   <script>
-    trackPage("Support")
+    trackPage("Support/LoopSubscriptions")
   </script>
 </head>
 
@@ -200,71 +200,43 @@
       <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
         <div class="row text-center">
           <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-            <h1 class="display-1 mb-3">FAQ</h1>
+            <h1 class="display-1 mb-3">Set up Loop Subscriptions</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="../support/">Integrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Loop Subscriptions</li>
+              </ol>
+            </nav>
           </div>
         </div>
         <div class="row gx-0">
-          <div class="col-xl-10 mx-auto">
+          <div class="col-xl-8 mx-auto">
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-10">
-                  <ul>
-                    <li class="mb-1">
-                      <a href="../support/getting-started.html" class="hover more">Getting started</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/products-collections.html" class="hover more">How to add Products and Collections to your App?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/publication.html" class="hover more">How can I publish my App on the App Store (Apple) and Play Store (Android)?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/stores.html" class="hover more">Your App on the App Store (Apple) and Play Store (Android)</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/updates.html" class="hover more">When is your App updated?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/links.html" class="hover more">How can I set up universal links for iOS and Android?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/customer-api.html" class="hover more">How to set up Shopify's New Customer Accounts?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/unlock-upload-key.html" class="hover more">How to unlock your Android upload key?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/review-agreement.html" class="hover more">How to accept the Apple Developer Agreement?</a>
-                    </li>
-                  </ul>
-                  <h3>Integrations</h3>
-                  <ul>
-                    <li class="mb-1"><a href="../support/biscuits-bundles.html" class="hover more">Set up Biscuits Bundles</a></li>
-                    <li class="mb-1"><a href="../support/loop-subscriptions.html" class="hover more">Set up Loop Subscriptions</a></li>
-                    <li class="mb-1">
-                      <a href="../support/facebook.html" class="hover more">How to integrate Facebook?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/smile.html" class="hover more">How to integrate Smile?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/klaviyo.html" class="hover more">How to integrate Klaviyo?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/gorgias.html" class="hover more">How to integrate Gorgias?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/judge-me.html" class="hover more">How to integrate JudgeMe?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/flits.html" class="hover more">How to integrate Flits Wishlist?</a>
-                    </li>
-                  </ul><br /><br />
-                  <h3 className="mt-10">Still have a question?</h3>
-                  <p> You can also contact us by email : <a href="mailto:support@makappi.com">support@makappi.com</a>
-                  </p>
+                  <p>Connect Loop Subscriptions to Makappi so customers can choose subscription plans on eligible products in your app.</p>
+                  <h3>1. Check the product in Shopify</h3>
+                  <p>Set up its subscription plan in Loop. In Shopify, make sure the product is active, in stock and available on the <strong>Makappi</strong> sales channel.</p>
+                  <h3>2. Generate a Loop API token</h3>
+                  <p>In Loop, open <strong>Settings &gt; Admin &gt; API tokens</strong> and select <strong>Generate New Token</strong> (or <strong>Generate Token</strong> if the list is empty).</p>
+                  <img src="../assets/img/support/loop-subscriptions/api-tokens.png" alt="Loop API tokens page with Generate New Token" class="img-fluid rounded mx-auto d-block mb-5" />
+                  <p>Enter <strong>Makappi</strong> as the name. Select only <strong>Customers</strong> with <strong>Read &amp; write</strong> permission, then click <strong>Generate</strong>.</p>
+                  <img src="../assets/img/support/loop-subscriptions/generate-token.png" alt="Loop token form with Customers Read and write selected" class="img-fluid rounded mx-auto d-block mb-5" />
+                  <p>Copy the generated API token. Keep it private. The Loop <strong>Selling Plans</strong> permission is not needed because Makappi reads purchase plans through Shopify.</p>
+                  <h3>3. Publish the Makappi integration</h3>
+                  <p>In Makappi, open <strong>Settings &gt; Integrations &gt; Loop Subscriptions</strong>, click <strong>Enable integration</strong>, paste the token into <strong>API token</strong>, then click <strong>Publish Changes</strong> at the top of the page. You can enter the token before this first publication. The field keeps the saved value so you can review or replace it later.</p>
+                  <p>The token is kept on the Makappi server and is not included in the configuration sent to the mobile apps.</p>
+                  <h3>4. Check the purchase flow</h3>
+                  <p>Open an eligible product in your app, choose a subscription plan and check that the selected plan and price remain in the cart through Shopify checkout.</p>
+                  <p><a href="https://developer.loopwork.co/reference/generate-admin-api-tokens" target="_blank" rel="noopener noreferrer">Loop API token documentation</a></p>
                 </div>
+              </div>
             </section>
+            <a href="../support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Back to FAQ</span>
+            </a>
           </div>
         </div>
       </div>

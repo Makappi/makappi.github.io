@@ -32,6 +32,11 @@ docs/                 ← Built output (served by GitHub Pages)
 
 ## Getting Started
 
+Use Node.js 22 or later, with npm optional dependencies enabled. PNG and JPEG
+compression uses Sharp's native binaries, including macOS ARM64; Homebrew image
+tools and Rosetta are not required. PNG compression is lossless; JPEG compression
+uses progressive encoding at quality 90. GIF and SVG optimizers are unchanged.
+
 ```bash
 npm install
 ```
@@ -45,6 +50,13 @@ npm run dev
 ```
 
 The website will be available at http://localhost:8080. Changes to files in `src/` trigger an automatic rebuild and browser refresh.
+
+Images are compressed on each relevant change. If an image cannot be processed,
+the console reports its filename and the server keeps running. Its previous
+generated output is retained until a successful retry. Production builds fail
+on image errors instead of silently skipping them.
+
+Run the image processing regression tests with `npm test`.
 
 ## Build
 

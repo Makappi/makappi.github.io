@@ -77,10 +77,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
     uglify = require('gulp-uglify'),
-    cache = require('gulp-cache'),
-    imagemin = require('gulp-imagemin'),
-    jpegrecompress = require('imagemin-jpeg-recompress'),
-    pngquant = require('imagemin-pngquant'),
+    optimizeImages = require('./src/build/optimize-images'),
+    pipeline = require('node:stream/promises').pipeline,
     del = require('del'),
     fileinclude = require('gulp-file-include'),
     beautify = require('gulp-beautify'),
@@ -331,35 +329,23 @@ gulp.task('docs:dist', function () {
 });
 
 // Image processing
+function processImages(destination, continueOnError = false) {
+  return pipeline(
+    gulp.src(path.src.img),
+    newer(destination),
+    optimizeImages({ continueOnError }),
+    gulp.dest(destination)
+  );
+}
+
 gulp.task('image:dev', function () {
-  return gulp.src(path.src.img)
-    .pipe(newer(path.dev.img))
-    .pipe(cache(imagemin([
-      imagemin.gifsicle({ interlaced: true }),
-      jpegrecompress({
-        progressive: true,
-        max: 90,
-        min: 80
-      }),
-      pngquant(),
-      imagemin.svgo({ plugins: [{ removeViewBox: false }] })])))
-    .pipe(gulp.dest(path.dev.img));
+  return processImages(path.dev.img);
 });
 gulp.task('image:dist', function () {
-  return gulp.src(path.src.img)
-    .pipe(newer(path.dist.img))
-    .pipe(cache(imagemin([
-      imagemin.gifsicle({ interlaced: true }),
-      jpegrecompress({
-        progressive: true,
-        max: 90,
-        min: 80
-      }),
-      pngquant(),
-      imagemin.svgo({ plugins: [{ removeViewBox: false }] })
-        ])))
-    .pipe(gulp.dest(path.dist.img))
-    .on('end', () => { reload(); });
+  return processImages(path.dist.img).then(() => { reload(); });
+});
+gulp.task('image:watch', function () {
+  return processImages(path.dist.img, true).then(() => { reload(); });
 });
 
 // Move CNAME
@@ -392,11 +378,6 @@ gulp.task('clean:dev', function () {
 });
 gulp.task('clean:dist', function () {
   return del(path.clean.dist);
-});
-
-// Clear cache
-gulp.task('cache:clear', function () {
-    cache.clearAll();
 });
 
 // Assembly Dev
@@ -451,7 +432,7 @@ gulp.task('watch', function () {
     gulp.watch(path.watch.vendorcss, gulp.series('vendorcss:dist'));
     gulp.watch(path.watch.vendorjs, gulp.series('pluginsjs:dist'));
     gulp.watch(path.watch.themejs, gulp.series('themejs:dist'));
-    gulp.watch(path.watch.img, gulp.series('image:dist'));
+    gulp.watch(path.watch.img, gulp.series('image:watch'));
     gulp.watch(path.watch.fonts, gulp.series('fonts:dist'));
     gulp.watch(path.watch.media, gulp.series('media:dist'));
     gulp.watch(path.watch.docs, gulp.series('docs:dist'));

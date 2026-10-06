@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Makappi - Support</title>
+  <title>Makappi - Support &gt; Customer segment</title>
   <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -135,11 +135,11 @@
     gtag('config', 'AW-11209948472');
   </script>
   <script>
-    trackPage("Support")
+    trackPage("Support/CustomerSegment")
   </script>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+<body>
   <div class="content-wrapper">
     <header class="wrapper bg-light">
       <nav class="navbar navbar-expand-lg classic transparent navbar-light">
@@ -199,74 +199,59 @@
     <section class="wrapper bg-soft-primary">
       <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
         <div class="row text-center">
-          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-            <h1 class="display-1 mb-3">FAQ</h1>
+          <div class="col-md-10 col-lg-8 mx-auto">
+            <h1 class="display-1 mb-3">How to find customers who ordered through your app?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../support/">FAQ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Customer segment</li>
+              </ol>
+            </nav>
           </div>
         </div>
         <div class="row gx-0">
           <div class="col-xl-10 mx-auto">
             <section class="wrapper pt-8">
               <div class="card">
-                <div class="card-body p-10">
-                  <ul>
-                    <li class="mb-1">
-                      <a href="../support/getting-started.html" class="hover more">Getting started</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/products-collections.html" class="hover more">How to add Products and Collections to your App?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/publication.html" class="hover more">How can I publish my App on the App Store (Apple) and Play Store (Android)?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/stores.html" class="hover more">Your App on the App Store (Apple) and Play Store (Android)</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/updates.html" class="hover more">When is your App updated?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/links.html" class="hover more">How can I set up universal links for iOS and Android?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/customer-api.html" class="hover more">How to set up Shopify's New Customer Accounts?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/unlock-upload-key.html" class="hover more">How to unlock your Android upload key?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/review-agreement.html" class="hover more">How to accept the Apple Developer Agreement?</a>
-                    </li>
-                    <li class="mb-1"><a href="../support/customer-segment.html" class="hover more">How to find customers who ordered through your app?</a></li>
-                  </ul>
-                  <h3>Integrations</h3>
-                  <ul>
-                    <li class="mb-1">
-                      <a href="../support/facebook.html" class="hover more">How to integrate Facebook?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/smile.html" class="hover more">How to integrate Smile?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/klaviyo.html" class="hover more">How to integrate Klaviyo?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/gorgias.html" class="hover more">How to integrate Gorgias?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/judge-me.html" class="hover more">How to integrate JudgeMe?</a>
-                    </li>
-                    <li class="mb-1">
-                      <a href="../support/flits.html" class="hover more">How to integrate Flits Wishlist?</a>
-                    </li>
-                    <li class="mb-1"><a href="../support/join-stories.html" class="hover more">Set up JOIN Stories</a></li>
-                    <li class="mb-1"><a href="../support/biscuits-bundles.html" class="hover more">Set up Biscuits Bundles</a></li>
-                    <li class="mb-1"><a href="../support/loop-subscriptions.html" class="hover more">Set up Loop Subscriptions</a></li>
-                  </ul><br /><br />
-                  <h3 className="mt-10">Still have a question?</h3>
-                  <p> You can also contact us by email : <a href="mailto:support@makappi.com">support@makappi.com</a>
-                  </p>
+                <div class="card-body p-6 p-md-10">
+                  <p>Create a Shopify customer segment to find customers who have placed at least one order through the Makappi sales channel. You can then export the customer list if needed.</p>
+                  <h3 class="mt-6">1. Open customer segments</h3>
+                  <p>In your Shopify admin, go to <strong>Customers → Segments</strong>, then click <strong>Create segment</strong>.</p>
+                  <a href="../assets/img/support/customer-segment/customer-segment-1.png" target="_blank" rel="noopener">
+                    <img src="../assets/img/support/customer-segment/customer-segment-1.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Shopify Customers and Segments menu with the Create segment button highlighted" loading="lazy" />
+                  </a>
+                  <h3 class="mt-6">2. Describe the customers you want to find</h3>
+                  <p>Copy the sentence below and paste it into the segment description field. Then click the <strong>arrow on the right</strong>.</p>
+                  <div class="bg-soft-primary rounded p-4 mb-5">
+                    <p id="segment-prompt" class="text-dark mb-3">Customers who placed orders created by the app 'Makappi, Mobile App Builder'.</p>
+                    <button type="button" class="btn btn-sm btn-primary rounded-pill" data-segment-copy data-clipboard-target="#segment-prompt" data-copied-label="Copied!" data-error-label="Copy unavailable. Select the sentence above and copy it manually.">Copy sentence</button>
+                    <span class="d-block fs-14 mt-2" data-copy-status role="status" aria-live="polite"></span>
+                  </div>
+                  <a href="../assets/img/support/customer-segment/customer-segment-2.png" target="_blank" rel="noopener">
+                    <img src="../assets/img/support/customer-segment/customer-segment-2.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Segment description field with the Makappi sentence and the arrow on the right" loading="lazy" />
+                  </a>
+                  <h3 class="mt-6">3. Save the generated segment</h3>
+                  <p>Shopify generates the query and displays the matching customers. Check that the description refers to customers who <strong>placed orders</strong> through Makappi, then click <strong>Save</strong>.</p>
+                  <a href="../assets/img/support/customer-segment/customer-segment-3.png" target="_blank" rel="noopener">
+                    <img src="../assets/img/support/customer-segment/customer-segment-3.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Shopify generated query for orders placed through Makappi and the Save button" loading="lazy" />
+                  </a>
+                  <p class="fs-15 text-muted">The segment can be empty if no customers match yet. It updates automatically as customers place orders through Makappi.</p>
+                  <h3 class="mt-6">4. Name your segment</h3>
+                  <p>Enter a name, such as <strong>Ordered from App</strong>, then click <strong>Save</strong>.</p>
+                  <a href="../assets/img/support/customer-segment/customer-segment-4.png" target="_blank" rel="noopener">
+                    <img src="../assets/img/support/customer-segment/customer-segment-4.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Save as new segment dialog with the segment name and Save button" loading="lazy" />
+                  </a>
+                  <h3 class="mt-6">5. Export the customer list (optional)</h3>
+                  <p>Once the segment is saved, open <strong>More actions → Export</strong> to export the customer list.</p>
+                  <a href="../assets/img/support/customer-segment/customer-segment-5.png" target="_blank" rel="noopener">
+                    <img src="../assets/img/support/customer-segment/customer-segment-5.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Saved customer segment with More actions and Export" loading="lazy" />
+                  </a>
                 </div>
+              </div>
             </section>
+            <a href="../support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i><span>Back to FAQ</span>
+            </a>
           </div>
         </div>
       </div>
@@ -335,6 +320,51 @@
   </div>
   <script src="../assets/js/plugins.js"></script>
   <script src="../assets/js/theme.js"></script>
+  <script>
+    (() => {
+      const button = document.querySelector('[data-segment-copy]');
+      const status = document.querySelector('[data-copy-status]');
+      if (!button || !status) return;
+      const label = button.textContent;
+      let resetTimer;
+      const onSuccess = () => {
+        clearTimeout(resetTimer);
+        button.textContent = button.dataset.copiedLabel;
+        status.textContent = button.dataset.copiedLabel;
+        resetTimer = setTimeout(() => {
+          button.textContent = label;
+          status.textContent = '';
+        }, 2500);
+      };
+      const onError = () => {
+        clearTimeout(resetTimer);
+        button.textContent = label;
+        status.textContent = button.dataset.errorLabel;
+        const range = document.createRange();
+        range.selectNodeContents(document.querySelector('#segment-prompt'));
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        button.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(document.querySelector('#segment-prompt').textContent);
+            onSuccess();
+          } catch (_) {
+            onError();
+          }
+        });
+      } else {
+        const clipboard = new ClipboardJS(button);
+        clipboard.on('success', event => {
+          event.clearSelection();
+          onSuccess();
+        });
+        clipboard.on('error', onError);
+      }
+    })();
+  </script>
   <script>
     window.axeptioSettings = {
       clientId: "62cda5a4dd4555d5187103c0",

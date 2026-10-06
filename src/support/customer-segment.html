@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makappi - Support &gt; Customer segment</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>trackPage("Support/CustomerSegment")</script>
+</head>
+<body>
+  <div class="content-wrapper">
+    @@include('_header.html', {"currentPage": "support"})
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 mx-auto">
+            <h1 class="display-1 mb-3">How to find customers who ordered through your app?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Customer segment</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div class="row gx-0">
+          <div class="col-xl-10 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-6 p-md-10">
+                  <p>Create a Shopify customer segment to find customers who have placed at least one order through the Makappi sales channel. You can then export the customer list if needed.</p>
+                  <h3 class="mt-6">1. Open customer segments</h3>
+                  <p>In your Shopify admin, go to <strong>Customers → Segments</strong>, then click <strong>Create segment</strong>.</p>
+                  <a href="@@webRoot/assets/img/support/customer-segment/customer-segment-1.png" target="_blank" rel="noopener">
+                    <img src="@@webRoot/assets/img/support/customer-segment/customer-segment-1.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Shopify Customers and Segments menu with the Create segment button highlighted" loading="lazy" />
+                  </a>
+                  <h3 class="mt-6">2. Describe the customers you want to find</h3>
+                  <p>Copy the sentence below and paste it into the segment description field. Then click the <strong>arrow on the right</strong>.</p>
+                  <div class="bg-soft-primary rounded p-4 mb-5">
+                    <p id="segment-prompt" class="text-dark mb-3">Customers who placed orders created by the app 'Makappi, Mobile App Builder'.</p>
+                    <button type="button" class="btn btn-sm btn-primary rounded-pill" data-segment-copy data-clipboard-target="#segment-prompt" data-copied-label="Copied!" data-error-label="Copy unavailable. Select the sentence above and copy it manually.">Copy sentence</button>
+                    <span class="d-block fs-14 mt-2" data-copy-status role="status" aria-live="polite"></span>
+                  </div>
+                  <a href="@@webRoot/assets/img/support/customer-segment/customer-segment-2.png" target="_blank" rel="noopener">
+                    <img src="@@webRoot/assets/img/support/customer-segment/customer-segment-2.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Segment description field with the Makappi sentence and the arrow on the right" loading="lazy" />
+                  </a>
+                  <h3 class="mt-6">3. Save the generated segment</h3>
+                  <p>Shopify generates the query and displays the matching customers. Check that the description refers to customers who <strong>placed orders</strong> through Makappi, then click <strong>Save</strong>.</p>
+                  <a href="@@webRoot/assets/img/support/customer-segment/customer-segment-3.png" target="_blank" rel="noopener">
+                    <img src="@@webRoot/assets/img/support/customer-segment/customer-segment-3.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Shopify generated query for orders placed through Makappi and the Save button" loading="lazy" />
+                  </a>
+                  <p class="fs-15 text-muted">The segment can be empty if no customers match yet. It updates automatically as customers place orders through Makappi.</p>
+                  <h3 class="mt-6">4. Name your segment</h3>
+                  <p>Enter a name, such as <strong>Ordered from App</strong>, then click <strong>Save</strong>.</p>
+                  <a href="@@webRoot/assets/img/support/customer-segment/customer-segment-4.png" target="_blank" rel="noopener">
+                    <img src="@@webRoot/assets/img/support/customer-segment/customer-segment-4.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Save as new segment dialog with the segment name and Save button" loading="lazy" />
+                  </a>
+                  <h3 class="mt-6">5. Export the customer list (optional)</h3>
+                  <p>Once the segment is saved, open <strong>More actions → Export</strong> to export the customer list.</p>
+                  <a href="@@webRoot/assets/img/support/customer-segment/customer-segment-5.png" target="_blank" rel="noopener">
+                    <img src="@@webRoot/assets/img/support/customer-segment/customer-segment-5.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Saved customer segment with More actions and Export" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </section>
+            <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i><span>Back to FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  @@include('_footer.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_support-customer-segment-scripts.html')
+  @@include('_cookie.html')
+</body>
+</html>

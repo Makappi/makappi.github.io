@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Makappi - Support &gt; Segment de clients</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>trackPage("Support/FR/CustomerSegment")</script>
+</head>
+<body>
+  <div class="content-wrapper">
+    @@include('_header_fr.html', {"currentPage": "support"})
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 mx-auto">
+            <h1 class="display-1 mb-3">Comment retrouver les clients ayant commandé depuis votre app ?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">FAQ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Segment de clients</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div class="row gx-0">
+          <div class="col-xl-10 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-6 p-md-10">
+                  <p>Créez un segment de clients Shopify pour retrouver les clients ayant passé au moins une commande via le canal de vente Makappi. Vous pourrez ensuite exporter cette liste si besoin.</p>
+                  <h3 class="mt-6">1. Ouvrir les segments de clients</h3>
+                  <p>Dans votre administration Shopify, allez dans <strong>Customers → Segments</strong> (Clients → Segments), puis cliquez sur <strong>Create segment</strong> (Créer un segment).</p>
+                  <a href="@@webRoot/assets/img/support/customer-segment/customer-segment-1.png" target="_blank" rel="noopener">
+                    <img src="@@webRoot/assets/img/support/customer-segment/customer-segment-1.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Menu Shopify Customers et Segments avec le bouton Create segment encadré" loading="lazy" />
+                  </a>
+                  <h3 class="mt-6">2. Décrire les clients à retrouver</h3>
+                  <p>Copiez la phrase ci-dessous et collez-la dans le champ de description du segment. Puis cliquez sur la <strong>flèche à droite</strong>. Conservez cette phrase en anglais, comme dans la capture.</p>
+                  <div class="bg-soft-primary rounded p-4 mb-5">
+                    <p id="segment-prompt" class="text-dark mb-3">Customers who placed orders created by the app 'Makappi, Mobile App Builder'.</p>
+                    <button type="button" class="btn btn-sm btn-primary rounded-pill" data-segment-copy data-clipboard-target="#segment-prompt" data-copied-label="Copié !" data-error-label="Copie indisponible. Sélectionnez la phrase ci-dessus et copiez-la manuellement.">Copier la phrase</button>
+                    <span class="d-block fs-14 mt-2" data-copy-status role="status" aria-live="polite"></span>
+                  </div>
+                  <a href="@@webRoot/assets/img/support/customer-segment/customer-segment-2.png" target="_blank" rel="noopener">
+                    <img src="@@webRoot/assets/img/support/customer-segment/customer-segment-2.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Champ de description du segment avec la phrase Makappi et la flèche à droite" loading="lazy" />
+                  </a>
+                  <h3 class="mt-6">3. Enregistrer le segment généré</h3>
+                  <p>Shopify génère la requête et affiche les clients correspondants. Vérifiez que la description concerne les clients ayant <strong>passé des commandes</strong> via Makappi, puis cliquez sur <strong>Save</strong> (Enregistrer).</p>
+                  <a href="@@webRoot/assets/img/support/customer-segment/customer-segment-3.png" target="_blank" rel="noopener">
+                    <img src="@@webRoot/assets/img/support/customer-segment/customer-segment-3.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Requête Shopify pour les commandes passées via Makappi et bouton Save" loading="lazy" />
+                  </a>
+                  <p class="fs-15 text-muted">Le segment peut être vide si aucun client ne correspond encore. Il se met à jour automatiquement lorsque des clients passent commande via Makappi.</p>
+                  <h3 class="mt-6">4. Nommer votre segment</h3>
+                  <p>Saisissez un nom, par exemple <strong>Clients ayant commandé depuis l’app</strong>, puis cliquez sur <strong>Save</strong> (Enregistrer).</p>
+                  <a href="@@webRoot/assets/img/support/customer-segment/customer-segment-4.png" target="_blank" rel="noopener">
+                    <img src="@@webRoot/assets/img/support/customer-segment/customer-segment-4.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Fenêtre Save as new segment avec le nom du segment et le bouton Save" loading="lazy" />
+                  </a>
+                  <h3 class="mt-6">5. Exporter la liste des clients (facultatif)</h3>
+                  <p>Une fois le segment enregistré, ouvrez <strong>More actions → Export</strong> (Autres actions → Exporter) pour exporter la liste des clients.</p>
+                  <a href="@@webRoot/assets/img/support/customer-segment/customer-segment-5.png" target="_blank" rel="noopener">
+                    <img src="@@webRoot/assets/img/support/customer-segment/customer-segment-5.png" width="1351" height="975" class="img-fluid rounded mb-5" alt="Segment de clients enregistré avec les options More actions et Export" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </section>
+            <a href="@@webRoot/fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i><span>Retour à la FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  @@include('_footer_fr.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_support-customer-segment-scripts.html')
+  @@include('_cookie_fr.html')
+</body>
+</html>

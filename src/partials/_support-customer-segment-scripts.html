@@ -1,0 +1,46 @@
+<script>
+(() => {
+  const button = document.querySelector('[data-segment-copy]');
+  const status = document.querySelector('[data-copy-status]');
+  if (!button || !status) return;
+
+  const label = button.textContent;
+  let resetTimer;
+  const onSuccess = () => {
+    clearTimeout(resetTimer);
+    button.textContent = button.dataset.copiedLabel;
+    status.textContent = button.dataset.copiedLabel;
+    resetTimer = setTimeout(() => {
+      button.textContent = label;
+      status.textContent = '';
+    }, 2500);
+  };
+  const onError = () => {
+    clearTimeout(resetTimer);
+    button.textContent = label;
+    status.textContent = button.dataset.errorLabel;
+    const range = document.createRange();
+    range.selectNodeContents(document.querySelector('#segment-prompt'));
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+  };
+  if (navigator.clipboard && window.isSecureContext) {
+    button.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(document.querySelector('#segment-prompt').textContent);
+        onSuccess();
+      } catch (_) {
+        onError();
+      }
+    });
+  } else {
+    const clipboard = new ClipboardJS(button);
+    clipboard.on('success', event => {
+      event.clearSelection();
+      onSuccess();
+    });
+    clipboard.on('error', onError);
+  }
+})();
+</script>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Makappi - Support &gt; Customer segment</title>
+  <title>Makappi - Support &gt; Customer metafield and segments</title>
   <meta name="robots" content="noindex">
   @@include('_head.html')
   <script>trackPage("Support/CustomerSegment")</script>
@@ -13,11 +13,11 @@
       <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
         <div class="row text-center">
           <div class="col-md-10 col-lg-8 mx-auto">
-            <h1 class="display-1 mb-3">How to find customers who ordered through your app?</h1>
+            <h1 class="display-1 mb-3">Identify app customers: customer metafield and segments</h1>
             <nav class="d-inline-block" aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Customer segment</li>
+                <li class="breadcrumb-item active" aria-current="page">Customer metafield and segments</li>
               </ol>
             </nav>
           </div>
@@ -27,6 +27,36 @@
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-6 p-md-10">
+                  <p>Identify customers signed in to your app using the <strong>Makappi App User</strong> customer metafield, and find those who ordered through the app with Shopify segments.</p>
+                  <ul class="mb-6">
+                    <li><a href="#app-users">Use the Makappi App User customer metafield</a></li>
+                    <li><a href="#orders">Find customers who ordered through the app</a></li>
+                  </ul>
+                  <h2 id="app-users" class="mb-4" style="scroll-margin-top: 8rem;">Customers signed in to the app: Makappi App User</h2>
+                  <p>Makappi automatically updates the <strong>Makappi App User</strong> customer metafield to identify customers signed in to their account in the iOS or Android app, even if they have not placed an order.</p>
+                  <h3 class="mt-6">View the field on a customer profile</h3>
+                  <p>In Shopify, go to <strong>Customers</strong>, open a customer profile, then find <strong>Makappi App User</strong> under <strong>Metafields</strong>.</p>
+                  <a href="@@webRoot/assets/img/support/customer-segment/customer-metafield.png" target="_blank" rel="noopener">
+                    <img src="@@webRoot/assets/img/support/customer-segment/customer-metafield.png" width="829" height="257" class="img-fluid rounded mb-5" alt="Makappi App User metafield displayed in Shopify customer metafields" loading="lazy" />
+                  </a>
+                  <ul>
+                    <li><strong>True</strong>: the customer signed in to their account in the app. The field is also updated when they open the app with an existing session.</li>
+                    <li><strong>False</strong>: the field is reset to false when the customer explicitly signs out of the app, if the update can be sent.</li>
+                  </ul>
+                  <h3 class="mt-6">Filter your reports in Shopify Analytics</h3>
+                  <p>The <strong>Makappi App User</strong> metafield is also available under <strong>Filters</strong> in all Shopify Analytics views. Add this filter and select <strong>Yes</strong> to analyze data for identified app customers, or <strong>No</strong> for customers whose field is false.</p>
+                  <a href="@@webRoot/assets/img/support/customer-segment/customer-metafield-analytics.png" target="_blank" rel="noopener">
+                    <img src="@@webRoot/assets/img/support/customer-segment/customer-metafield-analytics.png" width="321" height="156" class="img-fluid rounded mb-5" alt="Makappi App User filter in Shopify Analytics with Yes and No options" loading="lazy" />
+                  </a>
+                  <h3 class="mt-6">Create a segment using this field</h3>
+                  <ol>
+                    <li>Go to <strong>Customers → Segments → Create segment</strong>.</li>
+                    <li>In the segment filters, find the <strong>Makappi App User</strong> metafield and select <strong>true</strong>.</li>
+                    <li>Save the segment with a name such as <strong>Customers signed in to the app</strong>. You can then export it as described below.</li>
+                  </ol>
+                  <p>This segment helps you find identified app customers, including those who have not placed an order yet.</p>
+                  <p class="fs-15 text-muted mb-0">This field is an approximate indicator: it does not cover guests and cannot be used to count installations. Uninstalling the app or using multiple devices can leave a value that no longer reflects the current situation. Customers who are already signed in are included progressively when they next open a compatible app version.</p>
+                  <h2 id="orders" class="mt-10 mb-4" style="scroll-margin-top: 8rem;">Customers who ordered through the app</h2>
                   <p>Create a Shopify customer segment to find customers who have placed at least one order through the Makappi sales channel. You can then export the customer list if needed.</p>
                   <h3 class="mt-6">1. Open customer segments</h3>
                   <p>In your Shopify admin, go to <strong>Customers → Segments</strong>, then click <strong>Create segment</strong>.</p>

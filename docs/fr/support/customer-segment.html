@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-  <title>Makappi - Support &gt; Segment de clients</title>
+  <title>Makappi - Support &gt; Métachamp client et segments</title>
   <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -200,11 +200,11 @@
       <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
         <div class="row text-center">
           <div class="col-md-10 col-lg-8 mx-auto">
-            <h1 class="display-1 mb-3">Comment retrouver les clients ayant commandé depuis votre app ?</h1>
+            <h1 class="display-1 mb-3">Identifier les clients de l’app : métachamp client et segments</h1>
             <nav class="d-inline-block" aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="../../fr/support/">FAQ</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Segment de clients</li>
+                <li class="breadcrumb-item active" aria-current="page">Métachamp client et segments</li>
               </ol>
             </nav>
           </div>
@@ -214,6 +214,36 @@
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-6 p-md-10">
+                  <p>Identifiez les clients connectés à votre app grâce au métachamp client <strong>Makappi App User</strong>, et retrouvez ceux qui ont commandé depuis l’app avec les segments Shopify.</p>
+                  <ul class="mb-6">
+                    <li><a href="#app-users">Utiliser le métachamp client Makappi App User</a></li>
+                    <li><a href="#orders">Retrouver les clients ayant commandé depuis l’app</a></li>
+                  </ul>
+                  <h2 id="app-users" class="mb-4" style="scroll-margin-top: 8rem;">Clients connectés à l’app : Makappi App User</h2>
+                  <p>Makappi renseigne automatiquement le métachamp client (Customer Metafield) <strong>Makappi App User</strong> pour identifier les clients connectés à leur compte dans l’app iOS ou Android, même s’ils n’ont pas passé commande.</p>
+                  <h3 class="mt-6">Consulter le champ sur une fiche client</h3>
+                  <p>Dans Shopify, allez dans <strong>Clients</strong>, ouvrez une fiche client, puis retrouvez <strong>Makappi App User</strong> dans les <strong>Champs méta</strong>.</p>
+                  <a href="../../assets/img/support/customer-segment/customer-metafield.png" target="_blank" rel="noopener">
+                    <img src="../../assets/img/support/customer-segment/customer-metafield.png" width="829" height="257" class="img-fluid rounded mb-5" alt="Métachamp Makappi App User visible dans les champs méta du client Shopify" loading="lazy" />
+                  </a>
+                  <ul>
+                    <li><strong>Vrai (true)</strong> : le client s’est connecté à son compte dans l’app. Le champ est aussi mis à jour lorsqu’il ouvre l’app avec une session existante.</li>
+                    <li><strong>Faux (false)</strong> : le champ est remis à faux lorsque le client se déconnecte explicitement de l’app, si la mise à jour peut être transmise.</li>
+                  </ul>
+                  <h3 class="mt-6">Filtrer vos analyses dans Shopify Analytics</h3>
+                  <p>Le métachamp <strong>Makappi App User</strong> est aussi disponible dans les <strong>Filters</strong> (Filtres) de toutes les vues Shopify Analytics. Ajoutez ce filtre et sélectionnez <strong>Yes</strong> (Oui) pour analyser les données des clients identifiés dans l’app, ou <strong>No</strong> (Non) pour ceux dont le champ est à faux.</p>
+                  <a href="../../assets/img/support/customer-segment/customer-metafield-analytics.png" target="_blank" rel="noopener">
+                    <img src="../../assets/img/support/customer-segment/customer-metafield-analytics.png" width="321" height="156" class="img-fluid rounded mb-5" alt="Filtre Makappi App User dans Shopify Analytics avec les choix Yes et No" loading="lazy" />
+                  </a>
+                  <h3 class="mt-6">Créer un segment à partir de ce champ</h3>
+                  <ol>
+                    <li>Allez dans <strong>Clients → Segments → Créer un segment</strong>.</li>
+                    <li>Dans les filtres du segment, recherchez le métachamp <strong>Makappi App User</strong> et choisissez la valeur <strong>vrai (true)</strong>.</li>
+                    <li>Enregistrez le segment, par exemple sous le nom <strong>Clients connectés à l’app</strong>. Vous pourrez ensuite l’exporter comme décrit plus bas.</li>
+                  </ol>
+                  <p>Ce segment permet de retrouver les clients identifiés dans l’app, y compris ceux qui n’ont encore passé aucune commande.</p>
+                  <p class="fs-15 text-muted mb-0">Ce champ est un indicateur approximatif : il ne couvre pas les visiteurs non connectés et ne permet pas de compter les installations. Une désinstallation ou l’utilisation de plusieurs appareils peut laisser une valeur qui ne reflète pas la situation actuelle. Les clients déjà connectés sont pris en compte progressivement à leur prochaine ouverture d’une version de l’app compatible.</p>
+                  <h2 id="orders" class="mt-10 mb-4" style="scroll-margin-top: 8rem;">Clients ayant commandé depuis l’app</h2>
                   <p>Créez un segment de clients Shopify pour retrouver les clients ayant passé au moins une commande via le canal de vente Makappi. Vous pourrez ensuite exporter cette liste si besoin.</p>
                   <h3 class="mt-6">1. Ouvrir les segments de clients</h3>
                   <p>Dans votre administration Shopify, allez dans <strong>Customers → Segments</strong> (Clients → Segments), puis cliquez sur <strong>Create segment</strong> (Créer un segment).</p>

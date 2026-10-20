@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Makappi - Support > Convertir un compte Apple Developer en compte organisation</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support FR/ConvertAppleAccount")
+  </script>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header_fr.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">Convertir un compte Apple Developer individuel en compte organisation</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">FAQ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Compte Apple Developer</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>
+                    Makappi n'est pas compatible avec les <strong>comptes Apple Developer individuels (Individual)</strong>. Pour publier votre application avec Makappi, vous devez disposer d'un <strong>compte organisation (Organization)</strong>. Si votre compte est actuellement de type Individual, vous devez demander sa conversion à Apple en suivant les étapes ci-dessous.
+                  </p>
+
+                  <h2 class="mb-3 mt-8">Avant de commencer</h2>
+                  <p>Préparez les éléments suivants :</p>
+                  <ul>
+                    <li class="mb-2">Un accès au compte en tant que <strong>titulaire (Account Holder)</strong>. La demande doit être effectuée par le fondateur ou cofondateur de la société.</li>
+                    <li class="mb-2">Une <strong>société constituée en personne morale</strong>. Un simple nom commercial ou un statut d'entrepreneur individuel ne suffit pas pour ce type de compte.</li>
+                    <li class="mb-2">Le <strong>numéro D-U-N-S</strong> de votre société. Vous pouvez le rechercher ou en demander un gratuitement depuis la <a href="https://developer.apple.com/help/account/membership/D-U-N-S/" target="_blank" rel="noopener noreferrer" class="hover-3">page D-U-N-S d'Apple</a>.</li>
+                    <li class="mb-2">La dénomination légale, l'adresse et les coordonnées de votre société, correspondant à sa fiche D-U-N-S, ainsi que ses documents d'immatriculation si Apple les demande.</li>
+                  </ul>
+
+                  <h2 class="mb-3 mt-8">Envoyer la demande à Apple</h2>
+                  <ol>
+                    <li class="mb-3">Connectez-vous à votre <a href="https://developer.apple.com/account/" target="_blank" rel="noopener noreferrer" class="hover-3">compte Apple Developer</a> avec le compte Apple du titulaire.</li>
+                    <li class="mb-3">Ouvrez la rubrique <strong>Membership</strong> (informations d'adhésion) et vérifiez que le type de compte est <strong>Individual</strong>. S'il indique déjà <strong>Organization</strong>, aucune conversion n'est nécessaire.</li>
+                    <li class="mb-3">Cliquez sur <strong>Need to edit this information?</strong>, puis sur le lien permettant de fournir les nouvelles informations de votre organisation (<strong>Provide your updated information</strong> ou <strong>Provide your new organization information</strong>, selon l'écran).</li>
+                    <li class="mb-3">Dans le formulaire <strong>Individual to Organization Membership Update</strong>, renseignez les informations de votre société et son numéro D-U-N-S.</li>
+                    <li class="mb-3">Relisez les informations, puis envoyez la demande à Apple.</li>
+                  </ol>
+                  <p>
+                    Vous ne trouvez pas cette option ? Utilisez le <a href="https://developer.apple.com/contact/request/migrate-individual-account" target="_blank" rel="noopener noreferrer" class="hover-3">formulaire officiel de conversion Apple</a>, après vous être connecté au compte du titulaire.
+                  </p>
+
+                  <h2 class="mb-3 mt-8">Suivre la conversion</h2>
+                  <p>
+                    Apple examine votre demande et peut vous contacter pour vérifier votre société ou obtenir des justificatifs. Surveillez les e-mails associés au compte et répondez aux demandes d'Apple. Le délai dépend des vérifications nécessaires.
+                  </p>
+                  <p class="mb-0">
+                    Pour plus d'informations, consultez l'<a href="https://developer.apple.com/help/account/membership/updating-your-account-information/" target="_blank" rel="noopener noreferrer" class="hover-3">aide officielle Apple sur la mise à jour du compte</a>.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <a href="@@webRoot/fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Retour à la FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer_fr.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie_fr.html')
+</body>
+</html>

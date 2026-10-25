@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makappi - Support > App Discount Codes</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support/DiscountCodes")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">How to offer discount codes in your App?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Discount codes in your App</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>
+                    A discount reserved for your App is one of the best ways to get your customers to download it and order from it. This page explains how to set one up with Makappi.
+                  </p>
+
+                  <h3>Shopify does not offer "App only" discount codes</h3>
+                  <p>
+                    Shopify does not allow you to restrict a discount code to a sales channel. A code created in Shopify works everywhere: on your online store, in your App and on your other channels. There is no setting to make it technically exclusive to the App.
+                  </p>
+                  <p>
+                    The good news: with Makappi's tools, you can get a result that works very well in practice. The idea is simple: <strong>create a code that you only promote inside the App</strong>, and let the App apply it for your customers, without them ever having to type it.
+                  </p>
+
+                  <h3>1. Create the discount code in Shopify</h3>
+                  <p>
+                    In your Shopify admin, go to "Discounts" and create a discount code as usual (percentage, fixed amount, free shipping...).
+                  </p>
+                  <ul>
+                    <li>
+                      Choose a code that is hard to guess. Avoid obvious names like APP10 or MOBILE: prefer something like <strong>APPX7K24</strong>
+                    </li>
+                    <li>
+                      Do not mention it anywhere else: not on your website, in your newsletters or on your social networks
+                    </li>
+                    <li>
+                      Limit it to <strong>one use per customer</strong> and set an end date if it is a temporary offer
+                    </li>
+                  </ul>
+
+                  <h3>2. Promote it with a banner on the Home page</h3>
+                  <p>
+                    In your Makappi dashboard, go to "Design" > "Home" and add an <strong>Image Banner</strong>, a <strong>Text Banner</strong> or a <strong>Slideshow</strong>. In the block settings:
+                  </p>
+                  <ul>
+                    <li>
+                      Turn on <strong>"Add a discount to the cart on click"</strong>
+                    </li>
+                    <li>
+                      Enter your discount code in the field that appears
+                    </li>
+                  </ul>
+                  <p>
+                    When a customer taps the banner, the code is added to their cart automatically. Your banner can also link to a product or a collection, so the customer lands right where you want them, with the discount already applied. Place it at the top of the Home page so it is seen as soon as the App opens.
+                  </p>
+                  <p>
+                    Save and publish the change for it to reach your App.
+                  </p>
+
+                  <h3>3. Promote it with a push notification</h3>
+                  <p>
+                    In your Makappi dashboard, go to "Marketing" > "Push Campaigns" and create a new campaign. In the content step, enter your code in the <strong>"Discount code"</strong> field: it is applied automatically when the customer taps the notification.
+                  </p>
+                  <p>
+                    As with campaigns without a code, you can choose a destination in the App (product, collection or page), send it right away, schedule it, or have it arrive at the same local time for every customer.
+                  </p>
+                  <p>
+                    You can combine both: a banner on the Home page for the duration of the offer, and a push notification to announce it.
+                  </p>
+
+                  <h3>Can a customer use the code on the online store?</h3>
+                  <p>
+                    In theory, yes. Since the code is applied for them, the customer never has to see it in the App, but it does appear in the checkout summary. A customer could therefore note it down and reuse it on your online store.
+                  </p>
+                  <p>
+                    In practice, very few customers do it, especially if the code is hard to guess, limited to one use per customer and never published anywhere else. This setup does the job: your offer stays a reason to download and use the App.
+                  </p>
+
+                  <p>
+                    A question about discount codes? Write to us at <a href="mailto:support@makappi.com">support@makappi.com</a>.
+                  </p>
+
+                </div>
+              </div>
+            </section>
+
+            <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Back to FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie.html')
+</body>
+</html>

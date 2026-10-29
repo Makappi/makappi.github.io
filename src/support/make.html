@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makappi - Support > Make</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support/Make")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">How to create push campaigns with Make?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">Integrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Make</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>
+                    The <strong>Make</strong> integration lets your <a href="https://www.make.com" target="_blank">Make</a> scenarios create push notification campaigns in your app: a new arrival, a best seller detected from your paid orders, a restock... Each campaign can have an image, open a product, a collection or a link, and be saved as a draft, scheduled or sent immediately.
+                  </p>
+                  <p>
+                    Campaigns created by Make appear in your Makappi campaign list, like the ones you create yourself. They are sent to every app user who accepted notifications.
+                  </p>
+
+                  <div class="alert alert-info d-flex" role="alert">
+                    <div>
+                      The Make integration is available in the <strong>Premium</strong> and <strong>Custom</strong> plans. It is enabled by the Makappi team: <a href="mailto:support@makappi.com">contact us</a> to activate it.
+                    </div>
+                  </div>
+
+                  <h3>Step 1: Get your API key</h3>
+                  <ul>
+                    <li class="mb-2">In your Makappi dashboard, go to <strong>Settings &gt; Integrations &gt; Make</strong></li>
+                    <li class="mb-2">Copy the <strong>API endpoint</strong> and the <strong>API key</strong></li>
+                  </ul>
+                  <div class="alert alert-warning d-flex" role="alert">
+                    <div>
+                      <strong>Keep this key secret:</strong> it gives access to your push campaigns. If it leaks, click <strong>Regenerate API key</strong>: the old key stops working immediately and you will need to update your scenarios.
+                    </div>
+                  </div>
+
+                  <h3>Step 2: Add an HTTP module in Make</h3>
+                  <p>In your scenario, add the <strong>HTTP &gt; Make a request</strong> module and configure it:</p>
+                  <ul>
+                    <li class="mb-2"><strong>URL</strong>: <code>https://app.makappi.com/api/v1/push-campaigns</code></li>
+                    <li class="mb-2"><strong>Method</strong>: <code>POST</code></li>
+                    <li class="mb-2"><strong>Headers</strong>: name <code>Authorization</code>, value <code>Bearer YOUR_API_KEY</code></li>
+                    <li class="mb-2"><strong>Body type</strong>: <code>Raw</code>, <strong>Content type</strong>: <code>JSON (application/json)</code></li>
+                    <li class="mb-2"><strong>Parse response</strong>: <code>Yes</code></li>
+                  </ul>
+                  <p>Then fill the <strong>Request content</strong> with your campaign, using the data of the previous modules (for example a Shopify product):</p>
+<pre class="bg-light rounded p-4 mb-5"><code>{
+  "externalId": "new-arrival-8123456789",
+  "status": "DRAFT",
+  "title": {"en": "New arrival", "fr": "Nouveauté"},
+  "message": {"en": "Discover the Blue shirt", "fr": "Découvrez la chemise bleue"},
+  "imageUrl": "https://cdn.shopify.com/s/files/.../blue-shirt.jpg",
+  "destination": {"type": "PRODUCT", "productId": "8123456789", "productTitle": "Blue shirt"}
+}</code></pre>
+
+                  <h3>Campaign fields</h3>
+                  <ul>
+                    <li class="mb-2"><code>title</code> and <code>message</code> (required): a text, or one text per language such as <code>{"en": "...", "fr": "..."}</code>. Each user receives their language, or English by default. Title: 200 characters max, message: 1000.</li>
+                    <li class="mb-2"><code>status</code>: <code>DRAFT</code> (default, saved without being sent, to review in Makappi), <code>SCHEDULED</code> (sent at <code>sendAt</code>) or <code>NOW</code> (sent immediately).</li>
+                    <li class="mb-2"><code>sendAt</code>: sending date in ISO 8601 format, for example <code>2026-11-02T18:00:00Z</code>. Required with <code>SCHEDULED</code>, must be in the future. The campaign is sent at this exact time for everyone.</li>
+                    <li class="mb-2"><code>imageUrl</code>: an <code>https</code> image URL shown in the notification (rich push).</li>
+                    <li class="mb-2"><code>destination</code>: what opens when the notification is tapped.
+                      <ul>
+                        <li><code>{"type": "PRODUCT", "productId": "...", "productTitle": "..."}</code></li>
+                        <li><code>{"type": "COLLECTION", "collectionId": "...", "collectionTitle": "..."}</code></li>
+                        <li><code>{"type": "LINK", "url": "https://..."}</code></li>
+                        <li><code>{"type": "NONE"}</code> (default): opens the app</li>
+                      </ul>
+                      Shopify IDs can be numeric (<code>8123456789</code>) or full (<code>gid://shopify/Product/8123456789</code>). Titles are optional and only shown in your dashboard.
+                    </li>
+                    <li class="mb-2"><code>discountCode</code>: a discount code applied to the cart when the notification is opened.</li>
+                    <li class="mb-2"><code>externalId</code>: your own unique identifier for this campaign (see below). Recommended.</li>
+                  </ul>
+
+                  <h3>Avoid duplicate campaigns</h3>
+                  <p>
+                    A scenario can run twice on the same data (retry, replay, two triggers). Always send an <code>externalId</code> built from your data, for example <code>new-arrival-{{product id}}</code> or <code>best-seller-2026-11-02</code>. If a campaign with the same <code>externalId</code> already exists, no new campaign is created: the API returns the existing one with <code>"created": false</code>.
+                  </p>
+
+                  <h3>Response</h3>
+                  <p>A new campaign returns the code <code>201</code>, an existing one (same <code>externalId</code>) the code <code>200</code>:</p>
+<pre class="bg-light rounded p-4 mb-5"><code>{
+  "created": true,
+  "campaign": {
+    "id": "5f535f0b-4d31-4d17-820c-06411031c114",
+    "externalId": "new-arrival-8123456789",
+    "status": "DRAFT",
+    "title": {"en": "New arrival", "fr": "Nouveauté"},
+    "message": {"en": "Discover the Blue shirt", "fr": "Découvrez la chemise bleue"},
+    "imageUrl": "https://cdn.shopify.com/s/files/.../blue-shirt.jpg",
+    "destination": {"type": "PRODUCT", "productId": "gid://shopify/Product/8123456789", "productTitle": "Blue shirt"},
+    "discountCode": null,
+    "sendAt": null,
+    "deliveryStats": null,
+    "createdAt": "2026-10-28T20:13:16.683Z",
+    "updatedAt": "2026-10-28T20:13:16.683Z"
+  }
+}</code></pre>
+                  <p>Keep the <code>id</code> to read, schedule or cancel the campaign later.</p>
+
+                  <h3>Other operations</h3>
+                  <p>They use the same URL and the same <code>Authorization</code> header. They only apply to campaigns created through the API.</p>
+                  <ul>
+                    <li class="mb-2"><strong>Read a campaign</strong>: <code>GET /api/v1/push-campaigns/{id}</code>. Returns its status and, once sent, its <code>deliveryStats</code>.</li>
+                    <li class="mb-2"><strong>List campaigns</strong>: <code>GET /api/v1/push-campaigns</code>, most recent first. Optional filters: <code>?externalId=...</code>, <code>?status=DRAFT</code>, <code>?limit=50</code> (100 max).</li>
+                    <li class="mb-2"><strong>Schedule or send a draft</strong>: <code>POST /api/v1/push-campaigns/{id}/schedule</code> with <code>{"sendAt": "2026-11-02T18:00:00Z"}</code>, or an empty body <code>{}</code> to send it now.</li>
+                    <li class="mb-2"><strong>Cancel a campaign</strong>: <code>POST /api/v1/push-campaigns/{id}/cancel</code>. A scheduled or sending campaign goes back to draft. Notifications already delivered cannot be recalled.</li>
+                    <li class="mb-2"><strong>Delete a draft</strong>: <code>DELETE /api/v1/push-campaigns/{id}</code>.</li>
+                  </ul>
+
+                  <h3>Campaign statuses</h3>
+                  <ul>
+                    <li class="mb-2"><code>DRAFT</code>: saved, not sent</li>
+                    <li class="mb-2"><code>SCHEDULED</code>: waiting for <code>sendAt</code></li>
+                    <li class="mb-2"><code>NOW</code>: queued for immediate sending</li>
+                    <li class="mb-2"><code>PENDING</code>: being sent</li>
+                    <li class="mb-2"><code>SENT</code>: sent</li>
+                  </ul>
+
+                  <h3>Errors and limits</h3>
+                  <p>Errors return a message explaining the problem: <code>{"error": {"code": "...", "message": "..."}}</code>.</p>
+                  <ul>
+                    <li class="mb-2"><code>400</code>: invalid field (the message says which one)</li>
+                    <li class="mb-2"><code>401</code>: missing or invalid API key</li>
+                    <li class="mb-2"><code>403</code>: the Make integration is not enabled</li>
+                    <li class="mb-2"><code>404</code>: campaign not found</li>
+                    <li class="mb-2"><code>409</code>: operation impossible in the current status (for example deleting a scheduled campaign)</li>
+                    <li class="mb-2"><code>429</code>: more than 10 campaigns created in one minute</li>
+                  </ul>
+                </div>
+            </section>
+
+            <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Back to FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie.html')
+</body>
+</html>

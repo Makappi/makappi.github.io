@@ -214,7 +214,7 @@
             <section class="wrapper pt-8">
               <div class="card">
                 <div class="card-body p-10">
-                  <p> L'intégration Facebook nécessite un Facebook Application ID. Vous pouvez créer une app Facebook depuis Meta for Developers et copier l'Application ID dans Makappi. </p>
+                  <p> L'intégration Facebook nécessite l'Application ID et le Client Token de votre app Meta. Vous pouvez créer une app Facebook depuis Meta for Developers et copier l'Application ID dans Makappi. </p>
                   <h3>Comment récupérer le Facebook Application ID</h3>
                   <ol>
                     <li class="mb-2">Allez sur <a href="https://developers.facebook.com/" target="_blank">developers.facebook.com</a> et connectez-vous avec votre compte Facebook.</li>
@@ -228,6 +228,23 @@
                     <li class="mb-2">Dans le menu de gauche, allez dans <strong>Settings > Basic</strong>.</li>
                     <li class="mb-2">Complétez les paramètres de base obligatoires, notamment la <strong>Privacy Policy URL</strong> et la <strong>Category</strong>, puis enregistrez vos changements.</li>
                   </ol>
+                  <h3>Comment récupérer le Client Token</h3>
+                  <p>Depuis les versions récentes du SDK Meta, les événements ne sont acceptés que si l'app envoie aussi le Client Token de votre app Meta.</p>
+                  <ol>
+                    <li class="mb-2">Dans votre app Meta, allez dans <strong>Settings > Advanced</strong>.</li>
+                    <li class="mb-2">Dans la section <strong>Security</strong>, copiez le <strong>Client token</strong>.</li>
+                    <li class="mb-2">Collez-le dans le champ <strong>Client Token</strong> de l'intégration Facebook de Makappi, à côté de l'Application ID, puis enregistrez.</li>
+                  </ol>
+                  <p>Sans Client Token, l'app fonctionne normalement mais Meta refuse ses événements : vos campagnes ne peuvent pas mesurer les installations, ajouts au panier ni achats.</p>
+                  <h3>Ajouter les plateformes iOS et Android</h3>
+                  <p>Dans <strong>Settings > Basic</strong>, cliquez sur <strong>Add Platform</strong> en bas de la page et ajoutez les deux plateformes :</p>
+                  <ul>
+                    <li class="mb-2"><strong>iOS</strong> : renseignez le <strong>Bundle ID</strong> de votre app. Vous pouvez nous le demander.</li>
+                    <li class="mb-2"><strong>Android</strong> : renseignez le <strong>Package Name</strong> de votre app (généralement la même valeur que le Bundle ID), le <strong>Class Name</strong> <code>com.makappi.android.ui.scene.root.RootActivity</code> et les <strong>Key Hashes</strong> que nous vous transmettons sur demande.</li>
+                  </ul>
+                  <h3>Événements envoyés à Meta</h3>
+                  <p>L'app envoie les événements standards Meta, sur lesquels vos campagnes peuvent s'optimiser : vue d'un produit (<em>ViewContent</em>), ajout au panier (<em>AddToCart</em>), ajout à la wishlist (<em>AddToWishlist</em>), début du paiement (<em>InitiateCheckout</em>), achat (<em>Purchase</em>, avec montant et devise) et création de compte (<em>CompleteRegistration</em>). Les produits sont identifiés par l'ID de leur variante Shopify.</p>
+                  <p>Vous pouvez vérifier la réception des événements dans <strong>Meta Events Manager > Tester les événements</strong>.</p>
                 </div>
               </div>
             </section>

@@ -34,7 +34,7 @@
                             <div class="card">
                                 <div class="card-body p-10">
                                     <p>
-                                        The Facebook integration requires a Facebook Application ID. You can create a Facebook app from Meta for Developers and copy the Application ID into Makappi.
+                                        The Facebook integration requires the Application ID and the Client Token of your Meta app. You can create a Facebook app from Meta for Developers and copy the Application ID into Makappi.
                                     </p>
 
                                     <h3>How to get your Facebook Application ID</h3>
@@ -52,6 +52,26 @@
                                         <li class="mb-2">In the left menu, go to <strong>Settings > Basic</strong>.</li>
                                         <li class="mb-2">Fill in the required basic settings, especially the <strong>Privacy Policy URL</strong> and <strong>Category</strong>, then save your changes.</li>
                                     </ol>
+
+                                    <h3>How to get your Client Token</h3>
+                                    <p>Since recent versions of the Meta SDK, events are only accepted when the app also sends the Client Token of your Meta app.</p>
+                                    <ol>
+                                        <li class="mb-2">In your Meta app, go to <strong>Settings > Advanced</strong>.</li>
+                                        <li class="mb-2">In the <strong>Security</strong> section, copy the <strong>Client token</strong>.</li>
+                                        <li class="mb-2">Paste it into the <strong>Client Token</strong> field of the Facebook integration in Makappi, next to the Application ID, then save.</li>
+                                    </ol>
+                                    <p>Without a Client Token, the app keeps working normally but Meta rejects its events: your campaigns cannot measure installs, add to carts or purchases.</p>
+
+                                    <h3>Add the iOS and Android platforms</h3>
+                                    <p>In <strong>Settings > Basic</strong>, click <strong>Add Platform</strong> at the bottom of the page and add both platforms:</p>
+                                    <ul>
+                                        <li class="mb-2"><strong>iOS</strong>: enter the <strong>Bundle ID</strong> of your app. You can ask us for it.</li>
+                                        <li class="mb-2"><strong>Android</strong>: enter the <strong>Package Name</strong> of your app (usually the same value as the Bundle ID), the <strong>Class Name</strong> <code>com.makappi.android.ui.scene.root.RootActivity</code> and the <strong>Key Hashes</strong> we send you on request.</li>
+                                    </ul>
+
+                                    <h3>Events sent to Meta</h3>
+                                    <p>The app sends Meta standard events, which your campaigns can optimize for: product view (<em>ViewContent</em>), add to cart (<em>AddToCart</em>), add to wishlist (<em>AddToWishlist</em>), checkout start (<em>InitiateCheckout</em>), purchase (<em>Purchase</em>, with amount and currency) and account creation (<em>CompleteRegistration</em>). Products are identified by their Shopify variant ID.</p>
+                                    <p>You can check that events are received in <strong>Meta Events Manager > Test events</strong>.</p>
                                 </div>
                             </div>
                         </section>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Makappi - Support > Apple Pay</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support/Apple Pay FR")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header_fr.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">Comment fonctionne Apple Pay dans votre app ?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">Intégrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Apple Pay</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>
+                    L'intégration Apple Pay ajoute un bouton Apple Pay natif à votre app iOS, sur la fiche produit et dans le panier. Vos clients paient dans la fenêtre Apple Pay avec Face ID ou Touch ID, et Shopify crée directement la commande, sans passer par la page de paiement.
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Sur la fiche produit</strong> : le bouton achète la variante sélectionnée, en quantité 1, sans l'ajouter au panier
+                    </li>
+                    <li>
+                      <strong>Dans le panier</strong> : le bouton règle l'ensemble du panier
+                    </li>
+                  </ul>
+                  <p>
+                    Le bouton se place sur la même ligne que le bouton principal (« Ajouter au panier » sur la fiche produit, « Procéder au paiement » dans le panier). Si Apple Pay ne peut pas finaliser le paiement, le checkout Shopify habituel s'ouvre à la place : le client peut toujours terminer sa commande.
+                  </p>
+                  <p>
+                    Apple Pay au checkout Shopify n'est pas modifié : s'il est activé dans vos paiements Shopify, vos clients peuvent toujours le choisir au moment du paiement, avec ou sans cette intégration.
+                  </p>
+
+                  <h3>Prérequis</h3>
+                  <ul>
+                    <li>
+                      <strong>Apple Pay activé dans vos paiements Shopify</strong> : votre boutique et votre prestataire de paiement doivent accepter Apple Pay. Consultez <a href="https://help.shopify.com/fr/manual/payments/accelerated-checkouts/apple-pay" target="_blank" class="hover-3">les conditions Apple Pay de Shopify</a>
+                    </li>
+                    <li>
+                      <strong>Accès à votre compte Apple Developer</strong> : team@makappi.com doit être membre de votre compte Apple Developer avec le rôle Administrateur, comme lors de la publication de votre app (voir <a href="@@webRoot/fr/support/publication.html#apple-invite" class="hover-3">comment inviter Makappi</a>)
+                    </li>
+                    <li>
+                      <strong>iOS uniquement</strong> : Shopify ne propose pas encore ce paiement natif sur Android. Votre app Android conserve le checkout habituel
+                    </li>
+                    <li>
+                      <strong>iOS 16 ou plus récent</strong> : sur les versions antérieures, le bouton ne s'affiche pas. Il est aussi masqué quand l'appareil du client ne peut pas payer avec Apple Pay
+                    </li>
+                    <li>
+                      <strong>Forfait Advanced, Premium ou Custom</strong>
+                    </li>
+                  </ul>
+
+                  <h3>Comment Makappi le met en place</h3>
+                  <p>
+                    Apple Pay demande quelques éléments techniques côté Apple et côté Shopify. Makappi s'en charge pour vous lors de la mise en place, dans votre compte Apple Developer :
+                  </p>
+                  <ul>
+                    <li>
+                      Un <strong>identifiant marchand</strong> Apple Pay (merchant ID) dédié à votre app, nommé d'après son identifiant (<code>merchant.</code> suivi du bundle ID de votre app)
+                    </li>
+                    <li>
+                      Un <strong>certificat Apple Pay Payment Processing</strong> : Shopify génère la demande de certificat, nous créons le certificat auprès d'Apple et le renvoyons à Shopify depuis le tableau de bord Makappi. Ce certificat permet à Shopify de traiter les paiements effectués avec Apple Pay dans votre app. Il expire au bout de 25 mois, et nous le renouvelons avant son expiration
+                    </li>
+                    <li>
+                      Une <strong>mise à jour de votre app iOS</strong> intégrant Apple Pay, publiée sur l'App Store
+                    </li>
+                  </ul>
+                  <p>
+                    Apple Pay demande aussi de nouvelles autorisations Shopify pour l'app Makappi : elles vous seront demandées une fois, à votre prochaine connexion au tableau de bord Makappi. Tant qu'elles ne sont pas approuvées, Apple Pay ne peut pas fonctionner.
+                  </p>
+                  <p>
+                    Vous n'avez rien à faire côté Apple : indiquez-nous simplement que vous souhaitez Apple Pay à <a href="mailto:support@makappi.com">support@makappi.com</a>.
+                  </p>
+
+                  <h3>Apple Pay dans votre tableau de bord</h3>
+                  <p>
+                    Comme elle nécessite une mise à jour de votre app iOS, l'intégration Apple Pay est activée avec Makappi lors de la mise en place. Ensuite, dans votre tableau de bord Makappi, allez dans « Paramètres » > « Intégrations » et choisissez « Apple Pay » :
+                  </p>
+                  <ul>
+                    <li>
+                      Choisissez où le bouton s'affiche : sur la <strong>fiche produit</strong>, dans le <strong>panier</strong>, ou les deux
+                    </li>
+                    <li>
+                      Vous pouvez désactiver l'intégration à tout moment
+                    </li>
+                  </ul>
+                  <p>
+                    Enregistrez et publiez la modification pour qu'elle arrive dans votre app.
+                  </p>
+
+                  <h3>Quand le bouton ne s'affiche pas</h3>
+                  <p>
+                    Certains achats nécessitent le checkout Shopify complet. Dans ces cas, le bouton Apple Pay est masqué et vos clients utilisent le bouton habituel :
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Cart Hold</strong> : quand les réservations <a href="@@webRoot/fr/support/cart-hold.html" class="hover-3">Cart Hold</a> sont actives, le bouton ne s'affiche pas, car le paiement doit passer par la réservation
+                    </li>
+                    <li>
+                      <strong>Abonnements</strong> : sur la fiche d'un produit vendu avec une option d'abonnement (selling plan), et dans le panier quand l'intégration Subscribfy est activée
+                    </li>
+                    <li>
+                      <strong>Koala Bundle</strong> : sur la fiche produit d'un bundle ou d'une remise sur volume Koala
+                    </li>
+                    <li>
+                      <strong>Compte client obligatoire</strong> : quand votre app exige d'être connecté pour acheter et que le client n'est pas connecté
+                    </li>
+                    <li>
+                      <strong>Loop Checkout+</strong> : dans le panier, quand l'offre Loop Checkout+ est affichée
+                    </li>
+                    <li>
+                      <strong>Message de confirmation avant le checkout</strong> : quand vous demandez à vos clients de confirmer un message avant le paiement
+                    </li>
+                    <li>
+                      <strong>Variante indisponible</strong> : sur la fiche produit, quand la variante sélectionnée ne peut pas être achetée
+                    </li>
+                  </ul>
+
+                  <p>
+                    Une question sur Apple Pay ? Écrivez-nous à <a href="mailto:support@makappi.com">support@makappi.com</a>.
+                  </p>
+
+                </div>
+              </div>
+            </section>
+
+            <a href="@@webRoot/fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Retour à la FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer_fr.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie_fr.html')
+</body>
+
+</html>

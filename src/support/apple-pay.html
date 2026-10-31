@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makappi - Support > Apple Pay</title>
+  <meta name="robots" content="noindex">
+  @@include('_head.html')
+  <script>
+    trackPage("Support/Apple Pay")
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+  <div class="content-wrapper">
+    @@include('_header.html', {"currentPage": "support"})
+
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+        <div class="row text-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+            <h1 class="display-1 mb-3">How does Apple Pay work in your app?</h1>
+            <nav class="d-inline-block" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                <li class="breadcrumb-item"><a href="@@webRoot/support/">Integrations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Apple Pay</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row gx-0">
+          <div class="col-xl-8 mx-auto">
+            <section class="wrapper pt-8">
+              <div class="card">
+                <div class="card-body p-10">
+                  <p>
+                    The Apple Pay integration adds a native Apple Pay button to your iOS app, on the product page and in the cart. Your customers pay in the Apple Pay sheet with Face ID or Touch ID, and Shopify creates the order directly, without going through the checkout page.
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>On the product page</strong>: the button buys the selected variant, in a quantity of 1, without adding it to the cart
+                    </li>
+                    <li>
+                      <strong>In the cart</strong>: the button pays for the whole cart
+                    </li>
+                  </ul>
+                  <p>
+                    The button sits on the same row as the main button ("Add to cart" on the product page, "Checkout" in the cart). If Apple Pay cannot complete the payment, the usual Shopify checkout opens instead, so the customer can still finish their order.
+                  </p>
+                  <p>
+                    Apple Pay at the Shopify checkout is not affected: if it is enabled in your Shopify payments, your customers can still choose it at the checkout, with or without this integration.
+                  </p>
+
+                  <h3>Requirements</h3>
+                  <ul>
+                    <li>
+                      <strong>Apple Pay enabled in your Shopify payments</strong>: your store and your payment provider must accept Apple Pay. See <a href="https://help.shopify.com/en/manual/payments/accelerated-checkouts/apple-pay" target="_blank" class="hover-3">Shopify's Apple Pay requirements</a>
+                    </li>
+                    <li>
+                      <strong>Access to your Apple Developer account</strong>: team@makappi.com must be a member of your Apple Developer account with the Admin role, as set up when your app was published (see <a href="@@webRoot/support/publication.html#apple-invite" class="hover-3">how to invite Makappi</a>)
+                    </li>
+                    <li>
+                      <strong>iOS only</strong>: Shopify does not offer this native payment on Android yet. Your Android app keeps the usual checkout
+                    </li>
+                    <li>
+                      <strong>iOS 16 or later</strong>: on older versions the button is not shown. It is also hidden when the customer's device cannot pay with Apple Pay
+                    </li>
+                    <li>
+                      <strong>Advanced, Premium or Custom plan</strong>
+                    </li>
+                  </ul>
+
+                  <h3>How Makappi sets it up</h3>
+                  <p>
+                    Apple Pay needs a few technical elements on Apple's and Shopify's side. Makappi handles them for you during the setup, in your Apple Developer account:
+                  </p>
+                  <ul>
+                    <li>
+                      An Apple Pay <strong>merchant ID</strong> dedicated to your app, named after its identifier (<code>merchant.</code> followed by your app's bundle ID)
+                    </li>
+                    <li>
+                      An <strong>Apple Pay Payment Processing certificate</strong>: Shopify generates the certificate request, we create the certificate with Apple and send it back to Shopify from the Makappi dashboard. This certificate lets Shopify process the payments made with Apple Pay in your app. It expires after 25 months, and we renew it before it expires
+                    </li>
+                    <li>
+                      An <strong>update of your iOS app</strong> that includes Apple Pay, published on the App Store
+                    </li>
+                  </ul>
+                  <p>
+                    Apple Pay also needs new Shopify permissions for the Makappi app: you will be asked to approve them once, the next time you sign in to your Makappi dashboard. Until they are approved, Apple Pay cannot work.
+                  </p>
+                  <p>
+                    You have nothing to do on Apple's side: just let us know that you want Apple Pay at <a href="mailto:support@makappi.com">support@makappi.com</a>.
+                  </p>
+
+                  <h3>Apple Pay in your dashboard</h3>
+                  <p>
+                    Because it requires an update of your iOS app, the Apple Pay integration is enabled with Makappi during the setup. Then, in your Makappi dashboard, go to "Settings" > "Integrations" and select "Apple Pay":
+                  </p>
+                  <ul>
+                    <li>
+                      Choose where the button is shown: on the <strong>product page</strong>, in the <strong>cart</strong>, or both
+                    </li>
+                    <li>
+                      You can turn the integration off at any time
+                    </li>
+                  </ul>
+                  <p>
+                    Save and publish the change for it to reach your app.
+                  </p>
+
+                  <h3>When the button is not shown</h3>
+                  <p>
+                    Some purchases need the full Shopify checkout. In these cases the Apple Pay button is hidden and your customers use the usual button:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Cart Hold</strong>: when <a href="@@webRoot/support/cart-hold.html" class="hover-3">Cart Hold</a> reservations are active, the button is not shown, because payment must go through the reservation
+                    </li>
+                    <li>
+                      <strong>Subscriptions</strong>: on the product page of a product sold with a subscription option (selling plan), and in the cart when the Subscribfy integration is enabled
+                    </li>
+                    <li>
+                      <strong>Koala Bundle</strong>: on the product page of a Koala bundle or volume discount
+                    </li>
+                    <li>
+                      <strong>Customer account required</strong>: when your app requires customers to be logged in to buy and the customer is not logged in
+                    </li>
+                    <li>
+                      <strong>Loop Checkout+</strong>: in the cart, when the Loop Checkout+ offer is shown
+                    </li>
+                    <li>
+                      <strong>Checkout confirmation message</strong>: when you ask your customers to confirm a message before the checkout
+                    </li>
+                    <li>
+                      <strong>Unavailable variant</strong>: on the product page, when the selected variant cannot be bought
+                    </li>
+                  </ul>
+
+                  <p>
+                    A question about Apple Pay? Write to us at <a href="mailto:support@makappi.com">support@makappi.com</a>.
+                  </p>
+
+                </div>
+              </div>
+            </section>
+
+            <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+              <i class="uil uil-arrow-left"></i>
+              <span>Back to FAQ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('_footer.html', {"currentPage": "support"})
+  @@include('_page-progress.html')
+  @@include('_scripts.html')
+  @@include('_cookie.html')
+</body>
+</html>

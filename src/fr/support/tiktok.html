@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Makappi - Support > TikTok</title>
+    <meta name="robots" content="noindex">
+    @@include('_head.html')
+    <script>
+        trackPage("Support/TikTok FR")
+    </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+    <div class="content-wrapper">
+        @@include('_header_fr.html', {"currentPage": "support"})
+
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+                <div class="row text-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+                        <h1 class="display-1 mb-3">TikTok</h1>
+                        <nav class="d-inline-block" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="@@webRoot/fr/support/">FAQ</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">TikTok</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row gx-0">
+                    <div class="col-xl-8 mx-auto">
+                        <section class="wrapper pt-8">
+                            <div class="card">
+                                <div class="card-body p-10">
+                                    <p>
+                                        L'intégration TikTok envoie les événements de votre app à TikTok : vos campagnes publicitaires TikTok peuvent ainsi mesurer les installations et les achats, et s'optimiser dessus. Elle nécessite une source de données d'app dans TikTok Events Manager pour chaque plateforme (iOS et Android).
+                                    </p>
+
+                                    <h3>Créer les sources de données d'app</h3>
+                                    <ol>
+                                        <li class="mb-2">Dans TikTok Ads Manager, ouvrez <strong>Outils > Événements</strong> (Events Manager).</li>
+                                        <li class="mb-2">Ajoutez votre app iOS comme source de données d'app, avec le <strong>TikTok App Events SDK</strong> comme méthode de connexion. Recommencez pour votre app Android : chaque plateforme a sa propre source de données et son propre TikTok App ID.</li>
+                                        <li class="mb-2">TikTok vous demande les informations de votre app sur les stores : l'ID et l'URL App Store pour iOS, le nom du package et l'URL Google Play pour Android. Elles sont disponibles dans le Backoffice Makappi, prêtes à copier, dans <strong>Paramètres > Intégrations > TikTok App Events</strong>.</li>
+                                    </ol>
+
+                                    <h3>Identifiants à saisir dans Makappi</h3>
+                                    <p>Dans le Backoffice Makappi, ouvrez <strong>Paramètres > Intégrations > TikTok App Events</strong> et renseignez, pour chaque plateforme :</p>
+                                    <ul>
+                                        <li class="mb-2"><strong>TikTok App ID</strong> : affiché dans les détails de la source de données d'app dans Events Manager (TikTok l'envoie aussi par email à la création de la source).</li>
+                                        <li class="mb-2"><strong>App Secret</strong> : disponible dans les paramètres de la source de données d'app dans Events Manager.</li>
+                                    </ul>
+                                    <p>Une plateforme dont les identifiants sont incomplets n'envoie aucun événement, et l'app continue de fonctionner normalement. Les nouveaux réglages sont appliqués au prochain lancement de l'app.</p>
+
+                                    <h3>Événements envoyés à TikTok</h3>
+                                    <p>L'app envoie les événements standards TikTok : consultation d'un produit (<em>ViewContent</em>), ajout au panier (<em>AddToCart</em>), ajout aux favoris (<em>AddToWishlist</em>), début du paiement (<em>Checkout</em>), achat (<em>Purchase</em>, avec montant et devise) et création de compte (<em>Registration</em>). Le SDK remonte aussi les installations et les lancements de l'app. Les produits sont identifiés par l'ID de variante Shopify.</p>
+                                    <p>Sur iOS, les événements ne sont associés à l'identifiant publicitaire que si l'utilisateur accepte la demande de suivi de l'app. Vous pouvez vérifier la réception des événements dans <strong>Events Manager > Test Events</strong>.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <a href="@@webRoot/fr/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+                            <i class="uil uil-arrow-left"></i>
+                            <span>Retour à la FAQ</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    @@include('_footer_fr.html', {"currentPage": "support"})
+    @@include('_page-progress.html')
+    @@include('_scripts.html')
+    @@include('_cookie_fr.html')
+</body>
+
+</html>

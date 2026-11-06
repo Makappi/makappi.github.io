@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Makappi - Support > TikTok</title>
+    <meta name="robots" content="noindex">
+    @@include('_head.html')
+    <script>
+        trackPage("Support/TikTok")
+    </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+    <div class="content-wrapper">
+        @@include('_header.html', {"currentPage": "support"})
+
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16">
+                <div class="row text-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+                        <h1 class="display-1 mb-3">TikTok</h1>
+                        <nav class="d-inline-block" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="@@webRoot/support/">FAQ</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">TikTok</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row gx-0">
+                    <div class="col-xl-8 mx-auto">
+                        <section class="wrapper pt-8">
+                            <div class="card">
+                                <div class="card-body p-10">
+                                    <p>
+                                        The TikTok integration sends your app events to TikTok, so your TikTok ad campaigns can measure installs and purchases and optimize for them. It requires an app data source in TikTok Events Manager for each platform (iOS and Android).
+                                    </p>
+
+                                    <h3>Create the app data sources</h3>
+                                    <ol>
+                                        <li class="mb-2">In TikTok Ads Manager, open <strong>Tools > Events</strong> (Events Manager).</li>
+                                        <li class="mb-2">Add your iOS app as an app data source with the <strong>TikTok App Events SDK</strong> as connection method. Repeat for your Android app: each platform has its own data source and its own TikTok App ID.</li>
+                                        <li class="mb-2">TikTok asks for your app store information: the App Store ID and URL for iOS, the package name and Google Play URL for Android. They are available in the Makappi Backoffice, ready to copy, in <strong>Settings > Integrations > TikTok App Events</strong>.</li>
+                                    </ol>
+
+                                    <h3>Identifiers to enter in Makappi</h3>
+                                    <p>In the Makappi Backoffice, open <strong>Settings > Integrations > TikTok App Events</strong> and fill in, for each platform:</p>
+                                    <ul>
+                                        <li class="mb-2"><strong>TikTok App ID</strong>: shown in the details of the app data source in Events Manager (TikTok also sends it by email when the data source is created).</li>
+                                        <li class="mb-2"><strong>App Secret</strong>: available in the settings of the app data source in Events Manager.</li>
+                                    </ul>
+                                    <p>A platform with missing identifiers does not send any event, the app keeps working normally. The new settings are applied the next time the app is launched.</p>
+
+                                    <h3>Events sent to TikTok</h3>
+                                    <p>The app sends TikTok standard events: product view (<em>ViewContent</em>), add to cart (<em>AddToCart</em>), add to wishlist (<em>AddToWishlist</em>), checkout start (<em>Checkout</em>), purchase (<em>Purchase</em>, with amount and currency) and account creation (<em>Registration</em>). The SDK also reports app installs and launches. Products are identified by their Shopify variant ID.</p>
+                                    <p>On iOS, events are linked to the advertising identifier only when the user accepts the tracking request of the app. You can check that events are received in <strong>Events Manager > Test Events</strong>.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <a href="@@webRoot/support/" class="btn btn-expand btn-soft-primary rounded-pill mt-10">
+                            <i class="uil uil-arrow-left"></i>
+                            <span>Back to FAQ</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    @@include('_footer.html', {"currentPage": "support"})
+    @@include('_page-progress.html')
+    @@include('_scripts.html')
+    @@include('_cookie.html')
+</body>
+
+</html>

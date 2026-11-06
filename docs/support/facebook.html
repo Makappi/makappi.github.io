@@ -284,7 +284,7 @@
                       </tr>
                       <tr>
                         <td><strong>Key Hashes</strong></td>
-                        <td>Two key hashes, generated from your Google Play Console (see below).</td>
+                        <td>Shown in the Makappi dashboard, ready to copy. Makappi generates it from the certificate Google Play uses to sign your app.</td>
                       </tr>
                       <tr>
                         <td><strong>Install Referrer Decryption Key</strong></td>
@@ -292,15 +292,6 @@
                       </tr>
                     </tbody>
                   </table>
-                  <h4>Get your Android key hashes</h4>
-                  <p>Meta identifies your Android app by the certificates that sign it. Google Play signs the app installed by your customers, so you need the key hash of the <strong>app signing key</strong>, plus the one of the <strong>upload key</strong>.</p>
-                  <ol>
-                    <li class="mb-2">In <a href="https://play.google.com/console" target="_blank">Google Play Console</a>, open your app, then <strong>Test and release > App integrity > App signing</strong>.</li>
-                    <li class="mb-2">Copy the <strong>SHA-1 certificate fingerprint</strong> of the <strong>App signing key certificate</strong> (for example <code>AB:CD:EF:...</code>, 20 pairs of characters). Do not use the SHA-256.</li>
-                    <li class="mb-2">In Makappi, go to <strong>Settings > Integrations > Facebook</strong> and paste it in the <strong>Key Hashes</strong> converter. Copy the generated key hash (it ends with <code>=</code>) into the <strong>Key Hashes</strong> field in Meta.</li>
-                    <li class="mb-2">Repeat with the SHA-1 of the <strong>Upload key certificate</strong>, shown on the same page, then save your changes in Meta.</li>
-                  </ol>
-                  <p>Meta expects the SHA-1 encoded in base64, not the fingerprint displayed by Google Play: that is why the conversion is needed. It runs in your browser, nothing is sent.</p>
                   <h3>Events sent to Meta</h3>
                   <p>The app sends Meta standard events, which your campaigns can optimize for: product view (<em>ViewContent</em>), add to cart (<em>AddToCart</em>), add to wishlist (<em>AddToWishlist</em>), checkout start (<em>InitiateCheckout</em>), purchase (<em>Purchase</em>, with amount and currency) and account creation (<em>CompleteRegistration</em>). Products are identified by their Shopify variant ID.</p>
                   <p>You can check that events are received in <strong>Meta Events Manager > Test events</strong>.</p>

@@ -237,61 +237,7 @@
                   </ol>
                   <p>Sans Client Token, l'app fonctionne normalement mais Meta refuse ses événements : vos campagnes ne peuvent pas mesurer les installations, ajouts au panier ni achats.</p>
                   <h3>Ajouter les plateformes iOS et Android</h3>
-                  <p>Dans votre app Meta, allez dans <strong>Paramètres de l'app > Paramètres de base</strong>, cliquez sur <strong>Ajouter une plateforme</strong> en bas de la page et ajoutez iOS et Android. Le dashboard Makappi affiche les valeurs de votre app, prêtes à copier, dans <strong>Paramètres > Intégrations > Facebook</strong>.</p>
-                  <h4>iOS</h4>
-                  <table class="table mb-6">
-                    <thead>
-                      <tr>
-                        <th>Champ Meta</th>
-                        <th>Valeur</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><strong>ID de l'offre</strong> (Bundle ID)</td>
-                        <td>Affiché dans le dashboard Makappi, ou dans App Store Connect > votre app > <em>Informations sur l'app</em> > <em>Bundle ID</em>.</td>
-                      </tr>
-                      <tr>
-                        <td><strong>ID boutique iPhone / iPad</strong></td>
-                        <td>Affiché dans le dashboard Makappi, ou dans App Store Connect > <em>Informations sur l'app</em> > <em>Identifiant Apple</em> (chiffres uniquement).</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Suffixe du schéma d'URL</strong></td>
-                        <td>Laisser vide.</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Clé secrète partagée</strong></td>
-                        <td>Laisser vide. Elle ne sert qu'aux achats intégrés et abonnements App Store.</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <h4>Android</h4>
-                  <table class="table mb-6">
-                    <thead>
-                      <tr>
-                        <th>Champ Meta</th>
-                        <th>Valeur</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><strong>Noms des packages</strong></td>
-                        <td>Affiché dans le dashboard Makappi, ou dans la Google Play Console sous le nom de votre app.</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Nom de la classe</strong></td>
-                        <td><code>com.makappi.android.ui.scene.root.RootActivity</code></td>
-                      </tr>
-                      <tr>
-                        <td><strong>Clés de hachage</strong></td>
-                        <td>Affichée dans le dashboard Makappi, prête à copier. Makappi la génère à partir du certificat avec lequel Google Play signe votre app.</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Clé de déchiffrement du référent d'installation</strong></td>
-                        <td>Laisser vide.</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <p>Dans votre app Meta, allez dans <strong>Paramètres de l'app > Paramètres de base</strong>, cliquez sur <strong>Ajouter une plateforme</strong> en bas de la page et ajoutez iOS et Android. Toutes les valeurs à renseigner (Bundle ID, ID boutique, nom du package, nom de la classe, clés de hachage) sont disponibles dans le Backoffice Makappi, prêtes à copier, dans <strong>Paramètres > Intégrations > Facebook</strong>. Il indique aussi les champs à laisser vides.</p>
                   <h3>Événements envoyés à Meta</h3>
                   <p>L'app envoie les événements standards Meta, sur lesquels vos campagnes peuvent s'optimiser : vue d'un produit (<em>ViewContent</em>), ajout au panier (<em>AddToCart</em>), ajout à la wishlist (<em>AddToWishlist</em>), début du paiement (<em>InitiateCheckout</em>), achat (<em>Purchase</em>, avec montant et devise) et création de compte (<em>CompleteRegistration</em>). Les produits sont identifiés par l'ID de leur variante Shopify.</p>
                   <p>Vous pouvez vérifier la réception des événements dans <strong>Meta Events Manager > Tester les événements</strong>.</p>

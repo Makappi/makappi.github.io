@@ -237,61 +237,7 @@
                   </ol>
                   <p>Without a Client Token, the app keeps working normally but Meta rejects its events: your campaigns cannot measure installs, add to carts or purchases.</p>
                   <h3>Add the iOS and Android platforms</h3>
-                  <p>In your Meta app, go to <strong>App settings > Basic</strong>, click <strong>Add platform</strong> at the bottom of the page and add iOS and Android. The Makappi dashboard shows the values of your app, ready to copy, in <strong>Settings > Integrations > Facebook</strong>.</p>
-                  <h4>iOS</h4>
-                  <table class="table mb-6">
-                    <thead>
-                      <tr>
-                        <th>Meta field</th>
-                        <th>Value</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><strong>Bundle ID</strong></td>
-                        <td>Shown in the Makappi dashboard, or in App Store Connect > your app > <em>App Information</em> > <em>Bundle ID</em>.</td>
-                      </tr>
-                      <tr>
-                        <td><strong>iPhone Store ID / iPad Store ID</strong></td>
-                        <td>Shown in the Makappi dashboard, or in App Store Connect > <em>App Information</em> > <em>Apple ID</em> (digits only).</td>
-                      </tr>
-                      <tr>
-                        <td><strong>URL Scheme Suffix</strong></td>
-                        <td>Leave empty.</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Shared Secret</strong></td>
-                        <td>Leave empty. It is only used for App Store in-app purchases and subscriptions.</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <h4>Android</h4>
-                  <table class="table mb-6">
-                    <thead>
-                      <tr>
-                        <th>Meta field</th>
-                        <th>Value</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><strong>Package Names</strong></td>
-                        <td>Shown in the Makappi dashboard, or in Google Play Console under your app name.</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Class Name</strong></td>
-                        <td><code>com.makappi.android.ui.scene.root.RootActivity</code></td>
-                      </tr>
-                      <tr>
-                        <td><strong>Key Hashes</strong></td>
-                        <td>Shown in the Makappi dashboard, ready to copy. Makappi generates it from the certificate Google Play uses to sign your app.</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Install Referrer Decryption Key</strong></td>
-                        <td>Leave empty.</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <p>In your Meta app, go to <strong>App settings > Basic</strong>, click <strong>Add platform</strong> at the bottom of the page and add iOS and Android. All the values to enter (Bundle ID, Store ID, Package Name, Class Name, Key Hashes) are available in the Makappi Backoffice, ready to copy, in <strong>Settings > Integrations > Facebook</strong>. It also shows which fields to leave empty.</p>
                   <h3>Events sent to Meta</h3>
                   <p>The app sends Meta standard events, which your campaigns can optimize for: product view (<em>ViewContent</em>), add to cart (<em>AddToCart</em>), add to wishlist (<em>AddToWishlist</em>), checkout start (<em>InitiateCheckout</em>), purchase (<em>Purchase</em>, with amount and currency) and account creation (<em>CompleteRegistration</em>). Products are identified by their Shopify variant ID.</p>
                   <p>You can check that events are received in <strong>Meta Events Manager > Test events</strong>.</p>

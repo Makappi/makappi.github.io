@@ -225,23 +225,82 @@
                   </ol>
                   <img src="../../assets/img/support/facebook/Facebook-App ID.png" width="700" class="img-fluid rounded mx-auto d-block mb-10" />
                   <ol start="6">
-                    <li class="mb-2">Dans le menu de gauche, allez dans <strong>Settings > Basic</strong>.</li>
+                    <li class="mb-2">Dans le menu de gauche, allez dans <strong>Paramètres de l'app > Paramètres de base</strong>.</li>
                     <li class="mb-2">Complétez les paramètres de base obligatoires, notamment la <strong>Privacy Policy URL</strong> et la <strong>Category</strong>, puis enregistrez vos changements.</li>
                   </ol>
                   <h3>Comment récupérer le Client Token</h3>
                   <p>Depuis les versions récentes du SDK Meta, les événements ne sont acceptés que si l'app envoie aussi le Client Token de votre app Meta.</p>
                   <ol>
-                    <li class="mb-2">Dans votre app Meta, allez dans <strong>Settings > Advanced</strong>.</li>
+                    <li class="mb-2">Dans votre app Meta, allez dans <strong>Paramètres de l'app > Paramètres avancés</strong>.</li>
                     <li class="mb-2">Dans la section <strong>Security</strong>, copiez le <strong>Client token</strong>.</li>
                     <li class="mb-2">Collez-le dans le champ <strong>Client Token</strong> de l'intégration Facebook de Makappi, à côté de l'Application ID, puis enregistrez.</li>
                   </ol>
                   <p>Sans Client Token, l'app fonctionne normalement mais Meta refuse ses événements : vos campagnes ne peuvent pas mesurer les installations, ajouts au panier ni achats.</p>
                   <h3>Ajouter les plateformes iOS et Android</h3>
-                  <p>Dans <strong>Settings > Basic</strong>, cliquez sur <strong>Add Platform</strong> en bas de la page et ajoutez les deux plateformes :</p>
-                  <ul>
-                    <li class="mb-2"><strong>iOS</strong> : renseignez le <strong>Bundle ID</strong> de votre app. Vous pouvez nous le demander.</li>
-                    <li class="mb-2"><strong>Android</strong> : renseignez le <strong>Package Name</strong> de votre app (généralement la même valeur que le Bundle ID), le <strong>Class Name</strong> <code>com.makappi.android.ui.scene.root.RootActivity</code> et les <strong>Key Hashes</strong> que nous vous transmettons sur demande.</li>
-                  </ul>
+                  <p>Dans votre app Meta, allez dans <strong>Paramètres de l'app > Paramètres de base</strong>, cliquez sur <strong>Ajouter une plateforme</strong> en bas de la page et ajoutez iOS et Android. Le dashboard Makappi affiche les valeurs de votre app, prêtes à copier, dans <strong>Paramètres > Intégrations > Facebook</strong>.</p>
+                  <h4>iOS</h4>
+                  <table class="table mb-6">
+                    <thead>
+                      <tr>
+                        <th>Champ Meta</th>
+                        <th>Valeur</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>ID de l'offre</strong> (Bundle ID)</td>
+                        <td>Affiché dans le dashboard Makappi, ou dans App Store Connect > votre app > <em>Informations sur l'app</em> > <em>Bundle ID</em>.</td>
+                      </tr>
+                      <tr>
+                        <td><strong>ID boutique iPhone / iPad</strong></td>
+                        <td>Affiché dans le dashboard Makappi, ou dans App Store Connect > <em>Informations sur l'app</em> > <em>Identifiant Apple</em> (chiffres uniquement).</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Suffixe du schéma d'URL</strong></td>
+                        <td>Laisser vide.</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Clé secrète partagée</strong></td>
+                        <td>Laisser vide. Elle ne sert qu'aux achats intégrés et abonnements App Store.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h4>Android</h4>
+                  <table class="table mb-6">
+                    <thead>
+                      <tr>
+                        <th>Champ Meta</th>
+                        <th>Valeur</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Noms des packages</strong></td>
+                        <td>Affiché dans le dashboard Makappi, ou dans la Google Play Console sous le nom de votre app.</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Nom de la classe</strong></td>
+                        <td><code>com.makappi.android.ui.scene.root.RootActivity</code></td>
+                      </tr>
+                      <tr>
+                        <td><strong>Clés de hachage</strong></td>
+                        <td>Deux clés, générées à partir de votre Google Play Console (voir ci-dessous).</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Clé de déchiffrement du référent d'installation</strong></td>
+                        <td>Laisser vide.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h4>Obtenir vos clés de hachage Android</h4>
+                  <p>Meta identifie votre app Android grâce aux certificats qui la signent. C'est Google Play qui signe l'app installée par vos clients : il faut donc la clé de hachage de la <strong>clé de signature d'application</strong>, ainsi que celle de la <strong>clé d'importation</strong>.</p>
+                  <ol>
+                    <li class="mb-2">Dans la <a href="https://play.google.com/console" target="_blank">Google Play Console</a>, ouvrez votre app, puis <strong>Tester et publier > Intégrité de l'app > Signature d'application</strong>.</li>
+                    <li class="mb-2">Copiez l'<strong>empreinte du certificat SHA-1</strong> du <strong>certificat de la clé de signature d'application</strong> (par exemple <code>AB:CD:EF:...</code>, 20 paires de caractères). N'utilisez pas la SHA-256.</li>
+                    <li class="mb-2">Dans Makappi, allez dans <strong>Paramètres > Intégrations > Facebook</strong> et collez-la dans le convertisseur <strong>Clés de hachage</strong>. Copiez la clé générée (elle se termine par <code>=</code>) dans le champ <strong>Clés de hachage</strong> de Meta.</li>
+                    <li class="mb-2">Recommencez avec l'empreinte SHA-1 du <strong>certificat de la clé d'importation</strong>, affichée sur la même page, puis enregistrez vos modifications dans Meta.</li>
+                  </ol>
+                  <p>Meta attend l'empreinte SHA-1 encodée en base64, et non l'empreinte affichée par Google Play : c'est pourquoi la conversion est nécessaire. Elle se fait dans votre navigateur, rien n'est envoyé.</p>
                   <h3>Événements envoyés à Meta</h3>
                   <p>L'app envoie les événements standards Meta, sur lesquels vos campagnes peuvent s'optimiser : vue d'un produit (<em>ViewContent</em>), ajout au panier (<em>AddToCart</em>), ajout à la wishlist (<em>AddToWishlist</em>), début du paiement (<em>InitiateCheckout</em>), achat (<em>Purchase</em>, avec montant et devise) et création de compte (<em>CompleteRegistration</em>). Les produits sont identifiés par l'ID de leur variante Shopify.</p>
                   <p>Vous pouvez vérifier la réception des événements dans <strong>Meta Events Manager > Tester les événements</strong>.</p>
